@@ -1,5 +1,7 @@
 import React from 'react';
 import logo from "../logo.svg";
+import {Typography} from "@mui/material";
+
 
 
 
@@ -8,17 +10,19 @@ const LandingPage = () => {
     return (
         <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
-            <p>
-                Edit <code>src/App.js</code> and save to reload.
-            </p>
-            <a
-                className="App-link"
-                href="https://reactjs.org"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Learn React
-            </a>
+            <Typography
+                variant={"h1"}
+
+
+            >MEDIADAY 2022</Typography>
+            <Typography variant={"h5"}>
+                 Metropolia ammattikorkeakoulu järjestää Mediaday-tapahtuman pitkän tauon jälkeen keväällä 2022.
+            </Typography>
+            <Typography variant={"h5"}>
+                Puhujia eri teollisuudenaloilta
+                Huipputason ammattilaisten puheenvuoroja, mukana onta rautaista puhujaa monelta mediakentän osa-alueelta.
+
+            </Typography>
         </header>
     )
 }

@@ -1,14 +1,27 @@
 import React from 'react';
-import { Card, CardActionArea, CardContent, CardMedia } from '@mui/material';
+import {Card, CardActionArea, CardContent, CardMedia, Typography} from '@mui/material';
+import './speaker.css';
 
 const Speaker = () => {
-  return (
-      <Card>
-        <CardActionArea>
-          <CardMedia></CardMedia>
-        </CardActionArea>
-      </Card>
-  )
+    return (
+        <>
+            <Typography className='speaker-title' variant='h1'>Puhujat</Typography>
+            <Card className='speaker-card' sx={{maxWidth: 400}}>
+                <CardActionArea>
+                    <CardMedia
+                        component='img'
+                        height='300'
+                        image='https:placekeanu.com/400/300'
+                        alt=''/>
+                    <CardContent className='speaker-info'>
+                        <Typography variant='h2' color='white'>
+                            Keanu!
+                        </Typography>
+                    </CardContent>
+                </CardActionArea>
+            </Card>
+        </>
+    )
 }
 
-export { Speaker };
+export {Speaker};

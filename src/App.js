@@ -75,6 +75,10 @@ function App() {
           {/* A <Switch> looks through its children <Route>s and
                 renders the first one that matches the current URL. */}
           <Switch>
+            <Route exact path="/">
+              <LandingPage/>
+            </Route>
+
             <Route path="/about">
               <About />
             </Route>
@@ -82,11 +86,8 @@ function App() {
             <Route path="/promovideo">
               <PromoVideo/>
             </Route>
-            <Route path="/event/:id" children={<EventPage/>}></Route>
 
-            <Route path="/">
-              <LandingPage/>
-            </Route>
+            <Route path="/event/:id" children={<EventPage/>}></Route>
           </Switch>
         </MuiThemeProvider>
       </div>

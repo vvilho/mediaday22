@@ -1,7 +1,7 @@
 import React from 'react';
 import {Card, CardActionArea, CardContent, CardMedia, Typography} from '@mui/material';
 import './speaker.css';
-
+//TODO Tänne joku kiva tapa renderöidä yhtä monta korttia kuin puhujia
 const Speaker = () => {
     return (
         <>

@@ -1,10 +1,10 @@
 import React from 'react';
 import logo from "../logo.svg";
 import {Typography} from "@mui/material";
-import {Speaker} from '../components/Speaker/Speaker';
+import {SpeakerGrid} from '../components/SpeakerGrid/SpeakerGrid';
 
 
-
+//TODO hoida puhujien JSON kuntoon
 
 const LandingPage = () => {
 
@@ -22,7 +22,7 @@ const LandingPage = () => {
                 Huipputason ammattilaisten puheenvuoroja, mukana onta rautaista puhujaa monelta mediakentän osa-alueelta.
 
             </Typography>
-          <Speaker />
+          <SpeakerGrid speakers={[{id:1, speakerName: 'Masa', speakerTitle: 'Obe'}, {id:2}, {id:3}, {id:4}]} />
         </header>
     )
 }

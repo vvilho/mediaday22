@@ -14,7 +14,8 @@ const Video = ({ url, type }) => {
         autoplay: true,
         controls: true,
         responsive: true,
-        fluid: true,
+        fluid: false,
+        height: 450,
         sources: [
             {
                 src: url,
@@ -65,8 +66,14 @@ const Video = ({ url, type }) => {
     }, []);
 
     return (
-        <div data-vjs-player>
-            <video ref={videoRef} className="video-js vjs-big-play-centered" />
+        <div  style={{
+            display: "flex",
+            justifyContent: "center",
+            width: "100%"
+        }}>
+            <div data-vjs-player>
+                <video ref={videoRef} className="video-js vjs-big-play-centered" />
+            </div>
         </div>
     );
 };

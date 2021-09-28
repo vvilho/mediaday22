@@ -31,9 +31,10 @@ const Hello = () => {
             const dateEnd = format(new Date(x.endDate), 'yyyy-MM-dd');
 
             const singleEvent = {
-                title: x.name,
+                title: `${x.name} – ${x.desc}`,
                 start: `${dateStart}T${x.startTime}:00+02:00`,
                 end: `${dateEnd}T${x.endTime}:00+02:00`,
+                url: x.videoUrl
             }
 
             setEvents(oldEvents => [...oldEvents, singleEvent]);
@@ -63,8 +64,16 @@ const Hello = () => {
     },[eventData])
 
 
-    const eventclick = (info) => {
-        window.open(`/#/event/${info.event.data}`,'_self')
+    const eventclick = (event) => {
+        event.jsEvent.preventDefault()
+        console.log('click event',event)
+        window.open(`/#/event/${event.event.url}`,'_self')
+    }
+
+    const eventMouseEnter = (event) => {
+        event.jsEvent.preventDefault()
+        console.log('click event',event)
+        window.open(`/#/event/${event.event.url}`,'_self')
     }
 
 
@@ -75,7 +84,7 @@ const Hello = () => {
                 <h3>Hello all</h3>
                 <FullCalendar
                     plugins={[ timeGridPlugin ]}
-                    initialDate={"2022-02-02"}
+                    initialDate={"2022-04-01"}
                     initialView={'timeGridDay'}
                     editable={false}
                     eventClick={eventclick}
@@ -83,7 +92,7 @@ const Hello = () => {
                     events={events}
                     allDaySlot={false}
                     dayHeaders={true}
-                    locale={'swe'}
+                    locale={'fi'}
                     slotMinTime={'07:00:00'}
 
                     slotLabelFormat={[{

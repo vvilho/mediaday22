@@ -8,11 +8,10 @@ import {
   Typography,
 } from '@mui/material';
 import './speaker.css';
-//TODO Tänne joku kiva tapa renderöidä yhtä monta korttia kuin puhujia
-//TODO Mieti vielä mikä olisi järkevin tapa luoda monta puhujakorttia
+
 const Speaker = ({speakerName, speakerTitle, speakerImage}) => {
   return (
-      <Grid item>
+      <Grid item xs={12} md={6} xl={4} display='flex' justifyContent='center'>
         <Card className="speaker-card" sx={{maxWidth: 400}}>
           <CardActionArea>
             <CardMedia

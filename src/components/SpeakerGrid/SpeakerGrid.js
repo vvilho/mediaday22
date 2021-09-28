@@ -7,7 +7,7 @@ const SpeakerGrid = ({speakers}) => {
   return (
       <>
         <Typography variant={'h2'}>Puhujat</Typography>
-      <Grid container spacing={'2'}>
+      <Grid container justifyContent='center' spacing={0}>
         {speakers.map((speaker) =>
           <Speaker key={speaker.id}
                    speakerName={speaker?.speakerName ? speaker.speakerName : 'Keanu'}

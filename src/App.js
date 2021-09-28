@@ -9,7 +9,8 @@ import {PromoVideo} from "./pages/PromoVideo";
 import { EventPage} from "./pages/EventPage";
 import {LandingPage} from "./pages/LandingPage";
 import {AppBar, IconButton, Toolbar, Typography, Link, Divider, Box} from "@mui/material";
-import { MuiThemeProvider, createTheme} from '@material-ui/core/styles';
+import { createTheme} from '@material-ui/core/styles';
+import {ThemeProvider} from '@mui/material';
 
 
 const theme = createTheme({
@@ -24,7 +25,7 @@ const theme = createTheme({
 function App() {
   return (
       <div className="App">
-        <MuiThemeProvider theme={theme}>
+        <ThemeProvider theme={theme}>
           <AppBar position="fixed" color={"secondary"}>
             <Toolbar variant="dense" sx={{ flexGrow: 1 }}>
 
@@ -89,7 +90,7 @@ function App() {
 
             <Route path="/event/:id" children={<EventPage/>}></Route>
           </Switch>
-        </MuiThemeProvider>
+        </ThemeProvider>
       </div>
   );
 }

@@ -94,7 +94,7 @@ const Hello = () => {
                     dayHeaders={true}
                     locale={'fi'}
                     slotMinTime={'07:00:00'}
-                    c
+                    headerToolbar={false}
 
                     slotLabelFormat={[{
                         hour: 'numeric',

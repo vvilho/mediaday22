@@ -7,7 +7,6 @@ const EventPage = () => {
 
     const [eventData, setEventData] = useState()
     useEffect(() => {
-        console.log("useeffect")
         fetch('data/events.json'
             ,{
                 headers : {

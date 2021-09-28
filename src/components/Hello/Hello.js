@@ -12,17 +12,6 @@ const Hello = () => {
     const [events, setEvents] = useState([])
 
 
-    // const fetchEvents = async () => {
-    //     const response = await fetch('data/events.json',{
-    //         headers : {
-    //             'Content-Type': 'application/json',
-    //             'Accept': 'application/json'
-    //         }
-    //     });
-    //     setEventData(await response.json());
-    //     console.log("event data",typeof (await eventData.events))
-    // }
-
     const createEvents = (eventData) => {
 
 
@@ -37,7 +26,10 @@ const Hello = () => {
                 title: `${x.name} – ${x.desc}`,
                 start: `${dateStart}T${x.startTime}:00+02:00`,
                 end: `${dateEnd}T${x.endTime}:00+02:00`,
-                url: x.videoUrl
+                url: x.videoUrl,
+                backgroundColor: x.eventColor,
+                textColor: 'black',
+                borderColor: 'white'
             }
 
             setEvents(oldEvents => [...oldEvents, singleEvent]);

@@ -10,9 +10,15 @@ return (
         <Grid
             container
             justifyContent={"center"}
+
         >
             <Grid
-                xs={6}
+                xs={12}
+                sm={9   }
+                style={{
+                    margin: 0}
+                }
+
                 >
                 <h1>Speaker calendar</h1>
                 <Hello/>

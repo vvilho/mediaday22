@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {useParams} from 'react-router-dom';
 import {Video} from '../components/Video/Video';
-import {Grid} from '@mui/material';
 
 const EventPage = () => {
 

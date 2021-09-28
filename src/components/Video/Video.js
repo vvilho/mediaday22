@@ -2,6 +2,15 @@ import React, { useEffect, useRef } from "react";
 
 import videojs from "video.js";
 import "video.js/dist/video-js.css";
+import '@videojs/themes/dist/city/index.css';
+
+// Fantasy
+import '@videojs/themes/dist/fantasy/index.css';
+
+// Forest
+import '@videojs/themes/dist/forest/index.css';
+
+import '@videojs/themes/dist/sea/index.css';
 
 const Video = ({ url, type }) => {
     // return <div>Video tulee tähän, videon url: {url}</div>;
@@ -14,7 +23,6 @@ const Video = ({ url, type }) => {
         autoplay: true,
         controls: true,
         responsive: true,
-        fluid: true,
         sources: [
             {
                 src: url,
@@ -66,7 +74,7 @@ const Video = ({ url, type }) => {
 
     return (
         <div data-vjs-player>
-            <video ref={videoRef} className="video-js vjs-big-play-centered" />
+            <video ref={videoRef} className="video-js vjs-big-play-centered vjs-theme-forest" />
         </div>
     );
 };

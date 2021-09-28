@@ -75,8 +75,14 @@ const Video = ({ url, type }) => {
     }, []);
 
     return (
-        <div data-vjs-player>
-            <video ref={videoRef} className="video-js vjs-big-play-centered vjs-theme-forest" />
+        <div  style={{
+            display: "flex",
+            justifyContent: "center",
+            width: "100%"
+        }}>
+            <div data-vjs-player>
+                <video ref={videoRef} className="video-js vjs-big-play-centered" />
+            </div>
         </div>
     );
 };

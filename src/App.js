@@ -54,9 +54,9 @@ function App() {
                 >Eka sivu</Link>
                 <Link
                     component={RouterLink}
-                    to="/about"
+                    to="/calendar"
                     className={"Link"}
-                >About</Link>
+                >Calendar</Link>
                 <Link
                     component={RouterLink}
                     to="/promovideo"
@@ -64,7 +64,7 @@ function App() {
                 >Promovideo</Link>
                 <Link
                     component={RouterLink}
-                    to="/event/mediaday-123"
+                    to="/event/oskari-piiroinen"
                     className={"Link"}
                 >Linkki</Link>
               </Box>
@@ -81,8 +81,8 @@ function App() {
               <LandingPage/>
             </Route>
 
-            <Route path="/about">
-              <About />
+            <Route path="/calendar">
+              <About /> 
             </Route>
 
             <Route path="/promovideo">

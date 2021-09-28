@@ -41,11 +41,17 @@ const EventPage = () => {
         <div>
             Tapahtuman nimi: {eventResult.name}<br/>
             Tapahtuman aika: {eventResult.startTime}<br/>
-            <Video
-                url={eventResult.streamUrl}
-                type={eventResult.streamVideoType}
-            />
-
+          <Grid container spacing={2}>
+            <Grid item xs={12} md={6}>
+              <Counter startTime={eventResult.startTime} startDate={eventResult.startDate}/>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Video
+                  url={eventResult.streamUrl}
+                  type={eventResult.streamVideoType}
+              />
+            </Grid>
+          </Grid>
       </div>
   );
 };

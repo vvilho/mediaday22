@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import FullCalendar from '@fullcalendar/react' // must go before plugins
 import timeGridPlugin from '@fullcalendar/timegrid' // a plugin!
 import format from 'date-fns/format'
-
+import parse from 'date-fns/parse';
 
 
 
@@ -27,8 +27,11 @@ const Hello = () => {
 
 
         eventData?.map(x => {
-            const dateStart = format(new Date(x.startDate), 'yyyy-MM-dd');
-            const dateEnd = format(new Date(x.endDate), 'yyyy-MM-dd');
+            console.log('x',x)
+            const dateStart = format(parse(x.startDate, 'dd.MM.yyyy', new Date()), 'yyyy-MM-dd');
+            const dateEnd = format(parse(x.endDate, 'dd.MM.yyyy', new Date()), 'yyyy-MM-dd');
+            console.log('datestart',dateStart)
+
 
             const singleEvent = {
                 title: `${x.name} – ${x.desc}`,
@@ -93,7 +96,10 @@ const Hello = () => {
                     allDaySlot={false}
                     dayHeaders={true}
                     locale={'fi'}
-                    slotMinTime={'07:00:00'}
+                    slotMinTime='10:00:00'
+                    headerToolbar={false}
+
+
 
                     slotLabelFormat={[{
                         hour: 'numeric',

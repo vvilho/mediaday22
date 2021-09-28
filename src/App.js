@@ -9,7 +9,9 @@ import {PromoVideo} from "./pages/PromoVideo";
 import { EventPage} from "./pages/EventPage";
 import {LandingPage} from "./pages/LandingPage";
 import {AppBar, IconButton, Toolbar, Typography, Link, Divider, Box} from "@mui/material";
-import { MuiThemeProvider, createTheme} from '@material-ui/core/styles';
+import { createTheme} from '@material-ui/core/styles';
+import {ThemeProvider} from '@mui/material';
+import {Footer} from './components/Footer/Footer';
 
 
 const theme = createTheme({
@@ -24,7 +26,7 @@ const theme = createTheme({
 function App() {
   return (
       <div className="App">
-        <MuiThemeProvider theme={theme}>
+        <ThemeProvider theme={theme}>
           <AppBar position="fixed" color={"secondary"}>
             <Toolbar variant="dense" sx={{ flexGrow: 1 }}>
 
@@ -75,6 +77,10 @@ function App() {
           {/* A <Switch> looks through its children <Route>s and
                 renders the first one that matches the current URL. */}
           <Switch>
+            <Route exact path="/">
+              <LandingPage/>
+            </Route>
+
             <Route path="/about">
               <About />
             </Route>
@@ -82,13 +88,12 @@ function App() {
             <Route path="/promovideo">
               <PromoVideo/>
             </Route>
-            <Route path="/event/:id" children={<EventPage/>}></Route>
 
-            <Route path="/">
-              <LandingPage/>
-            </Route>
+            <Route path="/event/:id" children={<EventPage/>}></Route>
           </Switch>
-        </MuiThemeProvider>
+
+          <Footer/>
+        </ThemeProvider>
       </div>
   );
 }

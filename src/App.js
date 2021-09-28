@@ -11,6 +11,7 @@ import {LandingPage} from "./pages/LandingPage";
 import {AppBar, IconButton, Toolbar, Typography, Link, Divider, Box} from "@mui/material";
 import { createTheme} from '@material-ui/core/styles';
 import {ThemeProvider} from '@mui/material';
+import {Footer} from './components/Footer/Footer';
 
 
 const theme = createTheme({
@@ -90,6 +91,8 @@ function App() {
 
             <Route path="/event/:id" children={<EventPage/>}></Route>
           </Switch>
+
+          <Footer/>
         </ThemeProvider>
       </div>
   );

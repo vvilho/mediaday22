@@ -3,31 +3,56 @@
   "events" : [
     {
       "videoUrl" : "mediaday-123",
-      "name" : "Mediaday livekoodaus",
-      "startTime" : "15:00",
-      "startDate" : "2.2.2022",
-      "endTime" : "17:00",
+      "name" : "Mikko Kodisoja - Tulevaisuuden ratkaisut elokuvatuotannossa\n",
+      "startTime" : "08:00",
+      "startDate" : "04.01.2022",
+      "endTime" : "15:00",
+      "endDate" : "04.01.2022",
       "streamUrl" : "https://cdn.videvo.net/videvo_files/video/premium/getty_105/large_watermarked/istock-1083459308_preview.mp4",
       "streamVideoType" : "video/mp4"
 
     },
     {
       "videoUrl" : "koulu-123",
-      "name" : "Mediaday livekoodaus",
-      "startTime" : "15:00",
-      "startDate" : "2.2.2022",
+      "name" : "Mediaday livekoodaus2",
+      "startTime" : "16:00",
+      "startDate" : "04.01.2022",
       "endTime" : "17:00",
+      "endDate" : "04.01.2022",
       "streamUrl" : "https://upload.wikimedia.org/wikipedia/commons/transcoded/e/eb/Sass_Sylvia_mesterkurzus%C3%A1nak_z%C3%A1r%C3%B3koncertje.webm/Sass_Sylvia_mesterkurzus%C3%A1nak_z%C3%A1r%C3%B3koncertje.webm.480p.vp9.webm",
       "streamVideoType" : "video/webm"
 
     },{
-      "videoUrl" : "opiskelija-976",
-      "name" : "Mediaday livekoodaus",
-      "startTime" : "15:00",
-      "startDate" : "2.2.2022",
-      "endTime" : "17:00",
-      "streamUrl" : "https://upload.wikimedia.org/wikipedia/commons/transcoded/e/eb/Sass_Sylvia_mesterkurzus%C3%A1nak_z%C3%A1r%C3%B3koncertje.webm/Sass_Sylvia_mesterkurzus%C3%A1nak_z%C3%A1r%C3%B3koncertje.webm.480p.vp9.webm",
-      "streamVideoType" : "video/webm"
+      "videoUrl" : "kissa-123",
+      "name" : "Mediaday livekoodaus3",
+      "startTime" : "17:00",
+      "startDate" : "04.01.2022",
+      "endTime" : "19:00",
+      "endDate" : "04.01.2022",
+      "streamUrl" : "https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-road-that-crosses-through-nature-41389-large.mp4",
+      "streamVideoType" : "video/mp4"
+
+    }
+  ,{
+      "videoUrl" : "kissa-123",
+      "name" : "Mediaday etkot",
+      "startTime" : "08:00",
+      "startDate" : "04.01.2022",
+      "endTime" : "23:59",
+      "endDate" : "04.01.2022",
+      "streamUrl" : "https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-road-that-crosses-through-nature-41389-large.mp4",
+      "streamVideoType" : "video/mp4"
+
+    }
+  ,{
+      "videoUrl" : "kissa-123",
+      "name" : "Mediaday etkot",
+      "startTime" : "08:00",
+      "startDate" : "04.01.2022",
+      "endTime" : "23:59",
+      "endDate" : "04.01.2022",
+      "streamUrl" : "https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-road-that-crosses-through-nature-41389-large.mp4",
+      "streamVideoType" : "video/mp4"
 
     }
   ]

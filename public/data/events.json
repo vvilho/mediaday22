@@ -10,27 +10,12 @@
       "startDate" : "01.04.2022",
       "endTime" : "11:00",
       "endDate" : "01.04.2022",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       "streamPromoVideo": "https://upload.wikimedia.org/wikipedia/commons/8/84/Evening_drone_footage_of_Gothenburg_harbour.webm",
       "streamPromoVideoType": "video/mp4",
       "streamUrl" : "http://195.148.104.124:1935/jakelu/ryhmarama/playlist.m3u8",
       "streamVideoType" : "application/x-mpegurl",
       "streamArchiveVideo": "https://upload.wikimedia.org/wikipedia/commons/8/84/Evening_drone_footage_of_Gothenburg_harbour.webm",
       "streamArchiveVideoType": "video/mp4",
-=======
-      "streamUrl" : "https://cdn.videvo.net/videvo_files/video/premium/getty_105/large_watermarked/istock-1083459308_preview.mp4",
-      "streamVideoType" : "video/mp4",
->>>>>>> parent of 29429e2 (striimi statusta tarkkaillaan)
-=======
-      "streamUrl" : "https://cdn.videvo.net/videvo_files/video/premium/getty_105/large_watermarked/istock-1083459308_preview.mp4",
-      "streamVideoType" : "video/mp4",
->>>>>>> parent of 29429e2 (striimi statusta tarkkaillaan)
-=======
-      "streamUrl" : "https://cdn.videvo.net/videvo_files/video/premium/getty_105/large_watermarked/istock-1083459308_preview.mp4",
-      "streamVideoType" : "video/mp4",
->>>>>>> parent of 29429e2 (striimi statusta tarkkaillaan)
       "eventColor" : "#00ff44"
 
     },
@@ -43,27 +28,12 @@
       "startDate" : "01.04.2022",
       "endTime" : "12:00",
       "endDate" : "01.04.2022",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       "streamPromoVideo": "https://upload.wikimedia.org/wikipedia/commons/8/84/Evening_drone_footage_of_Gothenburg_harbour.webm",
       "streamPromoVideoType": "video/mp4",
       "streamUrl" : "http://195.148.104.124:1935/jakelu/ryhmarama/playlist.m3u8",
       "streamVideoType" : "application/x-mpegurl",
       "streamArchiveVideo": "https://upload.wikimedia.org/wikipedia/commons/8/84/Evening_drone_footage_of_Gothenburg_harbour.webm",
       "streamArchiveVideoType": "video/mp4",
-=======
-      "streamUrl" : "https://upload.wikimedia.org/wikipedia/commons/transcoded/e/eb/Sass_Sylvia_mesterkurzus%C3%A1nak_z%C3%A1r%C3%B3koncertje.webm/Sass_Sylvia_mesterkurzus%C3%A1nak_z%C3%A1r%C3%B3koncertje.webm.480p.vp9.webm",
-      "streamVideoType" : "video/webm",
->>>>>>> parent of 29429e2 (striimi statusta tarkkaillaan)
-=======
-      "streamUrl" : "https://upload.wikimedia.org/wikipedia/commons/transcoded/e/eb/Sass_Sylvia_mesterkurzus%C3%A1nak_z%C3%A1r%C3%B3koncertje.webm/Sass_Sylvia_mesterkurzus%C3%A1nak_z%C3%A1r%C3%B3koncertje.webm.480p.vp9.webm",
-      "streamVideoType" : "video/webm",
->>>>>>> parent of 29429e2 (striimi statusta tarkkaillaan)
-=======
-      "streamUrl" : "https://upload.wikimedia.org/wikipedia/commons/transcoded/e/eb/Sass_Sylvia_mesterkurzus%C3%A1nak_z%C3%A1r%C3%B3koncertje.webm/Sass_Sylvia_mesterkurzus%C3%A1nak_z%C3%A1r%C3%B3koncertje.webm.480p.vp9.webm",
-      "streamVideoType" : "video/webm",
->>>>>>> parent of 29429e2 (striimi statusta tarkkaillaan)
       "eventColor" : "#00ff44"
 
 
@@ -76,27 +46,12 @@
       "startDate" : "01.04.2022",
       "endTime" : "14:00",
       "endDate" : "01.04.2022",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       "streamPromoVideo": "https://upload.wikimedia.org/wikipedia/commons/8/84/Evening_drone_footage_of_Gothenburg_harbour.webm",
       "streamPromoVideoType": "video/mp4",
       "streamUrl" : "http://195.148.104.124:1935/jakelu/ryhmarama/playlist.m3u8",
       "streamVideoType" : "application/x-mpegurl",
       "streamArchiveVideo": "https://upload.wikimedia.org/wikipedia/commons/8/84/Evening_drone_footage_of_Gothenburg_harbour.webm",
       "streamArchiveVideoType": "video/mp4",
-=======
-      "streamUrl" : "https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-road-that-crosses-through-nature-41389-large.mp4",
-      "streamVideoType" : "video/mp4",
->>>>>>> parent of 29429e2 (striimi statusta tarkkaillaan)
-=======
-      "streamUrl" : "https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-road-that-crosses-through-nature-41389-large.mp4",
-      "streamVideoType" : "video/mp4",
->>>>>>> parent of 29429e2 (striimi statusta tarkkaillaan)
-=======
-      "streamUrl" : "https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-road-that-crosses-through-nature-41389-large.mp4",
-      "streamVideoType" : "video/mp4",
->>>>>>> parent of 29429e2 (striimi statusta tarkkaillaan)
       "eventColor" : "#00ff44"
 
 
@@ -106,34 +61,16 @@
       "desc" : "Kamerauutuudet indie-tuotannossa",
       "company" : "Sony" ,
       "name" : "Ulrich Mors",
-      "startTime" : "14:00",
+      "startTime" : "13:00",
       "startDate" : "01.04.2022",
       "endTime" : "15:00",
       "endDate" : "01.04.2022",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       "streamPromoVideo": "https://upload.wikimedia.org/wikipedia/commons/8/84/Evening_drone_footage_of_Gothenburg_harbour.webm",
       "streamPromoVideoType": "video/mp4",
       "streamUrl" : "http://195.148.104.124:1935/jakelu/ryhmarama/playlist.m3u8",
       "streamVideoType" : "application/x-mpegurl",
       "streamArchiveVideo": "https://upload.wikimedia.org/wikipedia/commons/8/84/Evening_drone_footage_of_Gothenburg_harbour.webm",
       "streamArchiveVideoType": "video/mp4"
-=======
-      "streamUrl" : "https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-road-that-crosses-through-nature-41389-large.mp4",
-      "streamVideoType" : "video/mp4"
-
->>>>>>> parent of 29429e2 (striimi statusta tarkkaillaan)
-=======
-      "streamUrl" : "https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-road-that-crosses-through-nature-41389-large.mp4",
-      "streamVideoType" : "video/mp4"
-
->>>>>>> parent of 29429e2 (striimi statusta tarkkaillaan)
-=======
-      "streamUrl" : "https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-road-that-crosses-through-nature-41389-large.mp4",
-      "streamVideoType" : "video/mp4"
-
->>>>>>> parent of 29429e2 (striimi statusta tarkkaillaan)
     }
   ,{
       "videoUrl" : "mika-vakkilainen",
@@ -144,27 +81,12 @@
       "startDate" : "01.04.2022",
       "endTime" : "16:00",
       "endDate" : "01.04.2022",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       "streamPromoVideo": "https://upload.wikimedia.org/wikipedia/commons/8/84/Evening_drone_footage_of_Gothenburg_harbour.webm",
       "streamPromoVideoType": "video/mp4",
       "streamUrl" : "http://195.148.104.124:1935/jakelu/ryhmarama/playlist.m3u8",
       "streamVideoType" : "application/x-mpegurl",
       "streamArchiveVideo": "https://upload.wikimedia.org/wikipedia/commons/8/84/Evening_drone_footage_of_Gothenburg_harbour.webm",
       "streamArchiveVideoType": "video/mp4",
-=======
-      "streamUrl" : "https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-road-that-crosses-through-nature-41389-large.mp4",
-      "streamVideoType" : "video/mp4",
->>>>>>> parent of 29429e2 (striimi statusta tarkkaillaan)
-=======
-      "streamUrl" : "https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-road-that-crosses-through-nature-41389-large.mp4",
-      "streamVideoType" : "video/mp4",
->>>>>>> parent of 29429e2 (striimi statusta tarkkaillaan)
-=======
-      "streamUrl" : "https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-road-that-crosses-through-nature-41389-large.mp4",
-      "streamVideoType" : "video/mp4",
->>>>>>> parent of 29429e2 (striimi statusta tarkkaillaan)
       "eventColor" : "#00ff44"
 
 
@@ -178,27 +100,12 @@
       "startDate" : "01.04.2022",
       "endTime" : "18:30",
       "endDate" : "01.04.2022",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       "streamPromoVideo": "https://upload.wikimedia.org/wikipedia/commons/8/84/Evening_drone_footage_of_Gothenburg_harbour.webm",
       "streamPromoVideoType": "video/mp4",
       "streamUrl" : "http://195.148.104.124:1935/jakelu/ryhmarama/playlist.m3u8",
       "streamVideoType" : "application/x-mpegurl",
       "streamArchiveVideo": "https://upload.wikimedia.org/wikipedia/commons/8/84/Evening_drone_footage_of_Gothenburg_harbour.webm",
       "streamArchiveVideoType": "video/mp4",
-=======
-      "streamUrl" : "https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-road-that-crosses-through-nature-41389-large.mp4",
-      "streamVideoType" : "video/mp4",
->>>>>>> parent of 29429e2 (striimi statusta tarkkaillaan)
-=======
-      "streamUrl" : "https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-road-that-crosses-through-nature-41389-large.mp4",
-      "streamVideoType" : "video/mp4",
->>>>>>> parent of 29429e2 (striimi statusta tarkkaillaan)
-=======
-      "streamUrl" : "https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-road-that-crosses-through-nature-41389-large.mp4",
-      "streamVideoType" : "video/mp4",
->>>>>>> parent of 29429e2 (striimi statusta tarkkaillaan)
       "eventColor" : "#00ff44"
 
 

@@ -1,12 +1,22 @@
 import React from 'react';
-import Countdown from 'react-countdown';
+import FlipCountdown from '@rumess/react-flip-countdown'
 
 const Counter = ({startDate, startTime}) => {
   const [day, month, year] = startDate.split('.').map(Number);
   const [hour, minutes] = startTime.split(':').map(Number);
 
-  console.log('aika', day, month, year, (hour < 10 ? '0' + hour : hour)+':'+ (minutes < 10 ? '0' + minutes : minutes));
- return  <Countdown date={startTime} />
+  return (
+      <FlipCountdown
+          hideYear
+          monthTitle='Kuukautta'
+          dayTitle='Päivää'
+          hourTitle='Tuntia'
+          minuteTitle='Minuuttia'
+          secondTitle='Sekuntia'
+          endAtZero
+          endAt={`${year}-${month}-${day} ${hour}:${minutes}:00`} // Date/Time
+      />
+  );
 }
 
 export default Counter;

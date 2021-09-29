@@ -11,6 +11,7 @@ import '@videojs/themes/dist/fantasy/index.css';
 import '@videojs/themes/dist/forest/index.css';
 
 import '@videojs/themes/dist/sea/index.css';
+import {Grid} from '@mui/material';
 
 const Video = ({ url, type }) => {
     // return <div>Video tulee tähän, videon url: {url}</div>;
@@ -75,15 +76,14 @@ const Video = ({ url, type }) => {
     }, []);
 
     return (
-        <div  style={{
-            display: "flex",
+        <Grid container style={{
             justifyContent: "center",
-            width: "100%"
+            padding: '16px',
         }}>
-            <div data-vjs-player>
-                <video ref={videoRef} className="video-js vjs-big-play-centered" />
-            </div>
-        </div>
+            <Grid item xs={12} data-vjs-player>
+                <video ref={videoRef} className="video-js vjs-big-play-centered vjs-theme-forest" />
+            </Grid>
+        </Grid>
     );
 };
 

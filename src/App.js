@@ -12,6 +12,7 @@ import {AppBar, IconButton, Toolbar, Typography, Link, Divider, Box} from "@mui/
 import { createTheme} from '@material-ui/core/styles';
 import {ThemeProvider} from '@mui/material';
 import {Footer} from './components/Footer/Footer';
+import Navbar from "./components/menubar/menubar";
 
 
 const theme = createTheme({
@@ -27,62 +28,15 @@ function App() {
   return (
       <div className="App">
         <ThemeProvider theme={theme}>
-          <AppBar position="fixed" color={"secondary"}>
-            <Toolbar variant="dense" sx={{ flexGrow: 1 }}>
+          <Navbar/>
 
-              <Typography variant="h6" color="inherit"  display={"block"} component="div" >
-                <Link
-                    component={RouterLink}
-                    to="/"
-                    style={{
-                      color: "inherit",
-                      textDecoration: "inherit"
-                    }}
-                >
-                MEDIADAY 2022</Link>
-              </Typography>
-              <Box component="div" sx={{ flexGrow: 1 }} style={{
-                display: "flex",
-                justifyContent: "space-between",
-                paddingRight: "100px",
-                paddingLeft: "100px"
-              }}>
-                <Link
-                    component={RouterLink}
-                    to="/"
-                    className={"Link"}
-                >Eka sivu</Link>
-                <Link
-                    component={RouterLink}
-                    to="/calendar"
-                    className={"Link"}
-                >Calendar</Link>
-                <Link
-                    component={RouterLink}
-                    to="/promovideo"
-                    className={"Link"}
-                >Promovideo</Link>
-                <Link
-                    component={RouterLink}
-                    to="/event/oskari-piiroinen"
-                    className={"Link"}
-                >Linkki</Link>
-              </Box>
-
-
-            </Toolbar>
-          </AppBar>
-
-
-          {/* A <Switch> looks through its children <Route>s and
-                renders the first one that matches the current URL. */}
           <Switch>
             <Route exact path="/">
               <LandingPage/>
             </Route>
 
             <Route path="/calendar">
-              <About /> 
+              <About />
             </Route>
 
             <Route path="/promovideo">

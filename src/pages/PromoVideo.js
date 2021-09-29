@@ -5,8 +5,9 @@ const PromoVideo = () => {
 
     return (
         <div>
-            <iframe width="1280" height="720" src="https://www.youtube.com/embed/live_stream?channel=UCCA99nD6JeW-QKunxpNlFWw&amp;autoplay=1&amp;controls=0"
-                    frameBorder="0" allowFullScreen allow={"autoplay"}></iframe>
+            <iframe id="ls_embed_1632898919"
+                    src="https://livestream.com/accounts/11707815/events/4299364/player?width=640&height=360&enableInfoAndActivity=true&defaultDrawer=&autoPlay=true&mute=false"
+                    width="640" height="360" frameBorder="0" scrolling="no" allowFullScreen autoPlay={true}></iframe>
         </div>
     )
 };

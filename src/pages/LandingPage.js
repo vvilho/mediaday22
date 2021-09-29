@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../logo.svg';
+import logo from '../logo.png';
 import {ThemeProvider, Typography} from '@mui/material';
 import {SpeakerGrid} from '../components/SpeakerGrid/SpeakerGrid';
 import {createTheme, responsiveFontSizes} from '@material-ui/core/styles';

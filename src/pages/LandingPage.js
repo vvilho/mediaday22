@@ -27,11 +27,7 @@ const LandingPage = () => {
             puhujaa monelta mediakentän osa-alueelta.
 
           </Typography>
-          <SpeakerGrid speakers={[
-            {id: 1, speakerName: 'Masa', speakerTitle: 'Obe'},
-            {id: 2},
-            {id: 3},
-            {id: 4}]}/>
+          <SpeakerGrid/>
         </ThemeProvider>
       </div>
   );

@@ -14,7 +14,7 @@ import colors from '../../siteWideColors'
 
 const useStyles = makeStyles((theme) => ({
     navLinks: {
-        marginLeft: theme.spacing(2),
+        marginRight: theme.spacing(12),
         display: "flex",
     },
     logo: {
@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
         textDecoration: "none",
         color: "white",
         fontSize: "20px",
-        marginLeft: theme.spacing(20),
+        marginLeft: theme.spacing(15),
         "&:hover": {
             color: "yellow",
             borderBottom: "1px solid white",

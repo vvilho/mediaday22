@@ -4,9 +4,8 @@ import {Speaker} from '../Speaker/Speaker';
 
 //TODO JSON tarvitsee alla pyydetyt puhujien tiedot
 const SpeakerGrid = () => {
-  const [speakers, setSpeakers] = useState([]);
+  const [speakers, setSpeakers] = useState(null);
 
-  useEffect(() => {
     const getSpeakers = async () => {
       try {
       const result = await fetch('data/events.json', {
@@ -15,15 +14,18 @@ const SpeakerGrid = () => {
           'Accept': 'application/json',
         },
       });
-      console.log('getSpeakers result',await result.json());
       const json = await result.json();
-      return await json.events;
+      console.log('getSpeaker json', json);
+      console.log('getSpeaker json.events', json.events);
+      setSpeakers(json.events);
       } catch(err) {
         console.log('getSpeakers error', err);
       }
     };
-    setSpeakers(getSpeakers);
-  }, [speakers]);
+  useEffect(() => {
+    getSpeakers();
+  }, []);
+  console.log('speakers state', speakers);
 
   return (
       <>
@@ -33,10 +35,10 @@ const SpeakerGrid = () => {
               <Speaker key={speakers.findIndex(x => x.name === speaker.name)}
                        speakerName={speaker?.name ?
                            speaker.name :
-                           'Keanu'}
+                           'Nimetön'}
                        speakerTitle={speaker?.company ?
                            speaker.company :
-                           'Best boy'}
+                           'Itsenäinen tekijä'}
                        speakerImage={speaker?.speakerImage ?
                            speaker.speakerImage :
                            'https:placekeanu.com/400/300'}/>,

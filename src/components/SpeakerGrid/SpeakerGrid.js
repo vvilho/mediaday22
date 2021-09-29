@@ -2,12 +2,11 @@ import React, {useEffect, useState} from 'react';
 import {Grid, Typography} from '@mui/material';
 import {Speaker} from '../Speaker/Speaker';
 
-//TODO JSON tarvitsee alla pyydetyt puhujien tiedot
 const SpeakerGrid = () => {
   const [speakers, setSpeakers] = useState(null);
 
-    const getSpeakers = async () => {
-      try {
+  const getSpeakers = async () => {
+    try {
       const result = await fetch('data/events.json', {
         headers: {
           'Content-Type': 'application/json',
@@ -15,17 +14,15 @@ const SpeakerGrid = () => {
         },
       });
       const json = await result.json();
-      console.log('getSpeaker json', json);
-      console.log('getSpeaker json.events', json.events);
       setSpeakers(json.events);
-      } catch(err) {
-        console.log('getSpeakers error', err);
-      }
-    };
+    } catch (err) {
+      console.log('getSpeakers error', err);
+    }
+  };
+    
   useEffect(() => {
     getSpeakers();
   }, []);
-  console.log('speakers state', speakers);
 
   return (
       <>

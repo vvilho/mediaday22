@@ -12,7 +12,8 @@
       "endDate" : "01.04.2022",
       "streamUrl" : "https://cdn.videvo.net/videvo_files/video/premium/getty_105/large_watermarked/istock-1083459308_preview.mp4",
       "streamVideoType" : "video/mp4",
-      "eventColor" : "#4B778D"
+      "eventColor" : "#4B778D",
+      "speakerImage": "../faces/mikko_kodisoja_scaled.webp"
 
     },
     {
@@ -26,7 +27,8 @@
       "endDate" : "01.04.2022",
       "streamUrl" : "https://upload.wikimedia.org/wikipedia/commons/transcoded/e/eb/Sass_Sylvia_mesterkurzus%C3%A1nak_z%C3%A1r%C3%B3koncertje.webm/Sass_Sylvia_mesterkurzus%C3%A1nak_z%C3%A1r%C3%B3koncertje.webm.480p.vp9.webm",
       "streamVideoType" : "video/webm",
-      "eventColor" : "#28B5B5"
+      "eventColor" : "#28B5B5",
+      "speakerImage": "../faces/sami_marttinen_scaled.webp"
 
 
     },{
@@ -40,7 +42,8 @@
       "endDate" : "01.04.2022",
       "streamUrl" : "https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-road-that-crosses-through-nature-41389-large.mp4",
       "streamVideoType" : "video/mp4",
-      "eventColor" : "#D2E69C"
+      "eventColor" : "#D2E69C",
+      "speakerImage": "../faces/frans_tihverainen.webp"
 
 
     }
@@ -55,7 +58,8 @@
       "endDate" : "01.04.2022",
       "streamUrl" : "https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-road-that-crosses-through-nature-41389-large.mp4",
       "streamVideoType" : "video/mp4",
-      "eventColor" : "#CEE5D0"
+      "eventColor" : "#CEE5D0",
+      "speakerImage": "../faces/Ulrich_Mors_scaled.webp"
 
 
     }

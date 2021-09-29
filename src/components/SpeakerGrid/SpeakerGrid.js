@@ -19,10 +19,11 @@ const SpeakerGrid = () => {
       console.log('getSpeakers error', err);
     }
   };
-    
+
   useEffect(() => {
     getSpeakers();
   }, []);
+  
 
   return (
       <>

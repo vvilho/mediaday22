@@ -1,6 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import {useParams} from 'react-router-dom';
 import {Video} from '../components/Video/Video';
+import {Grid} from '@mui/material';
+import Counter from '../components/Counter/Counter';
+import StreamStatus from '../components/StreamStatus/StreamStatus';
 
 const EventPage = () => {
 
@@ -36,15 +39,65 @@ const EventPage = () => {
     }
 
     return (
-        <div>
-            Tapahtuman nimi: {eventResult.name}<br/>
-            Tapahtuman aika: {eventResult.startTime}<br/>
-            <Video
-                url={eventResult.streamUrl}
-                type={eventResult.streamVideoType}
-            />
-
-      </div>
+        <Grid container>
+          <StreamStatus
+              startDate={eventResult.startDate}
+              startTime={eventResult.startTime}
+              endDate={eventResult.endDate}
+              endTime={eventResult.endTime}
+          >
+            {(streamStatus) => (
+                <>
+                  {(!streamStatus.streamHasStarted && !streamStatus.streamHasEnded) && (
+                      <>
+                        <Grid item xs={12}>
+                          <h2>Striimin alkuun</h2>
+                          <Counter startTime={eventResult.startTime} startDate={eventResult.startDate}/>
+                        </Grid>
+                        <Grid item xs={12}>
+                          <Video
+                              url={eventResult.streamPromoVideo}
+                              type={eventResult.streamPromoVideoType}
+                          />
+                        </Grid>
+                      </>
+                  )}
+                  {(streamStatus.streamHasStarted && !streamStatus.streamHasEnded) &&(
+                      <>
+                        <Grid item xs={12}>
+                          <h2>Striimi käynnissä! Tule katsomaan</h2>
+                        </Grid>
+                        <Grid item xs={12}>
+                          <Video
+                              url={eventResult.streamUrl}
+                              type={eventResult.streamVideoType}
+                          />
+                        </Grid>
+                      </>
+                  )
+                  }
+                  {streamStatus.streamHasEnded && (
+                      <>
+                        <Grid item xs={12}>
+                          <h2>Striimi päättynyt. Katso tallenne.</h2>
+                        </Grid>
+                        <Grid item xs={12}>
+                          <Video
+                              url={eventResult.streamArchiveVideo}
+                              type={eventResult.streamArchiveVideoType}
+                          />
+                        </Grid>
+                      </>
+                  )}
+                </>
+            )}
+          </StreamStatus>
+          <Grid item xs={12}>
+            <h1>{eventResult.name}, {eventResult.company}</h1>
+            <h2>{eventResult.desc}</h2>
+            <h2>{eventResult.startDate} klo {eventResult.startTime}-{eventResult.endTime}</h2>
+          </Grid>
+        </Grid>
   );
 };
 

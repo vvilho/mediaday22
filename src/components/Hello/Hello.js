@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import FullCalendar from '@fullcalendar/react' // must go before plugins
 import timeGridPlugin from '@fullcalendar/timegrid' // a plugin!
 import format from 'date-fns/format'
-
+import parse from 'date-fns/parse';
 
 
 
@@ -12,29 +12,24 @@ const Hello = () => {
     const [events, setEvents] = useState([])
 
 
-    // const fetchEvents = async () => {
-    //     const response = await fetch('data/events.json',{
-    //         headers : {
-    //             'Content-Type': 'application/json',
-    //             'Accept': 'application/json'
-    //         }
-    //     });
-    //     setEventData(await response.json());
-    //     console.log("event data",typeof (await eventData.events))
-    // }
-
     const createEvents = (eventData) => {
 
 
         eventData?.map(x => {
-            const dateStart = format(new Date(x.startDate), 'yyyy-MM-dd');
-            const dateEnd = format(new Date(x.endDate), 'yyyy-MM-dd');
+            console.log('x',x)
+            const dateStart = format(parse(x.startDate, 'dd.MM.yyyy', new Date()), 'yyyy-MM-dd');
+            const dateEnd = format(parse(x.endDate, 'dd.MM.yyyy', new Date()), 'yyyy-MM-dd');
+            console.log('datestart',dateStart)
+
 
             const singleEvent = {
                 title: `${x.name} – ${x.desc}`,
                 start: `${dateStart}T${x.startTime}:00+02:00`,
                 end: `${dateEnd}T${x.endTime}:00+02:00`,
-                url: x.videoUrl
+                url: x.videoUrl,
+                backgroundColor: x.eventColor,
+                textColor: 'black',
+                borderColor: 'white'
             }
 
             setEvents(oldEvents => [...oldEvents, singleEvent]);
@@ -93,7 +88,10 @@ const Hello = () => {
                     allDaySlot={false}
                     dayHeaders={true}
                     locale={'fi'}
-                    slotMinTime={'07:00:00'}
+                    slotMinTime='10:00:00'
+                    headerToolbar={false}
+
+
 
                     slotLabelFormat={[{
                         hour: 'numeric',

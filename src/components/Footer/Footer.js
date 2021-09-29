@@ -1,10 +1,12 @@
 import React from 'react';
 import {Container, Typography} from '@mui/material';
-import './footer.css';
 
 const Footer = () => {
   return (
-      <Container className='footer-container'>
+      <Container style={{
+          position:'fixed',
+          bottom:0
+      }}>
         <Typography variant='h5'>Hei, olen footer. Whassup?</Typography>
       </Container>
   )

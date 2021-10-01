@@ -4,7 +4,8 @@ const colors = {
     second: '#495d63',
     third: '#84bcda',
     fourth: '#94fbab',
-    fifth: '#f694c1'
+    fifth: '#f694c1',
+    base: '#ffffff',
 }
 
 

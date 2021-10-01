@@ -36,7 +36,7 @@ const SpeakerGrid = () => {
                              speakerName={speaker?.name ?
                                  speaker.name :
                                  'Nimetön'}
-                             speakerTitle={speaker?.company ?
+                             speakerCompany={speaker?.company ?
                                  speaker.company :
                                  'Itsenäinen tekijä'}
                              speakerImage={speaker?.speakerImage ?

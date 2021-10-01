@@ -1,4 +1,4 @@
-
+//TODO Mietitään värejä vielä <:D
 const colors = {
     main: '#fcd0a1',
     second: '#495d63',

@@ -21,7 +21,7 @@ const Speaker = ({speakerName, speakerCompany, speakerImage, speakerIntro, speak
                         height='300'
                         image={speakerImage}
                         alt={'image of '+speakerUrl}/>
-                    <CardContent className='speaker-content' sx={{height: 'inherit'}}>
+                    <CardContent className='speaker-content' sx={{height: 'inherit', backgroundColor: colors.second}}>
                         <Typography className='speaker-name' variant='h4' color={colors.base}>
                             {speakerName} <Typography variant='subtitle1'
                                                       className='speaker-caption' color={colors.fourth}><strong>{speakerCompany}</strong></Typography>

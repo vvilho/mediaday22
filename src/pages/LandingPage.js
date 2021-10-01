@@ -5,7 +5,6 @@ import {SpeakerGrid} from '../components/SpeakerGrid/SpeakerGrid';
 import {createTheme, responsiveFontSizes} from '@material-ui/core/styles';
 import {Container} from "@material-ui/core";
 
-//TODO hoida puhujien JSON kuntoon
 let theme = createTheme();
 theme = responsiveFontSizes(theme);
 

@@ -14,7 +14,9 @@ const SpeakerGrid = () => {
         },
       });
       const json = await result.json();
-      setSpeakers(json.events);
+      //
+      const keynoteSpeakers = await json.events.filter(speaker => speaker.keynote);
+      setSpeakers(keynoteSpeakers);
     } catch (err) {
       console.log('getSpeakers error', err);
     }
@@ -39,7 +41,8 @@ const SpeakerGrid = () => {
                            'Itsenäinen tekijä'}
                        speakerImage={speaker?.speakerImage ?
                            speaker.speakerImage :
-                           'https:placekeanu.com/400/300'}/>,
+                           'https:placekeanu.com/400/300'}
+                       speakerIntro={speaker?.speakerIntro}/>,
           )}
         </Grid>
       </>

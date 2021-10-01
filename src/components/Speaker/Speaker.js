@@ -9,7 +9,7 @@ import {
 } from '@mui/material';
 import './speaker.css';
 
-const Speaker = ({speakerName, speakerTitle, speakerImage}) => {
+const Speaker = ({speakerName, speakerTitle, speakerImage, speakerIntro}) => {
   return (
       <Grid item xs={12} md={6} xl={4} display='flex' justifyContent='center'>
         <Card className="speaker-card" sx={{maxWidth: 400}}>
@@ -24,6 +24,7 @@ const Speaker = ({speakerName, speakerTitle, speakerImage}) => {
                 {speakerName} <Typography variant="subtitle1"
                                           className="speaker-caption">{speakerTitle}</Typography>
               </Typography>
+              <Typography variant="subtitle2" color="white">{speakerIntro}</Typography>
             </CardContent>
           </CardActionArea>
         </Card>

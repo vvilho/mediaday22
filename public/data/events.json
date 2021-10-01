@@ -16,8 +16,8 @@
       "streamVideoType" : "application/x-mpegurl",
       "streamArchiveVideo": "https://upload.wikimedia.org/wikipedia/commons/8/84/Evening_drone_footage_of_Gothenburg_harbour.webm",
       "streamArchiveVideoType": "video/mp4",
-      "eventColor" : "#00ff44",
-      "speakerImage": "../faces/mikko_kodisoja_scaled.webp"
+      "speakerImage": "../faces/mikko_kodisoja_scaled.webp",
+      "eventColor" : "#4B778D"
 
     },
     {
@@ -35,8 +35,8 @@
       "streamVideoType" : "application/x-mpegurl",
       "streamArchiveVideo": "https://upload.wikimedia.org/wikipedia/commons/8/84/Evening_drone_footage_of_Gothenburg_harbour.webm",
       "streamArchiveVideoType": "video/mp4",
-      "eventColor" : "#00ff44",
-      "speakerImage": "../faces/sami_marttinen_scaled.webp"
+      "speakerImage": "../faces/sami_marttinen_scaled.webp",
+      "eventColor" : "#28B5B5"
 
 
     },{
@@ -54,8 +54,8 @@
       "streamVideoType" : "application/x-mpegurl",
       "streamArchiveVideo": "https://upload.wikimedia.org/wikipedia/commons/8/84/Evening_drone_footage_of_Gothenburg_harbour.webm",
       "streamArchiveVideoType": "video/mp4",
-      "eventColor" : "#00ff44",
-      "speakerImage": "../faces/frans_tihverainen.webp"
+      "speakerImage": "../faces/frans_tihverainen.webp",
+      "eventColor" : "#D2E69C"
 
 
     }
@@ -74,7 +74,8 @@
       "streamVideoType" : "application/x-mpegurl",
       "streamArchiveVideo": "https://upload.wikimedia.org/wikipedia/commons/8/84/Evening_drone_footage_of_Gothenburg_harbour.webm",
       "streamArchiveVideoType": "video/mp4",
-      "speakerImage": "../faces/Ulrich_Mors_scaled.webp"
+      "speakerImage": "../faces/Ulrich_Mors_scaled.webp",
+      "eventColor" : "#CEE5D0"
     }
   ,{
       "videoUrl" : "mika-vakkilainen",
@@ -91,7 +92,7 @@
       "streamVideoType" : "application/x-mpegurl",
       "streamArchiveVideo": "https://upload.wikimedia.org/wikipedia/commons/8/84/Evening_drone_footage_of_Gothenburg_harbour.webm",
       "streamArchiveVideoType": "video/mp4",
-      "eventColor" : "#00ff44"
+      "eventColor" : "#8FD9A8"
 
 
     }
@@ -110,7 +111,7 @@
       "streamVideoType" : "application/x-mpegurl",
       "streamArchiveVideo": "https://upload.wikimedia.org/wikipedia/commons/8/84/Evening_drone_footage_of_Gothenburg_harbour.webm",
       "streamArchiveVideoType": "video/mp4",
-      "eventColor" : "#00ff44"
+      "eventColor" : "#E0C097"
 
 
     }

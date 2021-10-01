@@ -6,7 +6,7 @@ import parse from 'date-fns/parse';
 
 
 
-const Hello = () => {
+const Calendar = () => {
 
     const [eventData, setEventData] = useState()
     const [events, setEvents] = useState([])
@@ -111,4 +111,4 @@ const Hello = () => {
 
     )
 }
-export {Hello}
+export {Calendar}

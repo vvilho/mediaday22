@@ -1,5 +1,5 @@
 import React from 'react';
-import {Hello} from "../components/Hello/Hello";
+import {Calendar} from "../components/Calendar/Calendar";
 import {Grid} from "@mui/material";
 
 
@@ -21,7 +21,7 @@ return (
 
                 >
                 <h1>Speaker calendar</h1>
-                <Hello/>
+                <Calendar/>
             </Grid>
         </Grid>
 

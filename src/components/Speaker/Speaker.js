@@ -14,7 +14,7 @@ import colors from '../../siteWideColors';
 const Speaker = ({speakerName, speakerCompany, speakerImage, speakerIntro, speakerUrl}) => {
     return (
         <Grid item xs={12} md={6} display='flex' justifyContent='center'>
-            <Card className='speaker-card' sx={{maxWidth: 400, height: 'auto'}}>
+            <Card className='speaker-card' sx={{maxWidth: 400, height: 'auto'}} elevation={20}>
                 <CardActionArea sx={{height: '100%'}} component={Link} to={'/event/'+speakerUrl}>
                     <CardMedia
                         component='img'

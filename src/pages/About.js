@@ -1,5 +1,5 @@
 import React from 'react';
-import {Hello} from "../components/Hello/Hello";
+import {Calendar} from "../components/Calendar/Calendar";
 import {Grid} from "@mui/material";
 
 
@@ -14,14 +14,14 @@ return (
         >
             <Grid
                 xs={12}
-                sm={6}
+                sm={9   }
                 style={{
-                    margin: ' 0 1rem 2rem 1rem'}
+                    margin: 0}
                 }
 
                 >
-                <h1>Aikataulu</h1>
-                <Hello/>
+                <h1>Speaker calendar</h1>
+                <Calendar/>
             </Grid>
         </Grid>
 

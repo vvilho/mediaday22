@@ -1,3 +1,29 @@
 .footer-container {
     padding: 1rem;
 }
+.brandImg{
+    width: 100px;
+    aspect-ratio: auto 200 / 100;
+    height: auto;
+    max-width: 100%;
+}
+.brandGridItem{
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+.brandGridContainer{
+    width: 80% !important;
+    justify-content: center;
+}
+.brandContainer{
+    display: flex !important;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+.footerBottomContainer{
+    margin: 16px;
+}
+.footerBottomGridItem{
+    margin: 10px 0;
+}

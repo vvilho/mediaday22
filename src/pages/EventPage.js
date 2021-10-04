@@ -4,6 +4,7 @@ import {Video} from '../components/Video/Video';
 import {Grid} from '@mui/material';
 import Counter from '../components/Counter/Counter';
 import StreamStatus from '../components/StreamStatus/StreamStatus';
+import StreamerInfo from '../components/StreamerInfo/StreamerInfo';
 
 const EventPage = () => {
 
@@ -42,7 +43,7 @@ const EventPage = () => {
     }
 
     return (
-        <Grid container>
+        <Grid container justifyContent='center'>
           <StreamStatus
               startDate={eventResult?.startDate}
               startTime={eventResult?.startTime}
@@ -57,10 +58,16 @@ const EventPage = () => {
                           <h2>Striimin alkuun</h2>
                           <Counter startTime={eventResult?.startTime} startDate={eventResult?.startDate}/>
                         </Grid>
-                        <Grid item xs={12}>
-                          <Video
-                              url={eventResult?.streamPromoVideo}
-                              type={eventResult?.streamPromoVideoType}
+                        <Grid item width='800px'>
+                          <StreamerInfo
+                              name={eventResult.name}
+                              company={eventResult.company}
+                              desc={eventResult.desc}
+                              startDate={eventResult.startDate}
+                              startTime={eventResult.startTime}
+                              endTime={eventResult.endTime}
+                              url={eventResult.streamPromoVideo}
+                              type={eventResult.streamPromoVideoType}
                           />
                         </Grid>
                       </>
@@ -70,10 +77,16 @@ const EventPage = () => {
                         <Grid item xs={12}>
                           <h2>Striimi käynnissä! Tule katsomaan</h2>
                         </Grid>
-                        <Grid item xs={12}>
-                          <Video
-                              url={eventResult?.streamUrl}
-                              type={eventResult?.streamVideoType}
+                        <Grid item width='800px'>
+                          <StreamerInfo
+                              name={eventResult.name}
+                              company={eventResult.company}
+                              desc={eventResult.desc}
+                              startDate={eventResult.startDate}
+                              startTime={eventResult.startTime}
+                              endTime={eventResult.endTime}
+                              url={eventResult.streamUrl}
+                              type={eventResult.streamVideoType}
                           />
                         </Grid>
                       </>
@@ -84,10 +97,16 @@ const EventPage = () => {
                         <Grid item xs={12}>
                           <h2>Striimi päättynyt. Katso tallenne.</h2>
                         </Grid>
-                        <Grid item xs={12}>
-                          <Video
-                              url={eventResult?.streamArchiveVideo}
-                              type={eventResult?.streamArchiveVideoType}
+                        <Grid item width='800px'>
+                          <StreamerInfo
+                              name={eventResult.name}
+                              company={eventResult.company}
+                              desc={eventResult.desc}
+                              startDate={eventResult.startDate}
+                              startTime={eventResult.startTime}
+                              endTime={eventResult.endTime}
+                              url={eventResult.streamArchiveVideo}
+                              type={eventResult.streamArchiveVideoType}
                           />
                         </Grid>
                       </>
@@ -95,11 +114,6 @@ const EventPage = () => {
                 </>
             )}
           </StreamStatus>
-          <Grid item xs={12}>
-            <h1>{eventResult.name}, {eventResult.company}</h1>
-            <h2>{eventResult.desc}</h2>
-            <h2>{eventResult.startDate} klo {eventResult.startTime}-{eventResult.endTime}</h2>
-          </Grid>
         </Grid>
   );
 };

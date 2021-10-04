@@ -4,6 +4,7 @@ import {Video} from '../components/Video/Video';
 import {Grid} from '@mui/material';
 import Counter from '../components/Counter/Counter';
 import StreamStatus from '../components/StreamStatus/StreamStatus';
+import StreamerInfo from '../components/StreamerInfo/StreamerInfo';
 
 const EventPage = () => {
 
@@ -18,11 +19,9 @@ const EventPage = () => {
             }
         )
             .then((response) => {
-                console.log(response)
                  return response.json();
             })
             .then((myJson) => {
-                console.log(myJson);
                 setEventData(myJson);
             });
     }, [])
@@ -37,7 +36,12 @@ const EventPage = () => {
 
     const eventResult = eventData?.events.find(({ videoUrl }) =>
         videoUrl === id
+
     )
+
+    useEffect(()=>{
+        console.log('result',eventResult)
+    },[eventResult])
 
 
     if(!eventResult){
@@ -45,36 +49,48 @@ const EventPage = () => {
     }
 
     return (
-        <Grid container>
+        <Grid container justifyContent='center'>
           <StreamStatus
-              startDate={eventResult.startDate}
-              startTime={eventResult.startTime}
-              endDate={eventResult.endDate}
-              endTime={eventResult.endTime}
+              startDate={eventResult?.startDate}
+              startTime={eventResult?.startTime}
+              endDate={eventResult?.endDate}
+              endTime={eventResult?.endTime}
           >
             {(streamStatus) => (
                 <>
-                  {(!streamStatus.streamHasStarted && !streamStatus.streamHasEnded) && (
+                  {(!streamStatus?.streamHasStarted && !streamStatus?.streamHasEnded) && (
                       <>
                         <Grid item xs={12}>
                           <h2>Striimin alkuun</h2>
-                          <Counter startTime={eventResult.startTime} startDate={eventResult.startDate}/>
+                          <Counter startTime={eventResult?.startTime} startDate={eventResult?.startDate}/>
                         </Grid>
-                        <Grid item xs={12}>
-                          <Video
+                        <Grid item width='800px'>
+                          <StreamerInfo
+                              name={eventResult.name}
+                              company={eventResult.company}
+                              desc={eventResult.desc}
+                              startDate={eventResult.startDate}
+                              startTime={eventResult.startTime}
+                              endTime={eventResult.endTime}
                               url={eventResult.streamPromoVideo}
                               type={eventResult.streamPromoVideoType}
                           />
                         </Grid>
                       </>
                   )}
-                  {(streamStatus.streamHasStarted && !streamStatus.streamHasEnded) &&(
+                  {(streamStatus?.streamHasStarted && !streamStatus?.streamHasEnded) &&(
                       <>
                         <Grid item xs={12}>
                           <h2>Striimi käynnissä! Tule katsomaan</h2>
                         </Grid>
-                        <Grid item xs={12}>
-                          <Video
+                        <Grid item width='800px'>
+                          <StreamerInfo
+                              name={eventResult.name}
+                              company={eventResult.company}
+                              desc={eventResult.desc}
+                              startDate={eventResult.startDate}
+                              startTime={eventResult.startTime}
+                              endTime={eventResult.endTime}
                               url={eventResult.streamUrl}
                               type={eventResult.streamVideoType}
                           />
@@ -87,8 +103,14 @@ const EventPage = () => {
                         <Grid item xs={12}>
                           <h2>Striimi päättynyt. Katso tallenne.</h2>
                         </Grid>
-                        <Grid item xs={12}>
-                          <Video
+                        <Grid item width='800px'>
+                          <StreamerInfo
+                              name={eventResult.name}
+                              company={eventResult.company}
+                              desc={eventResult.desc}
+                              startDate={eventResult.startDate}
+                              startTime={eventResult.startTime}
+                              endTime={eventResult.endTime}
                               url={eventResult.streamArchiveVideo}
                               type={eventResult.streamArchiveVideoType}
                           />
@@ -98,11 +120,6 @@ const EventPage = () => {
                 </>
             )}
           </StreamStatus>
-          <Grid item xs={12}>
-            <h1>{eventResult.name}, {eventResult.company}</h1>
-            <h2>{eventResult.desc}</h2>
-            <h2>{eventResult.startDate} klo {eventResult.startTime}-{eventResult.endTime}</h2>
-          </Grid>
         </Grid>
   );
 };

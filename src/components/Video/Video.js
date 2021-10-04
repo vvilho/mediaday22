@@ -24,8 +24,8 @@ const Video = ({ url, type }) => {
         autoplay: true,
         controls: true,
         responsive: true,
-        fluid: false,
-        height: 450,
+        loop: true,
+        fluid: true,
         sources: [
             {
                 src: url,

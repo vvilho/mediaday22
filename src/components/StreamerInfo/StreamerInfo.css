@@ -1,0 +1,32 @@
+.streamerInfoCard{
+    width: 100%;
+    max-width: 800px;
+}
+.streamerInfoCardDesc{
+    margin: 10px 0;
+    padding: 0px 16px;
+    font-size: 25px;
+    font-weight: 700;
+}
+.streamerInfoCardActions{
+    padding: 10px 32px !important;
+}
+.streamerInfoCardHeader{
+    padding: 16px 32px 0 32px !important;
+}
+.streamerInfoCardTitle{
+    font-size: 25px;
+    font-weight: 700;
+    margin: 0;
+}
+.streamerInfoCardSubHeader{
+    font-size: 15px;
+}
+.streamerInfoContainer{
+    padding: 16px 0;
+}
+@media only screen and (max-width: 830px) {
+    .streamerInfoContainer{
+        padding: 16px;
+    }
+}

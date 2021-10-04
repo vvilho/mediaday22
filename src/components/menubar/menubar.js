@@ -11,11 +11,13 @@ import {
 import { Link } from "react-router-dom";
 import DrawerComponent from './drawer';
 import colors from '../../siteWideColors'
+import Searchbar from "../Searchbar/Searchbar";
 
 const useStyles = makeStyles((theme) => ({
     navLinks: {
         marginRight: theme.spacing(12),
         display: "flex",
+        alignItems: "center"
     },
     logo: {
         flexGrow: "1",
@@ -35,7 +37,14 @@ const useStyles = makeStyles((theme) => ({
     },
     appBar: {
         zIndex: 999,
-        backgroundColor: colors.third
+        backgroundColor: colors.third,
+    },
+
+    searchBar : {
+        textDecoration: "none",
+        color: "white",
+        fontSize: "20px",
+        marginLeft: theme.spacing(15),
     }
 }));
 
@@ -71,6 +80,12 @@ function Navbar() {
                         <Link to="/event/oskari-piiroinen" className={classes.link}>
                             Mr. Beer
                         </Link>
+                        <div
+                            className={classes.searchBar}
+                        >
+                            <Searchbar/>
+                        </div>
+
                     </div>
                 )}
             </Toolbar>

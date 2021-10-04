@@ -11,6 +11,7 @@ import { createTheme} from '@material-ui/core/styles';
 import {ThemeProvider} from '@mui/material';
 import {Footer} from './components/Footer/Footer';
 import Navbar from "./components/menubar/menubar";
+import '@fontsource/roboto';
 
 
 const theme = createTheme({
@@ -19,6 +20,9 @@ const theme = createTheme({
       main: '#806270',
       secondary: "#78bd99"
     }
+  },
+  typography: {
+    fontFamily: 'Roboto'
   }
 });
 

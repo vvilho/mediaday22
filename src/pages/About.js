@@ -14,13 +14,13 @@ return (
         >
             <Grid
                 xs={12}
-                sm={9   }
+                sm={6}
                 style={{
-                    margin: 0}
+                    margin: ' 0 1rem 2rem 1rem'}
                 }
 
                 >
-                <h1>Speaker calendar</h1>
+                <h1>Aikataulu</h1>
                 <Hello/>
             </Grid>
         </Grid>

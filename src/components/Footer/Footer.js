@@ -180,7 +180,7 @@ const Footer = () => {
                       kysyttävää?
                       Yhteydenotot ja tiedustelut puhelimitse tuottaja Päivi
                       Pitkäseen
-                      040 123 4567 tai sähköpostilla mediaday2021@metropolia.fi.
+                      040 123 4567, mediaday2021@metropolia.fi tai yhteyslomakkeella.
                     </Typography>
                   </Stack>
                 </Grid>

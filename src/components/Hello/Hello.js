@@ -3,6 +3,7 @@ import FullCalendar from '@fullcalendar/react' // must go before plugins
 import timeGridPlugin from '@fullcalendar/timegrid' // a plugin!
 import format from 'date-fns/format'
 import parse from 'date-fns/parse';
+import './calender.css'
 
 
 
@@ -76,7 +77,6 @@ const Hello = () => {
 
 
             <div>
-                <h3>Hello all</h3>
                 <FullCalendar
                     plugins={[ timeGridPlugin ]}
                     initialDate={"2022-04-01"}
@@ -86,13 +86,14 @@ const Hello = () => {
                     nowIndicator={true}
                     events={events}
                     allDaySlot={false}
-                    dayHeaders={true}
+                    dayHeaders={false}
                     locale={'fi'}
                     slotMinTime='10:00:00'
-                    headerToolbar={false}
-
-
-
+                    slotMaxTime={'21:00:00'}
+                    headerToolbar={{start: '', center: 'title', end: ''}}
+                    height={'525px'}
+                    titleFormat={{weekday: 'long', year:'numeric', month: 'long', day: 'numeric', omitCommas: true}}
+                    buttonIcons={false}
                     slotLabelFormat={[{
                         hour: 'numeric',
                         minute: '2-digit',

@@ -18,11 +18,9 @@ const EventPage = () => {
             }
         )
             .then((response) => {
-                console.log(response)
                  return response.json();
             })
             .then((myJson) => {
-                console.log(myJson);
                 setEventData(myJson);
             });
     }, [])
@@ -31,7 +29,12 @@ const EventPage = () => {
 
     const eventResult = eventData?.events.find(({ videoUrl }) =>
         videoUrl === id
+
     )
+
+    useEffect(()=>{
+        console.log('result',eventResult)
+    },[eventResult])
 
 
     if(!eventResult){
@@ -41,36 +44,36 @@ const EventPage = () => {
     return (
         <Grid container>
           <StreamStatus
-              startDate={eventResult.startDate}
-              startTime={eventResult.startTime}
-              endDate={eventResult.endDate}
-              endTime={eventResult.endTime}
+              startDate={eventResult?.startDate}
+              startTime={eventResult?.startTime}
+              endDate={eventResult?.endDate}
+              endTime={eventResult?.endTime}
           >
             {(streamStatus) => (
                 <>
-                  {(!streamStatus.streamHasStarted && !streamStatus.streamHasEnded) && (
+                  {(!streamStatus?.streamHasStarted && !streamStatus?.streamHasEnded) && (
                       <>
                         <Grid item xs={12}>
                           <h2>Striimin alkuun</h2>
-                          <Counter startTime={eventResult.startTime} startDate={eventResult.startDate}/>
+                          <Counter startTime={eventResult?.startTime} startDate={eventResult?.startDate}/>
                         </Grid>
                         <Grid item xs={12}>
                           <Video
-                              url={eventResult.streamPromoVideo}
-                              type={eventResult.streamPromoVideoType}
+                              url={eventResult?.streamPromoVideo}
+                              type={eventResult?.streamPromoVideoType}
                           />
                         </Grid>
                       </>
                   )}
-                  {(streamStatus.streamHasStarted && !streamStatus.streamHasEnded) &&(
+                  {(streamStatus?.streamHasStarted && !streamStatus?.streamHasEnded) &&(
                       <>
                         <Grid item xs={12}>
                           <h2>Striimi käynnissä! Tule katsomaan</h2>
                         </Grid>
                         <Grid item xs={12}>
                           <Video
-                              url={eventResult.streamUrl}
-                              type={eventResult.streamVideoType}
+                              url={eventResult?.streamUrl}
+                              type={eventResult?.streamVideoType}
                           />
                         </Grid>
                       </>
@@ -83,8 +86,8 @@ const EventPage = () => {
                         </Grid>
                         <Grid item xs={12}>
                           <Video
-                              url={eventResult.streamArchiveVideo}
-                              type={eventResult.streamArchiveVideoType}
+                              url={eventResult?.streamArchiveVideo}
+                              type={eventResult?.streamArchiveVideoType}
                           />
                         </Grid>
                       </>

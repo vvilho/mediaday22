@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import logo from '../logo.png';
 import {ThemeProvider, Typography} from '@mui/material';
 import {SpeakerGrid} from '../components/SpeakerGrid/SpeakerGrid';
@@ -9,6 +9,9 @@ let theme = createTheme();
 theme = responsiveFontSizes(theme);
 
 const LandingPage = () => {
+  useEffect(() => {
+    document.title = "MediaDay Home";
+  }, [])
 
   return (
       <Container className='App-header' maxWidth={false}>

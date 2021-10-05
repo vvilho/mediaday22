@@ -1,9 +1,11 @@
 import './App.css';
+import {useEffect} from "react";
 import {
   Switch,
-  Route
+  Route,
+    useLocation
 } from "react-router-dom";
-import {About} from "./pages/About";
+import {EventiTimeTable} from "./pages/EventiTimeTable";
 import {PromoVideo} from "./pages/PromoVideo";
 import { EventPage} from "./pages/EventPage";
 import {LandingPage} from "./pages/LandingPage";
@@ -26,22 +28,30 @@ const theme = createTheme({
   }
 });
 
-function App() {
+function App({history}) {
+   const location = useLocation()
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+  }, [location]);
+
+
+
   return (
       <div className="App">
         <ThemeProvider theme={theme}>
-          <Navbar/>
+          <Navbar history={history}/>
 
           <Switch>
             <Route exact path="/">
               <LandingPage/>
             </Route>
 
-            <Route path="/calendar">
-              <About />
+            <Route path="/aikataulu">
+              <EventiTimeTable />
             </Route>
 
-            <Route path="/promovideo">
+            <Route path="/yhteystietolomake">
               <PromoVideo/>
             </Route>
 

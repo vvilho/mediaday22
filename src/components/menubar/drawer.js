@@ -33,24 +33,15 @@ function DrawerComponent() {
                 <List>
                     <ListItem onClick={() => setOpenDrawer(false)}>
                         <ListItemText>
-                            <Link to="/">Mediaday22</Link>
+                            <Link to="/aikataulu">Aikataulu</Link>
                         </ListItemText>
                     </ListItem>
                     <ListItem onClick={() => setOpenDrawer(false)}>
                         <ListItemText>
-                            <Link to="/calendar">Calendar</Link>
+                            <Link to="/yhteystietolomake">yhteystietolomake</Link>
                         </ListItemText>
                     </ListItem>
-                    <ListItem onClick={() => setOpenDrawer(false)}>
-                        <ListItemText>
-                            <Link to="/promovideo">promovideo</Link>
-                        </ListItemText>
-                    </ListItem>
-                    <ListItem onClick={() => setOpenDrawer(false)}>
-                        <ListItemText>
-                            <Link to="/event/oskari-piiroinen">Mr. Beer</Link>
-                        </ListItemText>
-                    </ListItem>
+
                 </List>
             </Drawer>
             <IconButton onClick={() => setOpenDrawer(!openDrawer)}>

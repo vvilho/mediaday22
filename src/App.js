@@ -26,11 +26,11 @@ const theme = createTheme({
   }
 });
 
-function App() {
+function App({history}) {
   return (
       <div className="App">
         <ThemeProvider theme={theme}>
-          <Navbar/>
+          <Navbar history={history}/>
 
           <Switch>
             <Route exact path="/">

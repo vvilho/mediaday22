@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-function Navbar() {
+function Navbar({history}) {
     const classes = useStyles();
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
@@ -61,7 +61,7 @@ function Navbar() {
                     <img
                         width='100px'
                         alt={'Mediaday logo'}
-                        src="logos/mediadaylogo.png"
+                        src="logos/mediadaylogo_pieni.png"
                         component={Link}
                         to="/"
                     />
@@ -77,21 +77,32 @@ function Navbar() {
                         </Grid>
                     </Grid>
                 ) : (
-                    <div className={classes.navLinks}>
 
-                        <Link to="/aikataulu" className={classes.link}>
-                            Aikataulu
-                        </Link>
-                        <Link to="/yhteystietolomake" className={classes.link}>
-                            Yhteystietolomake
-                        </Link>
-                        <div
-                            className={classes.searchBar}
+                    <Grid
+                        container
+                        justifyContent={"end"}
+                    >
+                        <Grid
+                            item
                         >
-                            <Searchbar/>
-                        </div>
+                            <div className={classes.navLinks}>
 
-                    </div>
+                                <Link to="/aikataulu" className={classes.link}>
+                                    Aikataulu
+                                </Link>
+                                <Link to="/yhteystietolomake" className={classes.link}>
+                                    Yhteystietolomake
+                                </Link>
+                                <div
+                                    className={classes.searchBar}
+                                >
+                                    <Searchbar history={history}/>
+                                </div>
+
+                            </div>
+                        </Grid>
+                    </Grid>
+
                 )}
             </Toolbar>
         </AppBar>

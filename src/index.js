@@ -14,7 +14,7 @@ const history = createBrowserHistory();
 ReactDOM.render(
   <React.StrictMode>
       <HashRouter history={history}>
-          <App />
+          <App history={history}/>
       </HashRouter>
 
   </React.StrictMode>,

@@ -3,7 +3,7 @@ import SearchBar from "material-ui-search-bar";
 
 
 
-const Searchbar = () => {
+const Searchbar = ({history}) => {
 
 
     const [eventData, setEventData] = useState()
@@ -41,6 +41,8 @@ const Searchbar = () => {
                 if (x.includes(searchBarValue.toString().toUpperCase())) {
                     const index = speakers.indexOf(x);
                     window.open(`/#/event/${eventData?.events[index].videoUrl}`, '_self')
+                    // history.push(`/#/event/${eventData?.events[index].videoUrl}`);
+
                 }
 
             })

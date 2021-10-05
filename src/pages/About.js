@@ -5,7 +5,7 @@ import {Grid} from "@mui/material";
 
 const About = () => {
     useEffect(() => {
-        document.title = 'Calendar';
+        document.title = 'MediaDay Kalenteri';
     }, [])
 
 return (

@@ -11,6 +11,7 @@ const useStyles = makeStyles((theme) => ({
     bottom: 0,
     width: '100%',
     paddingBottom: '8px',
+    maxWidth: '100vw',
     backgroundColor: colors.third,
   }
   ,

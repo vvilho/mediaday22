@@ -39,6 +39,7 @@ const useStyles = makeStyles((theme) => ({
     appBar: {
         zIndex: 999,
         backgroundColor: colors.third,
+
     },
 
     searchBar : {
@@ -80,7 +81,7 @@ function Navbar({history}) {
 
                     <Grid
                         container
-                        justifyContent={"end"}
+                        justifyContent={"flex-end"}
                     >
                         <Grid
                             item

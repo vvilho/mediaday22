@@ -1,7 +1,9 @@
 import './App.css';
+import {useEffect} from "react";
 import {
   Switch,
-  Route
+  Route,
+    useLocation
 } from "react-router-dom";
 import {EventiTimeTable} from "./pages/EventiTimeTable";
 import {PromoVideo} from "./pages/PromoVideo";
@@ -27,6 +29,14 @@ const theme = createTheme({
 });
 
 function App({history}) {
+   const location = useLocation()
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+  }, [location]);
+
+
+
   return (
       <div className="App">
         <ThemeProvider theme={theme}>

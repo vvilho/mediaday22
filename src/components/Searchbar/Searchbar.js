@@ -41,7 +41,7 @@ const Searchbar = ({history}) => {
                 if (x.includes(searchBarValue.toString().toUpperCase())) {
                     const index = speakers.indexOf(x);
                     window.open(`/#/event/${eventData?.events[index].videoUrl}`, '_self')
-                    // history.push(`/#/event/${eventData?.events[index].videoUrl}`);
+                    history.push(`/#/event/${eventData?.events[index].videoUrl}`);
 
                 }
 

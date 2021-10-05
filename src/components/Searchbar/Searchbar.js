@@ -33,14 +33,14 @@ const Searchbar = () => {
 
 
     const onSubmit = () => {
-        if(searchBarValue.length > 2) {
+        if(searchBarValue?.length > 2) {
             let speakers = [];
 
-            eventData.events.map(x => speakers.push(x.name.toUpperCase()));
+            eventData?.events.map(x => speakers?.push(x.name.toUpperCase()));
             speakers.map(x => {
                 if (x.includes(searchBarValue.toString().toUpperCase())) {
                     const index = speakers.indexOf(x);
-                    window.open(`/#/event/${eventData.events[index].videoUrl}`, '_self')
+                    window.open(`/#/event/${eventData?.events[index].videoUrl}`, '_self')
                 }
 
             })

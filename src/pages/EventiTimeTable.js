@@ -3,7 +3,7 @@ import {Calendar} from "../components/Calendar/Calendar";
 import {Grid} from "@mui/material";
 
 
-const About = () => {
+const EventiTimeTable = () => {
     useEffect(() => {
         document.title = 'Calendar';
     }, [])
@@ -23,7 +23,7 @@ return (
                 }
 
                 >
-                <h1>Speaker calendar</h1>
+                <h1>Puhujien aikataulut</h1>
                 <Calendar/>
             </Grid>
         </Grid>
@@ -32,4 +32,4 @@ return (
 )
 }
 
-export {About}
+export {EventiTimeTable}

@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 import DrawerComponent from './drawer';
 import colors from '../../siteWideColors'
 import Searchbar from "../Searchbar/Searchbar";
+import {Grid, IconButton} from "@mui/material";
 
 const useStyles = makeStyles((theme) => ({
     navLinks: {
@@ -51,34 +52,38 @@ const useStyles = makeStyles((theme) => ({
 function Navbar() {
     const classes = useStyles();
     const theme = useTheme();
-    const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+    const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
     return (
         <AppBar position="static" className={classes.appBar}>
             <CssBaseline />
             <Toolbar>
-                <Typography
-                    variant="h4"
-                    className={classes.logo}
-                    component={Link}
-                    to="/">
-                    Mediaday22
-                </Typography>
+                    <img
+                        width='100px'
+                        alt={'Mediaday logo'}
+                        src="logos/mediadaylogo.png"
+                        component={Link}
+                        to="/"
+                    />
                 {isMobile ? (
-                    <DrawerComponent />
+                    <Grid
+                        container
+                        justifyContent={"end"}
+                    >
+                        <Grid
+                            item
+                        >
+                            <DrawerComponent />
+                        </Grid>
+                    </Grid>
                 ) : (
                     <div className={classes.navLinks}>
-                        <Link to="/" className={classes.link}>
-                            Mediaday22
+
+                        <Link to="/aikataulu" className={classes.link}>
+                            Aikataulu
                         </Link>
-                        <Link to="/calendar" className={classes.link}>
-                            Calendar
-                        </Link>
-                        <Link to="/promovideo" className={classes.link}>
-                            Video
-                        </Link>
-                        <Link to="/event/oskari-piiroinen" className={classes.link}>
-                            Mr. Beer
+                        <Link to="/yhteystietolomake" className={classes.link}>
+                            Yhteystietolomake
                         </Link>
                         <div
                             className={classes.searchBar}

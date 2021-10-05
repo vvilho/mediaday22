@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import {useParams} from 'react-router-dom';
-import {Video} from '../components/Video/Video';
 import {Grid} from '@mui/material';
 import Counter from '../components/Counter/Counter';
 import StreamStatus from '../components/StreamStatus/StreamStatus';
@@ -9,21 +8,26 @@ import StreamerInfo from '../components/StreamerInfo/StreamerInfo';
 const EventPage = () => {
 
     const [eventData, setEventData] = useState()
-    useEffect(() => {
-        fetch('data/events.json'
-            ,{
-                headers : {
+
+    const getEvents = async() =>{
+        try {
+            const result = await fetch('data/events.json', {
+                headers: {
                     'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                }
-            }
-        )
-            .then((response) => {
-                 return response.json();
-            })
-            .then((myJson) => {
-                setEventData(myJson);
+                    'Accept': 'application/json',
+                },
             });
+            const json = await result.json();
+
+            setEventData(json);
+
+        } catch (err) {
+            console.log('getEvent error', err);
+        }
+    };
+
+    useEffect(() => {
+        getEvents();
     }, [])
 
     const {id} = useParams();
@@ -34,9 +38,9 @@ const EventPage = () => {
         document.title = `${streamName[0]} ${streamName[1]} Stream`;
     },  [streamName]);
 
+
     const eventResult = eventData?.events.find(({ videoUrl }) =>
         videoUrl === id
-
     )
 
     useEffect(()=>{
@@ -45,7 +49,7 @@ const EventPage = () => {
 
 
     if(!eventResult){
-        return (<div>Event {id} not found</div>)
+        return (<div>Event {id} not found</div>);
     }
 
     return (

@@ -27,6 +27,12 @@ const EventPage = () => {
     }, [])
 
     const {id} = useParams();
+    //Setting document title based on stream clicked
+    let streamName = id.split('-');
+    streamName = streamName.map(w => w.charAt(0).toUpperCase() + w.slice(1));
+    useEffect(() => {
+        document.title = `${streamName[0]} ${streamName[1]} Stream`;
+    },  []);
 
     const eventResult = eventData?.events.find(({ videoUrl }) =>
         videoUrl === id

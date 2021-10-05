@@ -1,7 +1,10 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 
 const PromoVideo = () => {
+    useEffect(() => {
+        document.title = 'MediaDay Promo'
+    }, []);
 
     return (
         <div>

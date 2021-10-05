@@ -1,18 +1,17 @@
 import './App.css';
 import {
   Switch,
-  Route,
-  Link as RouterLink
+  Route
 } from "react-router-dom";
 import {About} from "./pages/About";
 import {PromoVideo} from "./pages/PromoVideo";
 import { EventPage} from "./pages/EventPage";
 import {LandingPage} from "./pages/LandingPage";
-import {AppBar, IconButton, Toolbar, Typography, Link, Divider, Box} from "@mui/material";
 import { createTheme} from '@material-ui/core/styles';
 import {ThemeProvider} from '@mui/material';
 import {Footer} from './components/Footer/Footer';
 import Navbar from "./components/menubar/menubar";
+import '@fontsource/roboto';
 
 
 const theme = createTheme({
@@ -21,6 +20,9 @@ const theme = createTheme({
       main: '#806270',
       secondary: "#78bd99"
     }
+  },
+  typography: {
+    fontFamily: 'Roboto'
   }
 });
 

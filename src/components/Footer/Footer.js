@@ -10,6 +10,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'static',
     bottom: 0,
     width: '100%',
+    maxWidth: '100vw',
     paddingBottom: '8px',
     maxWidth: '100vw',
     backgroundColor: colors.third,
@@ -203,8 +204,8 @@ const Footer = () => {
                     </Typography>
                     <Typography textAlign="left">
                       Löydät Mediadayn lehdistötiedotteen täältä <Link
-                        href="http://mediaday.metropolia.fi/mediaday_press_2016_FIN.pdf">suomeksi</Link> ja <Link
-                        href="http://mediaday.metropolia.fi/mediaday_press_2016_ENG.pdf">englanniksi</Link> (julkaistaan
+                        href="http://mediaday.metropolia.fi/mediaday_press_2016_FIN.pdf" target="_blank">suomeksi</Link> ja <Link
+                        href="http://mediaday.metropolia.fi/mediaday_press_2016_ENG.pdf" target="_blank">englanniksi</Link> (julkaistaan
                       12/2021).
                     </Typography>
                   </Stack>

@@ -8,8 +8,9 @@ const Searchbar = () => {
 
     const [eventData, setEventData] = useState()
     const [searchBarValue, setSearchBarValue] = useState();
-    const [searchResult, setSearchResult] = useState()
     const searchBarRef = useRef()
+
+    // Load speakerdata from Public/data folder
     useEffect(() => {
         fetch('data/events.json'
             ,{
@@ -31,7 +32,7 @@ const Searchbar = () => {
 
 
 
-    const onSubmit = (e) => {
+    const onSubmit = () => {
         if(searchBarValue.length > 2) {
             let speakers = [];
 
@@ -56,9 +57,9 @@ const Searchbar = () => {
         <>
 
                 <SearchBar
-                    ref={searchBarRef   }
+                    ref={searchBarRef}
                     value={searchBarValue}
-                    onChange={(e) => {setSearchBarValue(e)} }
+                    onChange={setSearchBarValue}
                     onRequestSearch={onSubmit}
                     onCancelSearch={onCancelSearch}
                     placeholder={"Search by name"}

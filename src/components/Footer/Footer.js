@@ -164,13 +164,13 @@ const Footer = () => {
         <Divider/>
         <Container className={'footerBottomContainer'}>
           <Grid container alignItems='center'>
-            <Grid xs={12} md={3}>
+            <Grid item xs={12} md={3}>
                 <img className={'brandImg'} alt={'Mediaday logo'}
                      src="logos/mediadaylogo.png"/>
             </Grid>
-            <Grid xs={12} md={9}>
+            <Grid item xs={12} md={9}>
               <Grid container>
-                <Grid xs={12} className={'footerBottomGridItem'}>
+                <Grid item xs={12} className={'footerBottomGridItem'}>
                   <Stack spacing={3} direction={{ xs: 'column', sm: 'row' }}>
                     <Typography variant="h5" textAlign="left">
                       Yhteystiedot
@@ -185,7 +185,7 @@ const Footer = () => {
                     </Typography>
                   </Stack>
                 </Grid>
-                <Grid xs={12} className={'footerBottomGridItem'}>
+                <Grid item xs={12} className={'footerBottomGridItem'}>
                   <Stack spacing={{xs: 3 ,sm: 5}} direction={{ xs: 'column', sm: 'row' }}>
                     <Typography variant="h5" textAlign="left">
                       Järjestäjät
@@ -196,7 +196,7 @@ const Footer = () => {
                     </Typography>
                   </Stack>
                 </Grid>
-                <Grid xs={12} className={'footerBottomGridItem'}>
+                <Grid item xs={12} className={'footerBottomGridItem'}>
                   <Stack spacing={{xs: 3 ,sm: 7}} direction={{ xs: 'column', sm: 'row' }}>
                     <Typography variant="h5" textAlign="left">
                       Medioille

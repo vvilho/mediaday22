@@ -12,7 +12,7 @@ import {LandingPage} from "./pages/LandingPage";
 import { createTheme} from '@material-ui/core/styles';
 import {ThemeProvider} from '@mui/material';
 import {Footer} from './components/Footer/Footer';
-import Navbar from "./components/menubar/menubar";
+import Navbar from "./components/menubar/Navbar";
 import '@fontsource/roboto';
 
 

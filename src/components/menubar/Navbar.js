@@ -9,7 +9,7 @@ import {
     useMediaQuery,
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
-import DrawerComponent from './drawer';
+import DrawerComponent from './DrawerComponent';
 import colors from '../../siteWideColors'
 import Searchbar from "../Searchbar/Searchbar";
 import {Grid, IconButton} from "@mui/material";
@@ -59,17 +59,17 @@ function Navbar({history}) {
         <AppBar position="static" className={classes.appBar}>
             <CssBaseline />
             <Toolbar>
+                <Link to={'/'}>
                     <img
-                        width='100px'
+                        width='120px'
                         alt={'Mediaday logo'}
                         src="logos/mediadaylogo_pieni.png"
-                        component={Link}
-                        to="/"
                     />
+                </Link>
                 {isMobile ? (
                     <Grid
                         container
-                        justifyContent={"end"}
+                        justifyContent={'flex-end'}
                     >
                         <Grid
                             item

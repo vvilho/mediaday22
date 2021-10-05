@@ -1,9 +1,12 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Calendar} from "../components/Calendar/Calendar";
 import {Grid} from "@mui/material";
 
 
 const About = () => {
+    useEffect(() => {
+        document.title = 'Calendar';
+    }, [])
 
 return (
     <div>

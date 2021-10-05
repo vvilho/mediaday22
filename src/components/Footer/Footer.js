@@ -44,9 +44,9 @@ const Footer = () => {
                 lg={3}
                 className={'brandGridItem'}
             >
-              <Link href="https://fi-fi.facebook.com/" target="_blank">
-                <img className={'brandImg'}
-                     src="https://placekitten.com/200/300"/>
+              <Link href="https://fireframe.fi/" target="_blank">
+                <img className={'brandImg'} alt={'Fireframe logo'}
+                     src='logos/fireframelogo.png'/>
               </Link>
             </Grid>
             <Grid
@@ -56,9 +56,9 @@ const Footer = () => {
                 lg={3}
                 className={'brandGridItem'}
             >
-              <Link href="https://fi-fi.facebook.com/" target="_blank">
-                <img className={'brandImg'}
-                     src="https://placekitten.com/200/300"/>
+              <Link href="https://avita.org/" target="_blank">
+                <img className={'brandImg'} alt={'Avita logo'}
+                     src="logos/avitalogo.png"/>
               </Link>
             </Grid>
             <Grid
@@ -68,9 +68,9 @@ const Footer = () => {
                 lg={3}
                 className={'brandGridItem'}
             >
-              <Link href="https://fi-fi.facebook.com/" target="_blank">
-                <img className={'brandImg'}
-                     src="https://placekitten.com/200/300"/>
+              <Link href="https://www.crestron.com/" target="_blank">
+                <img className={'brandImg'} alt={'Creston logo'}
+                     src="logos/crestonlogo.png"/>
               </Link>
             </Grid>
             <Grid
@@ -80,9 +80,9 @@ const Footer = () => {
                 lg={3}
                 className={'brandGridItem'}
             >
-              <Link href="https://fi-fi.facebook.com/" target="_blank">
-                <img className={'brandImg'}
-                     src="https://placekitten.com/200/300"/>
+              <Link href="https://www.foodandco.fi/" target="_blank">
+                <img className={'brandImg'} alt={'Food & co logo'}
+                     src="logos/fazerlogo.png"/>
               </Link>
             </Grid>
             <Grid
@@ -92,9 +92,9 @@ const Footer = () => {
                 lg={3}
                 className={'brandGridItem'}
             >
-              <Link href="https://fi-fi.facebook.com/" target="_blank">
-                <img className={'brandImg'}
-                     src="https://placekitten.com/200/300"/>
+              <Link href="https://flyar.fi/fi/" target="_blank">
+                <img className={'brandImg'} alt={'FlyAR logo'}
+                     src="logos/flyarlogo.png"/>
               </Link>
             </Grid>
             <Grid
@@ -104,9 +104,9 @@ const Footer = () => {
                 lg={3}
                 className={'brandGridItem'}
             >
-              <Link href="https://fi-fi.facebook.com/" target="_blank">
-                <img className={'brandImg'}
-                     src="https://placekitten.com/200/300"/>
+              <Link href="https://metropolia.fi/fi" target="_blank">
+                <img className={'brandImg'} alt={'Metropolia logo'}
+                     src="logos/metropolialogo.png"/>
               </Link>
             </Grid>
             <Grid
@@ -116,9 +116,9 @@ const Footer = () => {
                 lg={3}
                 className={'brandGridItem'}
             >
-              <Link href="https://fi-fi.facebook.com/" target="_blank">
-                <img className={'brandImg'}
-                     src="https://placekitten.com/200/300"/>
+              <Link href="https://www.panasonic.com/fi/" target="_blank">
+                <img className={'brandImg'} alt={'Panasonic logo'}
+                     src="logos/panasoniclogo.png"/>
               </Link>
             </Grid>
             <Grid
@@ -128,9 +128,9 @@ const Footer = () => {
                 lg={3}
                 className={'brandGridItem'}
             >
-              <Link href="https://fi-fi.facebook.com/" target="_blank">
-                <img className={'brandImg'}
-                     src="https://placekitten.com/200/300"/>
+              <Link href="https://www.sony.fi/" target="_blank">
+                <img className={'brandImg'} alt={'Sony logo'}
+                     src="logos/sonylogo.png"/>
               </Link>
             </Grid>
             <Grid
@@ -140,9 +140,9 @@ const Footer = () => {
                 lg={3}
                 className={'brandGridItem'}
             >
-              <Link href="https://fi-fi.facebook.com/" target="_blank">
-                <img className={'brandImg'}
-                     src="https://placekitten.com/200/300"/>
+              <Link href="https://swappie.com/fi/" target="_blank">
+                <img className={'brandImg'} alt={'Swappie logo'}
+                     src="logos/swappielogo.png"/>
               </Link>
             </Grid>
             <Grid
@@ -153,9 +153,9 @@ const Footer = () => {
                 lg={3}
                 className={'brandGridItem'}
             >
-              <Link href="https://fi-fi.facebook.com/" target="_blank">
-                <img className={'brandImg'}
-                     src="https://placekitten.com/200/300"/>
+              <Link href="https://trail.fi/fi/" target="_blank">
+                <img className={'brandImg'} alt={'Trail logo'}
+                     src="logos/traillogo.png"/>
               </Link>
             </Grid>
           </Grid>
@@ -164,8 +164,8 @@ const Footer = () => {
         <Container className={'footerBottomContainer'}>
           <Grid container alignItems='center'>
             <Grid xs={12} md={3}>
-                <img className={'brandImg'}
-                     src="https://placekitten.com/200/300"/>
+                <img className={'brandImg'} alt={'Mediaday logo'}
+                     src="logos/mediadaylogo.png"/>
             </Grid>
             <Grid xs={12} md={9}>
               <Grid container>

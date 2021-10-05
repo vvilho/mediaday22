@@ -2,8 +2,7 @@
     padding: 1rem;
 }
 .brandImg{
-    width: 100px;
-    aspect-ratio: auto 200 / 100;
+    width: 200px;
     height: auto;
     max-width: 100%;
 }

@@ -14,7 +14,6 @@ import '@videojs/themes/dist/sea/index.css';
 import {Grid} from '@mui/material';
 
 const Video = ({ url, type }) => {
-    // return <div>Video tulee tähän, videon url: {url}</div>;
 
     const videoRef = useRef(null);
     const playerRef = useRef(null);
@@ -37,7 +36,6 @@ const Video = ({ url, type }) => {
     const onReady = (player) => {
         playerRef.current = player;
 
-        // you can handle player events here
         player.on("waiting", () => {
             console.log("player is waiting");
         });
@@ -45,6 +43,11 @@ const Video = ({ url, type }) => {
         player.on("dispose", () => {
             console.log("player will dispose");
         });
+
+        player.on("error", () => {
+            console.log("player error");
+        });
+
     };
 
     useEffect(() => {
@@ -74,6 +77,8 @@ const Video = ({ url, type }) => {
             }
         };
     }, []);
+
+
 
     return (
         <Grid container style={{

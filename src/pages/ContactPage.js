@@ -5,6 +5,7 @@ import {TextField} from '@material-ui/core';
 const ContactPage = () => {
 
     const [messageLength, setMessageLength] = useState(0);
+    const characterLimit = 2000;
 
     const handleChange = (evt) => {
         evt.preventDefault();
@@ -27,7 +28,7 @@ const ContactPage = () => {
     }, []);
 
     useEffect(() => {
-        document.getElementById('message-helper-text').innerText = `${messageLength}/1500`
+        document.getElementById('message-helper-text').innerText = `${messageLength}/${characterLimit}`
     }, [messageLength])
 
     return (
@@ -46,7 +47,7 @@ const ContactPage = () => {
             <br/>
             <TextField multiline={true} label="Viestisi" id="message" type="text"
                        variant="outlined" minRows={3} required={true}
-                       fullWidth={true} inputProps={{maxLength: 1500}}
+                       fullWidth={true} inputProps={{maxLength: characterLimit}}
                        helperText={' '}
                        onChange={handleChange}/>
             <br/>

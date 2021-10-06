@@ -4,23 +4,31 @@ import './counter.css';
 
 
 const Counter = ({startDate, startTime}) => {
-    console.log('aloitus', startDate, startTime)
   const [counterSize, setCounterSize] = useState('medium');
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
   const [day, month, year] = startDate.split('.').map(Number);
-    console.log('splitted date', day, month, year)
-    console.log('typeof', typeof(day));
   const [hour, minutes] = startTime.split(':').map(Number);
+
+  const handleResize = () => {
+    setWindowSize(window.innerWidth);
+  }
+
+  useEffect(()=>{
+    window.addEventListener('resize', handleResize);
+  }, []);
 
 
   useEffect(() => {
-    console.log('moi', window.innerWidth);
-    if(window.innerWidth< 768){
+
+    if(windowSize<350){
+      setCounterSize('extra-small');
+    }else if(windowSize< 768){
       setCounterSize('small');
     }else {
       setCounterSize('medium');
     }
 
-  }, [window.innerWidth]);
+  }, [windowSize]);
 
 
 

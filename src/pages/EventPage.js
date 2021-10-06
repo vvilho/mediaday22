@@ -71,6 +71,8 @@ const EventPage = () => {
                         <Grid item width='800px'>
                           <StreamerInfo
                               name={eventResult.name}
+                              avatar={eventResult.speakerImage}
+                              socialMedia={eventResult.socialMedia}
                               company={eventResult.company}
                               desc={eventResult.desc}
                               startDate={eventResult.startDate}
@@ -90,6 +92,8 @@ const EventPage = () => {
                         <Grid item width='800px'>
                           <StreamerInfo
                               name={eventResult.name}
+                              avatar={eventResult.speakerImage}
+                              socialMedia={eventResult.socialMedia}
                               company={eventResult.company}
                               desc={eventResult.desc}
                               startDate={eventResult.startDate}
@@ -110,6 +114,8 @@ const EventPage = () => {
                         <Grid item width='800px'>
                           <StreamerInfo
                               name={eventResult.name}
+                              avatar={eventResult.speakerImage}
+                              socialMedia={eventResult.socialMedia}
                               company={eventResult.company}
                               desc={eventResult.desc}
                               startDate={eventResult.startDate}

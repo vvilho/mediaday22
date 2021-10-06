@@ -17,7 +17,7 @@ const LandingPage = () => {
     return (
         <Container className='App-header' maxWidth={false}>
             <ThemeProvider theme={theme}>
-                <img src={logo} className='App-logo' alt='logo'/>
+                <img src={'/logos/mediadaylogo_pieni.png'} className='App-logo' alt='logo'/>
                 <Introduction/>
                 <SpeakerGrid/>
             </ThemeProvider>

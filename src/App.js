@@ -6,7 +6,7 @@ import {
     useLocation
 } from "react-router-dom";
 import {EventiTimeTable} from "./pages/EventiTimeTable";
-import {PromoVideo} from "./pages/PromoVideo";
+import {ContactPage} from "./pages/ContactPage";
 import { EventPage} from "./pages/EventPage";
 import {LandingPage} from "./pages/LandingPage";
 import { createTheme} from '@material-ui/core/styles';
@@ -28,7 +28,7 @@ const theme = createTheme({
   }
 });
 
-function App({history}) {
+function App() {
    const location = useLocation()
 
   useEffect(() => {
@@ -40,7 +40,7 @@ function App({history}) {
   return (
       <div className="App">
         <ThemeProvider theme={theme}>
-          <Navbar history={history}/>
+          <Navbar/>
 
           <Switch>
             <Route exact path="/">
@@ -52,7 +52,7 @@ function App({history}) {
             </Route>
 
             <Route path="/yhteystietolomake">
-              <PromoVideo/>
+              <ContactPage/>
             </Route>
 
             <Route path="/event/:id" children={<EventPage/>}></Route>

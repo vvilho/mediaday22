@@ -11,7 +11,7 @@ const EventPage = () => {
 
     const getEvents = async() =>{
         try {
-            const result = await fetch('data/events.json', {
+            const result = await fetch('/data/events.json', {
                 headers: {
                     'Content-Type': 'application/json',
                     'Accept': 'application/json',
@@ -34,6 +34,8 @@ const EventPage = () => {
     //Setting document title based on stream clicked
     let streamName = id.split('-');
     streamName = streamName.map(w => w.charAt(0).toUpperCase() + w.slice(1));
+
+    // set document title to be custom for each sitec
     useEffect(() => {
         document.title = `${streamName[0]} ${streamName[1]} Stream`;
     },  [streamName]);
@@ -43,9 +45,7 @@ const EventPage = () => {
         videoUrl === id
     )
 
-    useEffect(()=>{
-        console.log('result',eventResult)
-    },[eventResult])
+
 
 
     if(!eventResult){

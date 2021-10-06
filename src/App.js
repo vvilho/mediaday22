@@ -28,7 +28,7 @@ const theme = createTheme({
   }
 });
 
-function App({history}) {
+function App() {
    const location = useLocation()
 
   useEffect(() => {
@@ -40,7 +40,7 @@ function App({history}) {
   return (
       <div className="App">
         <ThemeProvider theme={theme}>
-          <Navbar history={history}/>
+          <Navbar/>
 
           <Switch>
             <Route exact path="/">

@@ -3,7 +3,6 @@ import {
     AppBar,
     Toolbar,
     CssBaseline,
-    Typography,
     makeStyles,
     useTheme,
     useMediaQuery,
@@ -50,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-function Navbar({history}) {
+function Navbar() {
     const classes = useStyles();
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
@@ -97,7 +96,7 @@ function Navbar({history}) {
                                 <div
                                     className={classes.searchBar}
                                 >
-                                    <Searchbar history={history}/>
+                                    <Searchbar/>
                                 </div>
 
                             </div>

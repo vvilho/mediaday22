@@ -1,14 +1,22 @@
 import React, {useEffect, useRef, useState} from "react";
 import SearchBar from "material-ui-search-bar";
+import { useHistory } from "react-router-dom";
+import { Autocomplete } from '@mui/material';
 
 
 
-const Searchbar = ({history}) => {
+
+
+
+const Searchbar = () => {
+    let history = useHistory();
+
 
 
     const [eventData, setEventData] = useState()
     const [searchBarValue, setSearchBarValue] = useState();
     const searchBarRef = useRef()
+    let speakers = [];
 
     // Load speakerdata from Public/data folder
     useEffect(() => {
@@ -28,7 +36,11 @@ const Searchbar = ({history}) => {
             });
     }, [])
 
+    useEffect(()=> {
 
+        eventData?.events.map(x => speakers?.push(x.name));
+    },
+        [eventData])
 
 
 
@@ -40,8 +52,7 @@ const Searchbar = ({history}) => {
             speakers.map(x => {
                 if (x.includes(searchBarValue.toString().toUpperCase())) {
                     const index = speakers.indexOf(x);
-                    window.open(`/#/event/${eventData?.events[index].videoUrl}`, '_self')
-                    history.push(`/#/event/${eventData?.events[index].videoUrl}`);
+                    history.push(`/event/${eventData?.events[index].videoUrl}`);
 
                 }
 
@@ -57,16 +68,15 @@ const Searchbar = ({history}) => {
 
     return (
         <>
+            <Autocomplete
+                disablePortal
+                id="combo-box-demo"
+                options={speakers}
+                sx={{ width: 300 }}
+                renderInput={(params) => <TextField {...params} label="Movie" />}
+            />
 
-                <SearchBar
-                    ref={searchBarRef}
-                    value={searchBarValue}
-                    onChange={setSearchBarValue}
-                    onRequestSearch={onSubmit}
-                    onCancelSearch={onCancelSearch}
-                    placeholder={"Search by name"}
 
-                />
         </>
     )
 }

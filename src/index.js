@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { HashRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import "typeface-roboto";
 
@@ -13,9 +13,9 @@ const history = createBrowserHistory();
 
 ReactDOM.render(
   <React.StrictMode>
-      <HashRouter history={history}>
+      <BrowserRouter history={history}>
           <App history={history}/>
-      </HashRouter>
+      </BrowserRouter>
 
   </React.StrictMode>,
   document.getElementById('root')

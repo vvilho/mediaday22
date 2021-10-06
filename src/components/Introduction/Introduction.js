@@ -4,9 +4,7 @@ import {Container, Divider, Typography} from "@mui/material";
 const Introduction = () => {
     return (
         <Container disableGutters={true} maxWidth={false}>
-            <Typography variant={'h1'} marginY='1rem'>
-                MEDIADAY 2022
-            </Typography>
+
             <Typography variant={'h5'} marginY='1.5rem'>
                 Metropolia ammattikorkeakoulu järjestää Mediaday-tapahtuman pitkän
                 tauon jälkeen keväällä 2022.

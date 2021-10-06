@@ -3,7 +3,6 @@ import {
     AppBar,
     Toolbar,
     CssBaseline,
-    Typography,
     makeStyles,
     useTheme,
     useMediaQuery,
@@ -12,6 +11,7 @@ import { Link } from "react-router-dom";
 import DrawerComponent from './DrawerComponent';
 import colors from '../../siteWideColors'
 import Searchbar from "../Searchbar/Searchbar";
+import ComboBox from "../Searchbar/TestBar";
 import {Grid, IconButton} from "@mui/material";
 
 const useStyles = makeStyles((theme) => ({
@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-function Navbar({history}) {
+function Navbar() {
     const classes = useStyles();
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
@@ -97,7 +97,7 @@ function Navbar({history}) {
                                 <div
                                     className={classes.searchBar}
                                 >
-                                    <Searchbar history={history}/>
+                                    <Searchbar/>
                                 </div>
 
                             </div>

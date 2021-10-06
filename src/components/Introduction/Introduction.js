@@ -3,31 +3,31 @@ import {Container, Divider, Typography} from "@mui/material";
 
 const Introduction = () => {
     return (
-        <Container disableGutters={true} maxWidth={false}>
-
-            <Typography variant={'h5'} marginY='1.5rem' className={''}>
-                Metropolia ammattikorkeakoulu järjestää Mediaday-tapahtuman pitkän
-                tauon jälkeen keväällä 2022.
+        <Container maxWidth={false}>
+            <Divider sx={{borderColor: 'white', borderBottomWidth: '1px'}}/>
+            <Typography variant={'h5'} marginY='1rem' textAlign='left' color='white'>
+                <strong>Puhujia eri teollisuudenaloilta</strong>
             </Typography>
-            <Divider/>
-            <Typography variant={'h5'} marginY='1rem'>
-                <strong>Puhujia eri teollisuudenaloilta</strong><br/>
-                Huipputason ammattilaisten puheenvuoroja, mukana monta rautaista
-                puhujaa monelta mediakentän osa-alueelta.
+            <Typography variant={'body1'} textAlign='left' color='white' sx={{margin:'0 0 1rem 0'}}>
+              Huipputason ammattilaisten puheenvuoroja, mukana monta rautaista
+              puhujaa monelta mediakentän osa-alueelta.
             </Typography>
-            <Divider/>
-            <Typography variant={'h5'} marginY='1rem'>
-                <strong>Mediaday yhdistää</strong><br/>
-                Mediaday tuo opiskelijat ja yritysmaailman yhteen.
-                Näet uusimmat jutut ja tutustut ammattilaisten maailmaan.
+            <Divider sx={{borderColor: 'white', borderBottomWidth: '1px'}}/>
+            <Typography variant={'h5'} marginY='1rem' textAlign='left' color='white'>
+                <strong>Mediaday yhdistää</strong>
             </Typography>
-            <Divider/>
-            <Typography variant={'h5'} marginY='1rem'>
-                <strong>Rento ilmapiiri</strong><br/>
-                Hyväntuulinen tekemisen meininki.
-                Meillä voi vapaasti kysellä ja ihmetellä, pääkohderyhmänä ovat opiskelijat.
+            <Typography variant={'body1'} textAlign='left' color='white' sx={{margin:'0 0 1rem 0'}}>
+              Mediaday tuo opiskelijat ja yritysmaailman yhteen.
+              Näet uusimmat jutut ja tutustut ammattilaisten maailmaan.
             </Typography>
-            <Divider/>
+            <Divider sx={{borderColor: 'white', borderBottomWidth: '1px'}}/>
+            <Typography variant={'h5'} marginY='1rem' textAlign='left' color='white'>
+                <strong>Rento ilmapiiri</strong>
+            </Typography>
+          <Typography variant={'body1'} textAlign='left' color='white' sx={{margin:'0 0 1rem 0'}}>
+            Hyväntuulinen tekemisen meininki.
+            Meillä voi vapaasti kysellä ja ihmetellä, pääkohderyhmänä ovat opiskelijat.
+          </Typography>
         </Container>
     )
 }

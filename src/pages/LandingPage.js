@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {Grid, ThemeProvider} from '@mui/material';
+import {Grid, ThemeProvider, Typography} from '@mui/material';
 import {SpeakerGrid} from '../components/SpeakerGrid/SpeakerGrid';
 import {createTheme, responsiveFontSizes} from '@material-ui/core/styles';
 import {Container} from "@material-ui/core";
@@ -14,20 +14,29 @@ const LandingPage = () => {
     }, [])
 
     return (
-        <Container className='App-header' maxWidth={false}>
+        <Container className='App-header' maxWidth={false} disableGutters={true}>
             <ThemeProvider theme={theme}>
-                <Grid
+                <Grid container
                     style={{
-                        backgroundImage: `url("/logos/background.jpg")`,
-                        backgroundPosition: 'center',
+                        background: 'linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("banner.webp")',
                         width: '100%',
+                        height: '100vh',
                         backgroundSize: 'cover',
+                        backgroundPosition: 'center',
                         margin: 0,
-                        padding: 0
+                        padding: 0,
                     }}
                 >
-                    <img src={'/logos/mediadaylogo_pieni.png'} className='App-logo' alt='logo'/>
+                  <Grid xs={12} sm={6}>
+                    <img src={'/logos/mediaday_logo_vanha_white.png'} className='App-logo' alt='Mediaday logo'/>
+                    <Typography variant={'h5'} marginY='1.5rem' marginX='1.5rem' className={''} color={'white'} textAlign='left'>
+                      Metropolia ammattikorkeakoulu järjestää Mediaday-tapahtuman pitkän
+                      tauon jälkeen keväällä 2022.
+                    </Typography>
+                  </Grid>
+                  <Grid xs={12} sm={6} className={'bannerGridRight'}>
                     <Introduction/>
+                  </Grid>
                 </Grid>
 
                 <SpeakerGrid/>

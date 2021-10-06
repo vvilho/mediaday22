@@ -9,6 +9,7 @@ import {
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import { Menu as MenuIcon } from "@material-ui/icons";
+import {linear, Scrollchor} from 'react-scrollchor';
 
 const useStyles = makeStyles(()=>({
     link:{
@@ -41,7 +42,13 @@ function DrawerComponent() {
                             <Link to="/yhteystietolomake">yhteystietolomake</Link>
                         </ListItemText>
                     </ListItem>
-
+                    <ListItem onClick={() => setOpenDrawer(false)}>
+                        <ListItemText>
+                            <Scrollchor to="#footerAbout" className={Link} animate={{ duration: 500, easing: linear}}>
+                                Lisätietoa
+                            </Scrollchor>
+                        </ListItemText>
+                    </ListItem>
                 </List>
             </Drawer>
             <IconButton onClick={() => setOpenDrawer(!openDrawer)}>

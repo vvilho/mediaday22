@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState} from 'react';
 import {
     Drawer,
     IconButton,
@@ -11,15 +11,15 @@ import { Link } from "react-router-dom";
 import { Menu as MenuIcon } from "@material-ui/icons";
 import {linear, Scrollchor} from 'react-scrollchor';
 
-const useStyles = makeStyles(()=>({
-    link:{
-        textDecoration:"none",
-        color: "blue",
-        fontSize: "20px",
-    },
-    icon:{
-        color: "white"
-    }
+const useStyles = makeStyles(() => ({
+  link: {
+    textDecoration: 'none',
+    color: 'blue',
+    fontSize: '20px',
+  },
+  icon: {
+    color: 'white',
+  },
 }));
 
 function DrawerComponent() {
@@ -57,4 +57,5 @@ function DrawerComponent() {
         </>
     );
 }
+
 export default DrawerComponent;

@@ -30,6 +30,7 @@ const Counter = ({startDate, startTime}) => {
 
   }, [windowSize]);
 
+  const dateEnd = `${year}-${month<10 ? '0'+month : month}-${day<10 ? '0'+day : day }T${hour}:0${minutes === '0' ? '00' : minutes}:59.999Z`
 
 
 
@@ -44,7 +45,7 @@ const Counter = ({startDate, startTime}) => {
           titlePosition='bottom'
           endAtZero
           size= {counterSize}
-          endAt={`${year}-${month}-${day} ${hour}:${minutes}:00`}
+          endAt={dateEnd}
       />
   );
 }

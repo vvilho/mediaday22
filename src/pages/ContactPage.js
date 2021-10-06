@@ -11,6 +11,7 @@ const ContactPage = () => {
     evt.preventDefault();
     const value = document.getElementById('email').value;
     console.log('Contact form submit value', value);
+    alert('Tämä on sähköposti hoho!');
   };
 
   return (
@@ -23,7 +24,7 @@ const ContactPage = () => {
         <Typography variant="body1">Jätä meille sähköpostisi, niin otamme
           yhteyttä.</Typography>
         <TextField label="Email" id="email" type="email" fullWidth={true}
-                   variant="outlined" margin="dense" />
+                   variant="outlined" margin="dense" required={true}/>
         <Button variant="contained" sx={{marginTop: '1rem'}} type='submit'>Lähetä</Button>
       </Box>
   );

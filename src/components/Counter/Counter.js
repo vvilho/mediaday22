@@ -1,19 +1,37 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import FlipCountdown from '@rumess/react-flip-countdown';
 import './counter.css';
 
 
 const Counter = ({startDate, startTime}) => {
-    console.log('aloitus', startDate, startTime)
+  const [counterSize, setCounterSize] = useState('medium');
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
   const [day, month, year] = startDate.split('.').map(Number);
-    console.log('splitted date', day, month, year)
-    console.log('typeof', typeof(day));
   const [hour, minutes] = startTime.split(':').map(Number);
-  let counterSize = 'medium';
 
-  if(window.innerWidth < 768){
-    counterSize = 'small';
+  const handleResize = () => {
+    setWindowSize(window.innerWidth);
   }
+
+  useEffect(()=>{
+    window.addEventListener('resize', handleResize);
+  }, []);
+
+
+  useEffect(() => {
+
+    if(windowSize<350){
+      setCounterSize('extra-small');
+    }else if(windowSize< 768){
+      setCounterSize('small');
+    }else {
+      setCounterSize('medium');
+    }
+
+  }, [windowSize]);
+
+  const dateEnd = `${year}-${month<10 ? '0'+month : month}-${day<10 ? '0'+day : day }T${hour}:0${minutes === '0' ? '00' : minutes}:59.999Z`
+
 
 
   return (
@@ -27,7 +45,7 @@ const Counter = ({startDate, startTime}) => {
           titlePosition='bottom'
           endAtZero
           size= {counterSize}
-          endAt={`${year}-${month}-${day} ${hour}:${minutes}:00`}
+          endAt={dateEnd}
       />
   );
 }

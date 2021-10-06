@@ -4,11 +4,13 @@ import timeGridPlugin from '@fullcalendar/timegrid' // a plugin!
 import format from 'date-fns/format'
 import parse from 'date-fns/parse';
 import './calender.css'
+import {useHistory} from "react-router-dom";
 
 
 
 const Calendar = () => {
 
+    let history = useHistory();
     const [eventData, setEventData] = useState()
     const [events, setEvents] = useState([])
 
@@ -39,7 +41,7 @@ const Calendar = () => {
 
 
     useEffect(() => {
-        fetch('data/events.json'
+        fetch('/data/events.json'
             ,{
                 headers : {
                     'Content-Type': 'application/json',
@@ -62,14 +64,13 @@ const Calendar = () => {
 
     const eventclick = (event) => {
         event.jsEvent.preventDefault()
-        console.log('click event',event)
-        window.open(`/#/event/${event.event.url}`,'_self')
+        history.push(`/event/${event.event.url}`)
     }
 
     const eventMouseEnter = (event) => {
         event.jsEvent.preventDefault()
-        console.log('click event',event)
-        window.open(`/#/event/${event.event.url}`,'_self')
+        history.push(`/event/${event.event.url}`)
+
     }
 
 

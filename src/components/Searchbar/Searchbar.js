@@ -1,14 +1,17 @@
 import React, {useEffect, useRef, useState} from "react";
 import SearchBar from "material-ui-search-bar";
+import { useHistory } from "react-router-dom";
 
 
 
-const Searchbar = ({history}) => {
+const Searchbar = () => {
 
 
     const [eventData, setEventData] = useState()
     const [searchBarValue, setSearchBarValue] = useState();
     const searchBarRef = useRef()
+    let history = useHistory();
+
 
     // Load speakerdata from Public/data folder
     useEffect(() => {
@@ -40,8 +43,7 @@ const Searchbar = ({history}) => {
             speakers.map(x => {
                 if (x.includes(searchBarValue.toString().toUpperCase())) {
                     const index = speakers.indexOf(x);
-                    window.open(`/#/event/${eventData?.events[index].videoUrl}`, '_self')
-                    // history.push(`/#/event/${eventData?.events[index].videoUrl}`);
+                    history.push(`/event/${eventData?.events[index].videoUrl}`);
 
                 }
 

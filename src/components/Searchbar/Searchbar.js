@@ -15,7 +15,7 @@ const Searchbar = () => {
 
     // Load speakerdata from Public/data folder
     useEffect(() => {
-        fetch('data/events.json'
+        fetch('/data/events.json'
             ,{
                 headers : {
                     'Content-Type': 'application/json',

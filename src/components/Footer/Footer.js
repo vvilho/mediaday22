@@ -170,7 +170,7 @@ const Footer = () => {
             </Grid>
             <Grid item xs={12} md={9}>
               <Grid container>
-                <Grid item xs={12} className={'footerBottomGridItem'}>
+                <Grid item xs={12} className={'footerBottomGridItem'} id={'footerAbout'}>
                   <Stack spacing={3} direction={{ xs: 'column', sm: 'row' }}>
                     <Typography variant="h5" textAlign="left">
                       Yhteystiedot

@@ -11,8 +11,8 @@ import { Link } from "react-router-dom";
 import DrawerComponent from './DrawerComponent';
 import colors from '../../siteWideColors'
 import Searchbar from "../Searchbar/Searchbar";
-import ComboBox from "../Searchbar/TestBar";
-import {Grid, IconButton} from "@mui/material";
+import { Scrollchor, linear} from 'react-scrollchor';
+import {Grid} from "@mui/material";
 
 const useStyles = makeStyles((theme) => ({
     navLinks: {
@@ -94,6 +94,9 @@ function Navbar() {
                                 <Link to="/yhteystietolomake" className={classes.link}>
                                     Yhteystietolomake
                                 </Link>
+                                <Scrollchor to="#footerAbout" className={classes.link} animate={{ duration: 500, easing: linear}}>
+                                    Lisätietoa
+                                </Scrollchor>
                                 <div
                                     className={classes.searchBar}
                                 >

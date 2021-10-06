@@ -5,7 +5,7 @@ const Introduction = () => {
     return (
         <Container disableGutters={true} maxWidth={false}>
 
-            <Typography variant={'h5'} marginY='1.5rem'>
+            <Typography variant={'h5'} marginY='1.5rem' className={''}>
                 Metropolia ammattikorkeakoulu järjestää Mediaday-tapahtuman pitkän
                 tauon jälkeen keväällä 2022.
             </Typography>

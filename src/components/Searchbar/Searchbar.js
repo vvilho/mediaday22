@@ -1,7 +1,6 @@
 import React, {useEffect, useRef, useState} from "react";
-import SearchBar from "material-ui-search-bar";
 import { useHistory } from "react-router-dom";
-import { Autocomplete } from '@mui/material';
+import { Autocomplete, TextField } from '@mui/material';
 
 
 
@@ -14,7 +13,7 @@ const Searchbar = () => {
 
 
     const [eventData, setEventData] = useState()
-    const [searchBarValue, setSearchBarValue] = useState();
+    const [inputValue, setInputValue] = useState('');
     const searchBarRef = useRef()
     let speakers = [];
 
@@ -38,42 +37,30 @@ const Searchbar = () => {
 
     useEffect(()=> {
 
-        eventData?.events.map(x => speakers?.push(x.name));
+            eventData?.events.map(x => speakers?.push({label: x.name, link: `/event/${x.videoUrl}`}));
     },
         [eventData])
 
 
+    useEffect(()=>{
+        console.log(inputValue)
+    },[inputValue])
 
-    const onSubmit = () => {
-        if(searchBarValue?.length > 2) {
-            let speakers = [];
-
-            eventData?.events.map(x => speakers?.push(x.name.toUpperCase()));
-            speakers.map(x => {
-                if (x.includes(searchBarValue.toString().toUpperCase())) {
-                    const index = speakers.indexOf(x);
-                    history.push(`/event/${eventData?.events[index].videoUrl}`);
-
-                }
-
-            })
-            setSearchBarValue('');
-            searchBarRef.current.blur();
-        }
-    }
-
-    const onCancelSearch = () => {
-        setSearchBarValue('')
-    }
 
     return (
         <>
+
             <Autocomplete
-                disablePortal
+                inputValue={inputValue}
+                onInputChange={(e) => setInputValue(e?.target.value)}
                 id="combo-box-demo"
                 options={speakers}
-                sx={{ width: 300 }}
-                renderInput={(params) => <TextField {...params} label="Movie" />}
+                getOptionLabel={(option) => option}
+                style={{ width: 300 }}
+                renderInput={(params) => (
+                    <TextField {...params} label="Combo box" variant="outlined" />
+                )}
+                open={inputValue?.length > 2}
             />
 
 

@@ -6,7 +6,7 @@ import {
     useLocation
 } from "react-router-dom";
 import {EventiTimeTable} from "./pages/EventiTimeTable";
-import {PromoVideo} from "./pages/PromoVideo";
+import {ContactPage} from "./pages/ContactPage";
 import { EventPage} from "./pages/EventPage";
 import {LandingPage} from "./pages/LandingPage";
 import { createTheme} from '@material-ui/core/styles';
@@ -52,7 +52,7 @@ function App() {
             </Route>
 
             <Route path="/yhteystietolomake">
-              <PromoVideo/>
+              <ContactPage/>
             </Route>
 
             <Route path="/event/:id" children={<EventPage/>}></Route>

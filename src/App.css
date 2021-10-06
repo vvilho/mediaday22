@@ -33,3 +33,10 @@
     transform: rotate(360deg);
   }
 }
+
+
+.landingPageText {
+  padding: 1rem;
+  background-color: rgba(173,168,167,0.5);
+
+}

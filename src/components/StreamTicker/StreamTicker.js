@@ -18,7 +18,7 @@ const StreamTicker = () => {
       });
 
       const json = await result.json();
-
+      setEventData(json.events);
 
     }
     catch (err) {
@@ -27,28 +27,9 @@ const StreamTicker = () => {
   };
 
   useEffect(() => {
-    fetch('/data/events.json'
-        ,{
-          headers : {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          }
-        }
-    )
-    .then((response) => {
-      return response.json();
-    })
-    .then((myJson) => {
-      setEventData(myJson.events);
-    });
-  }, [])
-
-
-
-  /*useEffect(() => {
     getEventData();
   }, []);
-  */
+
 
   return (
       <NextStream
@@ -57,16 +38,24 @@ const StreamTicker = () => {
         {(nextStream) => (
             <>
             {console.log('nextstream', nextStream)}
+              {nextStream?.name ?
               <Ticker
-                  speed={8}
+                  speed={7}
                   mode={'smooth'}
+                  offset={'run-in'}
               >
                 {({index}) => (
                     <>
-                      <Typography variant={'h6'}>This is the Headline of element! #{index}</Typography>
+                      <Typography variant={'h6'} sx={{whiteSpace: 'nowrap'}}>Seuraava striimi: {nextStream?.name}, {nextStream?.company} - {nextStream?.startDate} klo {nextStream?.startTime}</Typography>
                     </>
                 )}
               </Ticker>
+                :
+                <div className='blackDiv'>
+
+                </div>
+              }
+
             </>
         )}
       </NextStream>

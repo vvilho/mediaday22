@@ -2,8 +2,6 @@ import {useEffect, useState} from 'react';
 
 const NextStream = ({eventData, children}) => {
 
-  console.log('eventData', eventData);
-
   const [nextStream, setNextStream] = useState({});
 
   const isNext = (event) => {
@@ -21,21 +19,18 @@ const NextStream = ({eventData, children}) => {
 
   const setNextStreamValue = () => {
     const nextEvent = eventData?.find(isNext);
-    console.log('nextEvent', nextEvent);
     setNextStream(nextEvent);
   };
 
   useEffect(() => {
-    const interval = setInterval(setNextStreamValue, 5000);
+    setNextStreamValue();
+
+    const interval = setInterval(setNextStreamValue, 60000);
 
     return () => {
       clearInterval(interval);
     };
-  }, []);
-
-  useEffect(()=>{
-    console.log('nextstreamstate', nextStream);
-  }, [nextStream])
+  }, [eventData]);
 
   return children(nextStream);
 

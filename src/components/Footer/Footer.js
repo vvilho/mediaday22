@@ -2,6 +2,7 @@ import React from 'react';
 import {Container, Divider, Typography, Stack} from '@mui/material';
 import {makeStyles, useTheme, Grid} from '@material-ui/core';
 import Link from '@mui/material/Link';
+import { Link as RouterLink } from "react-router-dom";
 import './footer.css';
 import colors from '../../siteWideColors';
 
@@ -164,15 +165,15 @@ const Footer = () => {
         <Divider/>
         <Container className={'footerBottomContainer'}>
           <Grid container alignItems='center'>
-            <Grid item xs={12} md={3}>
+            <Grid item xs={12} md={4}>
                 <img className={'brandImg'} alt={'Mediaday logo'}
                      src="logos/mediadaylogo.png"/>
             </Grid>
-            <Grid item xs={12} md={9}>
+            <Grid item xs={12} md={8}>
               <Grid container>
                 <Grid item xs={12} className={'footerBottomGridItem'} id={'footerAbout'}>
-                  <Stack spacing={3} direction={{ xs: 'column', sm: 'row' }}>
-                    <Typography variant="h5" textAlign="left">
+                  <Stack spacing={1} marginBottom='8px' direction={'column'}>
+                    <Typography variant="h6" textAlign="left">
                       Yhteystiedot
                     </Typography>
                     <Typography textAlign="left">
@@ -181,13 +182,13 @@ const Footer = () => {
                       kysyttävää?
                       Yhteydenotot ja tiedustelut puhelimitse tuottaja Päivi
                       Pitkäseen
-                      040 123 4567, mediaday2021@metropolia.fi tai yhteyslomakkeella.
+                      040 123 4567, mediaday2021@metropolia.fi tai <RouterLink to={'/yhteystietolomake'}>yhteyslomakkeella</RouterLink>.
                     </Typography>
                   </Stack>
                 </Grid>
                 <Grid item xs={12} className={'footerBottomGridItem'}>
-                  <Stack spacing={{xs: 3 ,sm: 5}} direction={{ xs: 'column', sm: 'row' }}>
-                    <Typography variant="h5" textAlign="left">
+                  <Stack spacing={1} marginBottom='8px' direction={'column'}>
+                    <Typography variant="h6" textAlign="left">
                       Järjestäjät
                     </Typography>
                     <Typography textAlign="left">
@@ -197,8 +198,8 @@ const Footer = () => {
                   </Stack>
                 </Grid>
                 <Grid item xs={12} className={'footerBottomGridItem'}>
-                  <Stack spacing={{xs: 3 ,sm: 7}} direction={{ xs: 'column', sm: 'row' }}>
-                    <Typography variant="h5" textAlign="left">
+                  <Stack spacing={1} marginBottom='8px' direction={'column'}>
+                    <Typography variant="h6" textAlign="left">
                       Medioille
                     </Typography>
                     <Typography textAlign="left">

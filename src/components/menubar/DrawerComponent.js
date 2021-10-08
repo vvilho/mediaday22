@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState} from 'react';
 import {
     Drawer,
     IconButton,
@@ -9,16 +9,17 @@ import {
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import { Menu as MenuIcon } from "@material-ui/icons";
+import {linear, Scrollchor} from 'react-scrollchor';
 
-const useStyles = makeStyles(()=>({
-    link:{
-        textDecoration:"none",
-        color: "blue",
-        fontSize: "20px",
-    },
-    icon:{
-        color: "white"
-    }
+const useStyles = makeStyles(() => ({
+  link: {
+    textDecoration: 'none',
+    color: 'blue',
+    fontSize: '20px',
+  },
+  icon: {
+    color: 'white',
+  },
 }));
 
 function DrawerComponent() {
@@ -41,7 +42,13 @@ function DrawerComponent() {
                             <Link to="/yhteystietolomake">yhteystietolomake</Link>
                         </ListItemText>
                     </ListItem>
-
+                    <ListItem onClick={() => setOpenDrawer(false)}>
+                        <ListItemText>
+                            <Scrollchor to="#footerAbout" className={Link} animate={{ duration: 500, easing: linear}}>
+                                Lisätietoa
+                            </Scrollchor>
+                        </ListItemText>
+                    </ListItem>
                 </List>
             </Drawer>
             <IconButton onClick={() => setOpenDrawer(!openDrawer)}>
@@ -50,4 +57,5 @@ function DrawerComponent() {
         </>
     );
 }
+
 export default DrawerComponent;

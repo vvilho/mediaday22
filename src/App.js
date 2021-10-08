@@ -57,7 +57,6 @@ function App() {
 
             <Route path="/event/:id" children={<EventPage/>}></Route>
           </Switch>
-
           <Footer/>
         </ThemeProvider>
       </div>

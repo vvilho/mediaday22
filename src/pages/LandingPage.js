@@ -4,6 +4,7 @@ import {SpeakerGrid} from '../components/SpeakerGrid/SpeakerGrid';
 import {createTheme, responsiveFontSizes} from '@material-ui/core/styles';
 import {Container} from "@material-ui/core";
 import {Introduction} from "../components/Introduction/Introduction";
+import StreamTicker from '../components/StreamTicker/StreamTicker';
 
 let theme = createTheme();
 theme = responsiveFontSizes(theme);
@@ -16,6 +17,7 @@ const LandingPage = () => {
     return (
         <Container className='App-header' maxWidth={false} disableGutters={true}>
             <ThemeProvider theme={theme}>
+              <StreamTicker/>
                 <Grid container
                     style={{
                         background: 'linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("banner.webp")',

@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import Ticker from 'react-ticker';
 import {Typography} from '@mui/material';
 import NextStream from '../NextStream/NextStream';
+import {Link} from "react-router-dom";
 import './streamTicker.css';
 
 const StreamTicker = () => {
@@ -26,7 +27,7 @@ const StreamTicker = () => {
     }
   };
 
-  useEffect(() => {
+    useEffect(() => {
     getEventData();
   }, []);
 
@@ -46,7 +47,14 @@ const StreamTicker = () => {
               >
                 {({index}) => (
                     <>
-                      <Typography variant={'h6'} sx={{whiteSpace: 'nowrap'}}>Seuraava striimi: {nextStream?.name}, {nextStream?.company} - {nextStream?.startDate} klo {nextStream?.startTime}</Typography>
+                      <Typography
+                          variant={'h6'}
+                          component={Link}
+                          to={'/event/'+ nextStream.videoUrl}
+                          sx={{whiteSpace: 'nowrap', color: 'white', textDecoration: 'none'}}>
+                        Seuraava striimi: {nextStream?.name}, {nextStream?.company} - {nextStream?.desc} - {nextStream?.startDate} klo {nextStream?.startTime}
+
+                      </Typography>
                     </>
                 )}
               </Ticker>
@@ -61,5 +69,6 @@ const StreamTicker = () => {
       </NextStream>
   )
 }
+
 
 export default StreamTicker;

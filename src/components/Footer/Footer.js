@@ -166,7 +166,7 @@ const Footer = () => {
         <Container className={'footerBottomContainer'}>
           <Grid container alignItems='center'>
             <Grid item xs={12} md={4}>
-                <img className={'brandImg'} alt={'Mediaday logo'}
+                <img id={'mediaDayFooterLogo'} alt={'Mediaday logo'}
                      src="logos/mediadaylogo.png"/>
             </Grid>
             <Grid item xs={12} md={8}>

@@ -37,7 +37,6 @@ const LandingPage = () => {
     getEventData();
   }, []);
 
-
   useEffect(() => {
     document.title = 'MediaDay Home';
   }, []);
@@ -71,14 +70,19 @@ const LandingPage = () => {
               <NextStream
                   eventData={eventData}
               >
-                {(nextStream) => (
+                {(stream) => (
                     <>
-                      {console.log('landing', nextStream)}
-                      <Button
-                          variant={'contained'}
-                          onClick={() => history.push(`/event/${nextStream?.videoUrl}`)}>
-                        Striimiin
-                      </Button>
+                      {console.log('landing', stream.nextStream)}
+                      {(stream.nextStreamStatus === 'live' ||
+                          stream.nextStreamStatus === 'upcoming') &&
+                      (
+                          <Button
+                              variant={'contained'}
+                              onClick={() => history.push(
+                                  `/event/${stream.nextStream?.videoUrl}`)}>
+                            Striimiin
+                          </Button>
+                      )}
                     </>)}
               </NextStream>
             </Grid>

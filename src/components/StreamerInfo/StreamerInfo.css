@@ -25,6 +25,16 @@
 .streamerInfoContainer{
     padding: 16px 0;
 }
+.modalImg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: fit-content;
+    width: fit-content;
+    margin: 0;
+    padding: 0;
+}
 @media only screen and (max-width: 830px) {
     .streamerInfoContainer{
         padding: 16px;

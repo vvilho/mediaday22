@@ -24,7 +24,7 @@ const Introduction = () => {
             <Typography variant={'h5'} marginY='1rem' textAlign='left' color='white'>
                 <strong>Rento ilmapiiri</strong>
             </Typography>
-          <Typography variant={'body1'} textAlign='left' color='white' sx={{margin:'0 0 1rem 0'}}>
+          <Typography variant={'body1'} textAlign='left' color='white' sx={{margin:'0 0 5rem 0'}}>
             Hyväntuulinen tekemisen meininki.
             Meillä voi vapaasti kysellä ja ihmetellä, pääkohderyhmänä ovat opiskelijat.
           </Typography>

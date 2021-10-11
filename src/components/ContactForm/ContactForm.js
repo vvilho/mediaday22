@@ -23,7 +23,7 @@ const ContactForm = () => {
     const handleSubmit = async (evt) => {
         evt.preventDefault();
         try {
-            const response = await sendForm('contact_form_mediaday', 'mediaday2022_template', '#contactForm');
+            const response = await sendForm('contact_form_mediaday', 'mediaday2022_template', '#contactForm', 'user_9FZPzBTtUqDXunVFE3aTl');
             if (response.status === 200) {
                 await handleOpen();
                 document.getElementById('modalText').innerText = 'Kiitos yhtydenotostanne \n(Sulje modaali painamalla sen ulkopuolelta)';

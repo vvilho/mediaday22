@@ -39,3 +39,11 @@
 .footerBottomGridItem{
     margin: 10px 0;
 }
+.footerLink{
+    color: #C89A04 !important;
+    text-decoration-color: #C89A04 !important;
+}
+.footerLink:hover{
+    color: #DCAA04 !important;
+    text-decoration-color: #DCAA04 !important;
+}

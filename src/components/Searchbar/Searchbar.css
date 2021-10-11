@@ -15,3 +15,7 @@
 .nav-link:hover:after{
     width: 100%;
 } */
+.MuiInputBase-root{
+    font-family: 'Russo One', sans-serif !important;
+}
+

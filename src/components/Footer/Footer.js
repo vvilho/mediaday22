@@ -182,7 +182,7 @@ const Footer = () => {
                       kysyttävää?
                       Yhteydenotot ja tiedustelut puhelimitse tuottaja Päivi
                       Pitkäseen
-                      040 123 4567, mediaday2021@metropolia.fi tai <RouterLink to={'/yhteystietolomake'}>yhteyslomakkeella</RouterLink>.
+                      040 123 4567, mediaday2021@metropolia.fi tai <RouterLink to={'/yhteystietolomake'} className={'footerLink'}>yhteyslomakkeella</RouterLink>.
                     </Typography>
                   </Stack>
                 </Grid>
@@ -204,7 +204,9 @@ const Footer = () => {
                     </Typography>
                     <Typography textAlign="left">
                       Löydät Mediadayn lehdistötiedotteen täältä <Link
+                        className={'footerLink'}
                         href="http://mediaday.metropolia.fi/mediaday_press_2016_FIN.pdf" target="_blank">suomeksi</Link> ja <Link
+                        className={'footerLink'}
                         href="http://mediaday.metropolia.fi/mediaday_press_2016_ENG.pdf" target="_blank">englanniksi</Link> (julkaistaan
                       12/2021).
                     </Typography>

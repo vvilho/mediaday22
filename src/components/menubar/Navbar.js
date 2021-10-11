@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
         marginRight: theme.spacing(0),
         display: "flex",
         alignItems: "center",
+        fontFamily: "Russo One",
     },
     logo: {
         flexGrow: "1",
@@ -27,13 +28,16 @@ const useStyles = makeStyles((theme) => ({
         textDecoration: "none"
     },
     link: {
-        textDecoration: "none",
-        color: colors.base,
+        position: 'relative',
+        display: 'inline-block',
+        color: 'black',
         fontSize: "20px",
         marginLeft: theme.spacing(11),
+        textDecoration: 'underline 0.15em rgba(255, 255, 255, 0)',
+        transition: 'text-decoration-color 300ms',
         "&:hover": {
-            color: colors.second,
-            borderBottom: `1px solid ${colors.second}`,
+            color: colors.fourth,
+            textDecorationColor: colors.fourth,
         },
         "&:first-child": {
             marginLeft: theme.spacing(6),

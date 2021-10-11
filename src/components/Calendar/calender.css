@@ -1,3 +1,12 @@
 .fc-timegrid-col-events{
     width: 100%;
 }
+.fc{
+    margin: 2rem 0.5rem;
+}
+.fc-theme-standard td{
+    border: 1px solid #080808;
+}
+.fc-theme-standard .fc-scrollgrid{
+    border-color: #080808;
+}

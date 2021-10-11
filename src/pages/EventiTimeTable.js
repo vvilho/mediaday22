@@ -1,35 +1,76 @@
 import React, {useEffect} from 'react';
-import {Calendar} from "../components/Calendar/Calendar";
-import {Grid} from "@mui/material";
-
+import {Calendar} from '../components/Calendar/Calendar';
+import {
+  Grid,
+  Tooltip,
+  ClickAwayListener,
+  IconButton,
+} from '@mui/material';
+import {Info} from '@mui/icons-material';
 
 const EventiTimeTable = () => {
-    useEffect(() => {
-        document.title = 'MediaDay Kalenteri';
-    }, [])
 
-return (
-    <div>
+  const [open, setOpen] = React.useState(false);
+
+  useEffect(() => {
+    document.title = 'MediaDay Kalenteri';
+  }, []);
+
+  const handleTooltipClose = () => {
+    setOpen(false);
+  };
+
+  const handleTooltipOpen = () => {
+    setOpen(true);
+  };
+
+  return (
+      <div>
         <Grid
             container
-            justifyContent={"center"}
+            justifyContent={'center'}
 
         >
-            <Grid
-                xs={12}
-                sm={9   }
-                style={{
-                    margin: 0}
-                }
+          <Grid
+              xs={12}
+              sm={9}
+              style={{
+                margin: 0,
+              }
+              }
 
-                >
+          >
+            <Grid container justifyContent={'center'} spacing={1}>
+              <Grid item={'auto'}>
                 <h1>Puhujien aikataulut</h1>
-                <Calendar/>
+              </Grid>
+              <Grid item={'auto'} display={'flex'} alignItems={'center'}>
+                <ClickAwayListener onClickAway={handleTooltipClose}>
+                  <div>
+                    <Tooltip
+                        PopperProps={{
+                          disablePortal: true,
+                        }}
+                        onClose={handleTooltipClose}
+                        open={open}
+                        disableFocusListener
+                        disableHoverListener
+                        disableTouchListener
+                        title="Klikkaa tapahtumaa päästäksesi striimiin"
+                    >
+                      <IconButton onClick={handleTooltipOpen}><Info/></IconButton>
+                    </Tooltip>
+                  </div>
+                </ClickAwayListener>
+              </Grid>
             </Grid>
+
+            <Calendar/>
+          </Grid>
         </Grid>
 
-    </div>
-)
-}
+      </div>
+  );
+};
 
-export {EventiTimeTable}
+export {EventiTimeTable};

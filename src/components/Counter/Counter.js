@@ -20,9 +20,7 @@ const Counter = ({startDate, startTime}) => {
 
   useEffect(() => {
 
-    if(windowSize<350){
-      setCounterSize('extra-small');
-    }else if(windowSize< 768){
+    if(windowSize< 650){
       setCounterSize('small');
     }else {
       setCounterSize('medium');

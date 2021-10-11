@@ -6,14 +6,23 @@
     height: auto;
     max-width: 100%;
 }
-
+#mediaDayFooterLogo{
+    width: 200px;
+    height: auto;
+    max-width: 100%;
+}
 .brandImg:hover {
-
+    transform: scale(1.25);
+    background-color: rgba(0, 0, 0, 0.15);
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
 }
 .brandGridItem{
     display: flex !important;
     align-items: center;
     justify-content: center;
+    overflow:hidden;
 }
 .brandGridContainer{
     width: 80% !important;

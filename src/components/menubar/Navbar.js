@@ -16,24 +16,24 @@ import {Grid} from "@mui/material";
 
 const useStyles = makeStyles((theme) => ({
     navLinks: {
-        marginRight: theme.spacing(12),
+        marginRight: theme.spacing(0),
         display: "flex",
         alignItems: "center"
     },
     logo: {
         flexGrow: "1",
         cursor: "pointer",
-        color: "white",
+        color: colors.base,
         textDecoration: "none"
     },
     link: {
         textDecoration: "none",
-        color: "white",
+        color: colors.base,
         fontSize: "20px",
-        marginLeft: theme.spacing(15),
+        marginLeft: theme.spacing(12),
         "&:hover": {
-            color: "yellow",
-            borderBottom: "1px solid white",
+            color: colors.second,
+            borderBottom: `1px solid ${colors.second}`,
         },
     },
     appBar: {

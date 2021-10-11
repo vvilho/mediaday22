@@ -54,6 +54,7 @@ const Speaker = ({speakerName, speakerCompany, speakerImage, speakerIntro, speak
             </Typography>
             <Button
                 variant={'contained'}
+                className={'button'}
                 onClick={()=> history.push(`/event/${speakerUrl}`)}>
               Striimiin
             </Button>

@@ -56,10 +56,32 @@
     margin-left: 0;
   }
 }
-
+.button{
+  width: fit-content !important;
+  display: inline-block !important;
+  text-decoration: none !important;
+  border: 3px solid rgb(204, 204, 204) !important;
+  border-radius: 32px !important;
+  color: white !important;
+  padding: 6px 8px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  text-align: center !important;
+  user-select: none !important;
+  cursor: pointer !important;
+  margin: 12px 0px !important;
+  transition: all 200ms ease-in-out 0s !important;
+  background: none !important;
+}
+.button:hover{
+  color: rgb(0, 0, 0) !important;
+  border-color: rgb(255, 255, 255) !important;
+  background-color: rgb(255, 255, 255) !important;
+}
 
 .landingPageText {
   padding: 1rem;
   background-color: rgba(173,168,167,0.5);
-
 }

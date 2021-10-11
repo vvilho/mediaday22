@@ -13,12 +13,31 @@ import { createTheme} from '@material-ui/core/styles';
 import {ThemeProvider} from '@mui/material';
 import {Footer} from './components/Footer/Footer';
 import Navbar from "./components/menubar/Navbar";
+import '@fontsource/russo-one';
 import '@fontsource/roboto';
 
 
 const theme = createTheme({
   typography: {
-    fontFamily: 'Roboto'
+    h1: {
+      fontFamily: "Russo One",
+    },
+    h2: {
+      fontFamily: "Russo One",
+    },
+    h3: {
+      fontFamily: "Russo One",
+    },
+    h4: {
+      fontFamily: "Russo One",
+    },
+    h5: {
+      fontFamily: "Russo One",
+    },
+    h6: {
+      fontFamily: "Russo One",
+    },
+    fontFamily: "Roboto"
   }
 });
 

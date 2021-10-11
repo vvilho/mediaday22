@@ -1,12 +1,34 @@
 import React, {useEffect, useState} from 'react';
 import {useParams} from 'react-router-dom';
-import {Grid, ThemeProvider} from '@mui/material';
+import {Grid, ThemeProvider, Typography} from '@mui/material';
 import {createTheme, responsiveFontSizes} from '@material-ui/core/styles';
 import Counter from '../components/Counter/Counter';
 import StreamStatus from '../components/StreamStatus/StreamStatus';
 import StreamerInfo from '../components/StreamerInfo/StreamerInfo';
 
-let theme = createTheme();
+let theme = createTheme({
+  typography: {
+    h1: {
+      fontFamily: "Russo One",
+    },
+    h2: {
+      fontFamily: "Russo One",
+    },
+    h3: {
+      fontFamily: "Russo One",
+    },
+    h4: {
+      fontFamily: "Russo One",
+    },
+    h5: {
+      fontFamily: "Russo One",
+    },
+    h6: {
+      fontFamily: "Russo One",
+    },
+    fontFamily: "Roboto"
+  }
+});
 theme = responsiveFontSizes(theme, {breakpoints: ['xs','sm', 'md', 'lg']});
 
 const EventPage = () => {
@@ -68,7 +90,7 @@ const EventPage = () => {
                       !streamStatus?.streamHasEnded) && (
                       <>
                         <Grid item xs={12}>
-                          <h2>Striimin alkuun</h2>
+                          <Typography variant={'h4'} margin={'1rem 0'}>Striimin alkuun</Typography>
                           <Counter startTime={eventResult?.startTime}
                                    startDate={eventResult?.startDate}/>
                         </Grid>
@@ -92,7 +114,7 @@ const EventPage = () => {
                       !streamStatus?.streamHasEnded) && (
                       <>
                         <Grid item xs={12}>
-                          <h2>Striimi käynnissä! Tule katsomaan</h2>
+                          <Typography variant={'h4'}>Striimi käynnissä! Tule katsomaan</Typography>
                         </Grid>
                         <Grid item width="800px">
                           <StreamerInfo
@@ -114,7 +136,7 @@ const EventPage = () => {
                   {streamStatus.streamHasEnded && (
                       <>
                         <Grid item xs={12}>
-                          <h2>Striimi päättynyt. Katso tallenne.</h2>
+                          <Typography variant={'h4'}>Striimi päättynyt. Katso tallenne.</Typography>
                         </Grid>
                         <Grid item width="800px">
                           <StreamerInfo

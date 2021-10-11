@@ -5,12 +5,34 @@ import {
   Tooltip,
   ClickAwayListener,
   IconButton,
-  ThemeProvider,
+  ThemeProvider, Typography,
 } from '@mui/material';
 import {createTheme, responsiveFontSizes} from '@material-ui/core/styles';
 import {Info} from '@mui/icons-material';
 
-let theme = createTheme();
+let theme = createTheme({
+  typography: {
+    h1: {
+      fontFamily: "Russo One",
+    },
+    h2: {
+      fontFamily: "Russo One",
+    },
+    h3: {
+      fontFamily: "Russo One",
+    },
+    h4: {
+      fontFamily: "Russo One",
+    },
+    h5: {
+      fontFamily: "Russo One",
+    },
+    h6: {
+      fontFamily: "Russo One",
+    },
+    fontFamily: "Roboto"
+  }
+});
 theme = responsiveFontSizes(theme, {breakpoints: ['xs','sm', 'md', 'lg']});
 
 const EventTimeTable = () => {
@@ -48,7 +70,7 @@ const EventTimeTable = () => {
             >
               <Grid container justifyContent={'center'} spacing={1}>
                 <Grid item={'auto'}>
-                  <h1>Puhujien aikataulut</h1>
+                  <Typography variant={'h4'} margin={'1rem 0'}>Puhujien aikataulut</Typography>
                 </Grid>
                 <Grid item={'auto'} display={'flex'} alignItems={'center'}>
                   <ClickAwayListener onClickAway={handleTooltipClose}>

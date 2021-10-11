@@ -8,7 +8,7 @@ import {
   CardContent,
   CardActions,
   Modal,
-  Box,
+  Typography,
 } from '@mui/material';
 import {Facebook, Twitter, Instagram, LinkedIn} from '@mui/icons-material';
 import Link from '@mui/material/Link';
@@ -44,10 +44,10 @@ const StreamerInfo = ({
                     sx={{width: 56, height: 56}}
                     onClick={handleOpen}
                 />}
-                title={<span
-                    className={'streamerInfoCardTitle'}>{name}, {company}</span>}
-                subheader={<span
-                    className={'streamerInfoCardSubHeader'}>{startDate} klo {startTime}-{endTime}</span>}
+                title={<Typography variant={'h5'}
+                    className={'streamerInfoCardTitle'}>{name}, {company}</Typography>}
+                subheader={<Typography variant={'body1'}
+                    className={'streamerInfoCardSubHeader'}>{startDate} klo {startTime}-{endTime}</Typography>}
             />
             <Modal
                 open={open}
@@ -58,7 +58,7 @@ const StreamerInfo = ({
                 <img src={avatar} className={'modalImg'} alt={'Modal speaker avatar'}/>
             </Modal>
             <CardContent className="streamerInfoCardContent">
-              <h1 className={'streamerInfoCardDesc'}>{desc}</h1>
+              <Typography variant={'h5'} className={'streamerInfoCardDesc'}>{desc}</Typography>
               <Video
                   url={url}
                   type={type}

@@ -7,7 +7,32 @@ import StreamTicker from '../components/StreamTicker/StreamTicker';
 import NextStream from '../components/NextStream/NextStream';
 import {useHistory} from 'react-router-dom';
 
-let theme = createTheme();
+let theme = createTheme({
+  typography: {
+    h1: {
+      fontFamily: "Russo One",
+    },
+    h2: {
+      fontFamily: "Russo One",
+    },
+    h3: {
+      fontFamily: "Russo One",
+    },
+    h4: {
+      fontFamily: "Russo One",
+    },
+    h5: {
+      fontFamily: "Russo One",
+    },
+    h6: {
+      fontFamily: "Russo One",
+    },
+    button:{
+      fontFamily: "Russo One"
+    },
+    fontFamily: "Roboto"
+  }
+});
 theme = responsiveFontSizes(theme, {breakpoints: ['xs','sm', 'md', 'lg']});
 
 const LandingPage = () => {
@@ -82,6 +107,7 @@ const LandingPage = () => {
                                 style={{
                                   marginBottom: '1rem',
                                 }}
+                                className={'button'}
                             >
                               Striimiin
                             </Button>

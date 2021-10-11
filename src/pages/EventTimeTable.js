@@ -5,8 +5,13 @@ import {
   Tooltip,
   ClickAwayListener,
   IconButton,
+  ThemeProvider,
 } from '@mui/material';
+import {createTheme, responsiveFontSizes} from '@material-ui/core/styles';
 import {Info} from '@mui/icons-material';
+
+let theme = createTheme();
+theme = responsiveFontSizes(theme, {breakpoints: ['xs','sm', 'md', 'lg']});
 
 const EventTimeTable = () => {
 
@@ -26,49 +31,51 @@ const EventTimeTable = () => {
 
   return (
       <div>
-        <Grid
-            container
-            justifyContent={'center'}
-
-        >
+        <ThemeProvider theme={theme}>
           <Grid
-              xs={12}
-              sm={9}
-              style={{
-                margin: 0,
-              }
-              }
+              container
+              justifyContent={'center'}
 
           >
-            <Grid container justifyContent={'center'} spacing={1}>
-              <Grid item={'auto'}>
-                <h1>Puhujien aikataulut</h1>
+            <Grid
+                xs={12}
+                sm={9}
+                style={{
+                  margin: 0,
+                }
+                }
+
+            >
+              <Grid container justifyContent={'center'} spacing={1}>
+                <Grid item={'auto'}>
+                  <h1>Puhujien aikataulut</h1>
+                </Grid>
+                <Grid item={'auto'} display={'flex'} alignItems={'center'}>
+                  <ClickAwayListener onClickAway={handleTooltipClose}>
+                    <div>
+                      <Tooltip
+                          PopperProps={{
+                            disablePortal: true,
+                          }}
+                          onClose={handleTooltipClose}
+                          open={open}
+                          disableFocusListener
+                          disableHoverListener
+                          disableTouchListener
+                          title="Klikkaa tapahtumaa päästäksesi striimiin"
+                      >
+                        <IconButton
+                            onClick={handleTooltipOpen}><Info/></IconButton>
+                      </Tooltip>
+                    </div>
+                  </ClickAwayListener>
+                </Grid>
               </Grid>
-              <Grid item={'auto'} display={'flex'} alignItems={'center'}>
-                <ClickAwayListener onClickAway={handleTooltipClose}>
-                  <div>
-                    <Tooltip
-                        PopperProps={{
-                          disablePortal: true,
-                        }}
-                        onClose={handleTooltipClose}
-                        open={open}
-                        disableFocusListener
-                        disableHoverListener
-                        disableTouchListener
-                        title="Klikkaa tapahtumaa päästäksesi striimiin"
-                    >
-                      <IconButton onClick={handleTooltipOpen}><Info/></IconButton>
-                    </Tooltip>
-                  </div>
-                </ClickAwayListener>
-              </Grid>
+
+              <Calendar/>
             </Grid>
-
-            <Calendar/>
           </Grid>
-        </Grid>
-
+        </ThemeProvider>
       </div>
   );
 };

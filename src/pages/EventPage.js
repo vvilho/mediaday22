@@ -1,59 +1,61 @@
 import React, {useEffect, useState} from 'react';
 import {useParams} from 'react-router-dom';
-import {Grid} from '@mui/material';
+import {Grid, ThemeProvider} from '@mui/material';
+import {createTheme, responsiveFontSizes} from '@material-ui/core/styles';
 import Counter from '../components/Counter/Counter';
 import StreamStatus from '../components/StreamStatus/StreamStatus';
 import StreamerInfo from '../components/StreamerInfo/StreamerInfo';
 
+let theme = createTheme();
+theme = responsiveFontSizes(theme, {breakpoints: ['xs','sm', 'md', 'lg']});
+
 const EventPage = () => {
 
-    const [eventData, setEventData] = useState()
+  const [eventData, setEventData] = useState();
 
-    const getEvents = async() =>{
-        try {
-            const result = await fetch('/data/events.json', {
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json',
-                },
-            });
-            const json = await result.json();
+  const getEvents = async () => {
+    try {
+      const result = await fetch('/data/events.json', {
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+      });
+      const json = await result.json();
 
-            setEventData(json);
+      setEventData(json);
 
-        } catch (err) {
-            console.log('getEvent error', err);
-        }
-    };
-
-    useEffect(() => {
-        getEvents();
-    }, [])
-
-    const {id} = useParams();
-    //Setting document title based on stream clicked
-    let streamName = id.split('-');
-    streamName = streamName.map(w => w.charAt(0).toUpperCase() + w.slice(1));
-
-    // set document title to be custom for each sitec
-    useEffect(() => {
-        document.title = `${streamName[0]} ${streamName[1]} Stream`;
-    },  [streamName]);
-
-
-    const eventResult = eventData?.events.find(({ videoUrl }) =>
-        videoUrl === id
-    )
-
-
-
-
-    if(!eventResult){
-        return (<div>Event {id} not found</div>);
     }
+    catch (err) {
+      console.log('getEvent error', err);
+    }
+  };
 
-    return (
-        <Grid container justifyContent='center'>
+  useEffect(() => {
+    getEvents();
+  }, []);
+
+  const {id} = useParams();
+  //Setting document title based on stream clicked
+  let streamName = id.split('-');
+  streamName = streamName.map(w => w.charAt(0).toUpperCase() + w.slice(1));
+
+  // set document title to be custom for each sitec
+  useEffect(() => {
+    document.title = `${streamName[0]} ${streamName[1]} Stream`;
+  }, [streamName]);
+
+  const eventResult = eventData?.events.find(({videoUrl}) =>
+      videoUrl === id,
+  );
+
+  if (!eventResult) {
+    return (<div>Event {id} not found</div>);
+  }
+
+  return (
+      <ThemeProvider theme={theme}>
+        <Grid container justifyContent="center">
           <StreamStatus
               startDate={eventResult?.startDate}
               startTime={eventResult?.startTime}
@@ -62,13 +64,15 @@ const EventPage = () => {
           >
             {(streamStatus) => (
                 <>
-                  {(!streamStatus?.streamHasStarted && !streamStatus?.streamHasEnded) && (
+                  {(!streamStatus?.streamHasStarted &&
+                      !streamStatus?.streamHasEnded) && (
                       <>
                         <Grid item xs={12}>
                           <h2>Striimin alkuun</h2>
-                          <Counter startTime={eventResult?.startTime} startDate={eventResult?.startDate}/>
+                          <Counter startTime={eventResult?.startTime}
+                                   startDate={eventResult?.startDate}/>
                         </Grid>
-                        <Grid item width='800px'>
+                        <Grid item width="800px">
                           <StreamerInfo
                               name={eventResult.name}
                               avatar={eventResult.speakerImage}
@@ -84,12 +88,13 @@ const EventPage = () => {
                         </Grid>
                       </>
                   )}
-                  {(streamStatus?.streamHasStarted && !streamStatus?.streamHasEnded) &&(
+                  {(streamStatus?.streamHasStarted &&
+                      !streamStatus?.streamHasEnded) && (
                       <>
                         <Grid item xs={12}>
                           <h2>Striimi käynnissä! Tule katsomaan</h2>
                         </Grid>
-                        <Grid item width='800px'>
+                        <Grid item width="800px">
                           <StreamerInfo
                               name={eventResult.name}
                               avatar={eventResult.speakerImage}
@@ -111,7 +116,7 @@ const EventPage = () => {
                         <Grid item xs={12}>
                           <h2>Striimi päättynyt. Katso tallenne.</h2>
                         </Grid>
-                        <Grid item width='800px'>
+                        <Grid item width="800px">
                           <StreamerInfo
                               name={eventResult.name}
                               avatar={eventResult.speakerImage}
@@ -131,6 +136,7 @@ const EventPage = () => {
             )}
           </StreamStatus>
         </Grid>
+      </ThemeProvider>
   );
 };
 

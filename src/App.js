@@ -5,7 +5,7 @@ import {
   Route,
     useLocation
 } from "react-router-dom";
-import {EventiTimeTable} from "./pages/EventiTimeTable";
+import {EventTimeTable} from "./pages/EventTimeTable";
 import {ContactPage} from "./pages/ContactPage";
 import { EventPage} from "./pages/EventPage";
 import {LandingPage} from "./pages/LandingPage";
@@ -50,7 +50,7 @@ function App() {
             </Route>
 
             <Route path="/aikataulu">
-              <EventiTimeTable />
+              <EventTimeTable />
             </Route>
 
             <Route path="/yhteystietolomake">

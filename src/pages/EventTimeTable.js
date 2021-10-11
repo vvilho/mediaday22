@@ -8,7 +8,7 @@ import {
 } from '@mui/material';
 import {Info} from '@mui/icons-material';
 
-const EventiTimeTable = () => {
+const EventTimeTable = () => {
 
   const [open, setOpen] = React.useState(false);
 
@@ -73,4 +73,4 @@ const EventiTimeTable = () => {
   );
 };
 
-export {EventiTimeTable};
+export {EventTimeTable};

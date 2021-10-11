@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     navLinks: {
         marginRight: theme.spacing(0),
         display: "flex",
-        alignItems: "center"
+        alignItems: "center",
     },
     logo: {
         flexGrow: "1",
@@ -30,11 +30,14 @@ const useStyles = makeStyles((theme) => ({
         textDecoration: "none",
         color: colors.base,
         fontSize: "20px",
-        marginLeft: theme.spacing(12),
+        marginLeft: theme.spacing(11),
         "&:hover": {
             color: colors.second,
             borderBottom: `1px solid ${colors.second}`,
         },
+        "&:first-child": {
+            marginLeft: theme.spacing(6),
+        }
     },
     appBar: {
         zIndex: 999,
@@ -45,8 +48,8 @@ const useStyles = makeStyles((theme) => ({
     searchBar : {
         textDecoration: "none",
         color: "white",
-        fontSize: "20px",
-        marginLeft: theme.spacing(15),
+        fontSize: "1rem",
+        marginLeft: theme.spacing(5),
     }
 }));
 

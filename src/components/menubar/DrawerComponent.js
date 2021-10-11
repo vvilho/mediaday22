@@ -7,19 +7,27 @@ import {
     ListItemText,
     makeStyles
 } from "@material-ui/core";
-import { Link } from "react-router-dom";
-import { Menu as MenuIcon } from "@material-ui/icons";
+import {Link} from "react-router-dom";
+import {Menu as MenuIcon} from "@material-ui/icons";
 import {linear, Scrollchor} from 'react-scrollchor';
+import colors from "../../siteWideColors";
 
 const useStyles = makeStyles(() => ({
-  link: {
-    textDecoration: 'none',
-    color: 'blue',
-    fontSize: '20px',
-  },
-  icon: {
-    color: 'white',
-  },
+    link: {
+        textDecoration: 'none',
+        color: 'white',
+        fontSize: '20px',
+        "&:hover": {
+            color: colors.second,
+            borderBottom: `1px solid ${colors.second}`,
+        },
+    },
+    icon: {
+        color: 'white',
+    },
+    paper: {
+        backgroundColor: colors.third
+    }
 }));
 
 function DrawerComponent() {
@@ -29,22 +37,24 @@ function DrawerComponent() {
         <>
             <Drawer
                 open={openDrawer}
+                classes={{paper: classes.paper}}
                 onClose={() => setOpenDrawer(false)}
             >
                 <List>
                     <ListItem onClick={() => setOpenDrawer(false)}>
                         <ListItemText>
-                            <Link to="/aikataulu">Aikataulu</Link>
+                            <Link to="/aikataulu" className={classes.link}>Aikataulu</Link>
                         </ListItemText>
                     </ListItem>
                     <ListItem onClick={() => setOpenDrawer(false)}>
                         <ListItemText>
-                            <Link to="/yhteystietolomake">yhteystietolomake</Link>
+                            <Link to="/yhteystietolomake" className={classes.link}>yhteystietolomake</Link>
                         </ListItemText>
                     </ListItem>
                     <ListItem onClick={() => setOpenDrawer(false)}>
                         <ListItemText>
-                            <Scrollchor to="#footerAbout" className={Link} animate={{ duration: 500, easing: linear}}>
+                            <Scrollchor to="#footerAbout" className={classes.link}
+                                        animate={{duration: 500, easing: linear}}>
                                 Lisätietoa
                             </Scrollchor>
                         </ListItemText>
@@ -52,7 +62,7 @@ function DrawerComponent() {
                 </List>
             </Drawer>
             <IconButton onClick={() => setOpenDrawer(!openDrawer)}>
-                <MenuIcon />
+                <MenuIcon/>
             </IconButton>
         </>
     );

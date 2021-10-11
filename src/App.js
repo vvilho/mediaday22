@@ -17,19 +17,13 @@ import '@fontsource/roboto';
 
 
 const theme = createTheme({
-  palette: {
-    secondary: {
-      main: '#806270',
-      secondary: "#78bd99"
-    }
-  },
   typography: {
     fontFamily: 'Roboto'
   }
 });
 
 function App() {
-   const location = useLocation()
+   const location = useLocation();
 
   useEffect(() => {
     window.scrollTo({

@@ -23,7 +23,7 @@
     font-size: 15px;
 }
 .streamerInfoContainer{
-    padding: 16px 0;
+    padding: 2rem 0 2rem 0;
 }
 .modalImg{
     position: absolute;
@@ -37,6 +37,6 @@
 }
 @media only screen and (max-width: 830px) {
     .streamerInfoContainer{
-        padding: 16px;
+        padding: 2rem 0.5rem 2rem 0.5rem;
     }
 }

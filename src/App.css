@@ -6,13 +6,19 @@
 
 .App-logo {
   margin-top: 5rem;
+  margin-left: 1.5rem;
   pointer-events: none;
   width: 80%;
+  display: flex;
 }
 .bannerGridRight{
   margin-top: 5rem;
 }
-
+.bannerButtonContainer{
+  display: flex;
+  justify-content: start;
+  margin-left: 1.5rem;
+}
 .App-header {
   min-height: 100vh;
   display: flex;
@@ -39,9 +45,15 @@
 @media only screen and (max-width: 600px) {
   .App-logo{
     margin-top: 1.5rem;
+    margin-left: 0;
+    display: inline;
   }
   .bannerGridRight{
-    margin-top: 0rem;
+    margin-top: 0;
+  }
+  .bannerButtonContainer{
+    justify-content: center;
+    margin-left: 0;
   }
 }
 

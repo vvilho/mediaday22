@@ -55,7 +55,7 @@ const StreamerInfo = ({
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
             >
-                <img src={avatar} className={'modalImg'}/>
+                <img src={avatar} className={'modalImg'} alt={'Modal speaker avatar'}/>
             </Modal>
             <CardContent className="streamerInfoCardContent">
               <h1 className={'streamerInfoCardDesc'}>{desc}</h1>

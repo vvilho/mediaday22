@@ -1,15 +1,14 @@
 import React, {useEffect, useState} from 'react';
-import {Button, Grid, ThemeProvider, Typography} from '@mui/material';
+import {Button, Grid, ThemeProvider, Typography, Box, Container} from '@mui/material';
 import {SpeakerGrid} from '../components/SpeakerGrid/SpeakerGrid';
 import {createTheme, responsiveFontSizes} from '@material-ui/core/styles';
-import {Container} from '@material-ui/core';
 import {Introduction} from '../components/Introduction/Introduction';
 import StreamTicker from '../components/StreamTicker/StreamTicker';
 import NextStream from '../components/NextStream/NextStream';
 import {useHistory} from 'react-router-dom';
 
 let theme = createTheme();
-theme = responsiveFontSizes(theme);
+theme = responsiveFontSizes(theme, {breakpoints: ['xs','sm', 'md', 'lg']});
 
 const LandingPage = () => {
 
@@ -72,16 +71,21 @@ const LandingPage = () => {
               >
                 {(stream) => (
                     <>
-                      {console.log('landing', stream.nextStream)}
                       {(stream.nextStreamStatus === 'live' ||
                           stream.nextStreamStatus === 'upcoming') &&
                       (
-                          <Button
-                              variant={'contained'}
-                              onClick={() => history.push(
-                                  `/event/${stream.nextStream?.videoUrl}`)}>
-                            Striimiin
-                          </Button>
+                          <Box className={'bannerButtonContainer'}>
+                            <Button
+                                variant={'contained'}
+                                onClick={() => history.push(
+                                    `/event/${stream.nextStream?.videoUrl}`)}
+                                style={{
+                                  marginBottom: '1rem',
+                                }}
+                            >
+                              Striimiin
+                            </Button>
+                          </Box>
                       )}
                     </>)}
               </NextStream>

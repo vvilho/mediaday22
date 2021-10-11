@@ -64,7 +64,7 @@ const ContactForm = () => {
             </Modal>
             <Box id="contactForm" sx={{
                 '& .MuiTextField-root': {m: 1},
-                margin: '1rem 1rem 5rem 1rem',
+                margin: '2rem 0.5rem 2rem 0.5rem',
                 border: '1px solid grey',
                 borderRadius: '5px',
                 padding: '1rem',

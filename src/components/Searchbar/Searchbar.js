@@ -12,16 +12,20 @@ const Searchbar = () => {
     let history = useHistory();
 
     const getSpeakers = async () => {
-        const response = await fetch('/data/events.json'
-            , {
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
+        try {
+            const response = await fetch('/data/events.json'
+                , {
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    }
                 }
-            }
-        )
-        const json = await response.json();
-        setEventData(json);
+            )
+            const json = await response.json();
+            setEventData(json);
+        } catch (err) {
+            console.log('getSpeakers error', err.message);
+        }
     }
 
     // Load speakerdata from Public/data folder
@@ -34,7 +38,7 @@ const Searchbar = () => {
 
 
     const onSubmit = () => {
-        if(searchBarValue?.length > 2) {
+        if(searchBarValue?.length > 1) {
             let speakers = [];
 
             eventData?.events.map(x => speakers?.push(x.name.toUpperCase()));
@@ -64,7 +68,7 @@ const Searchbar = () => {
                 onChange={setSearchBarValue}
                 onRequestSearch={onSubmit}
                 onCancelSearch={onCancelSearch}
-                placeholder={"Search by name"}
+                placeholder={"Etsi nimellä"}
 
             />
         </>

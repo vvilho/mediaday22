@@ -10,10 +10,7 @@ import {
 import {createTheme, responsiveFontSizes} from '@material-ui/core/styles';
 import {Info} from '@mui/icons-material';
 
-let theme = createTheme();
-theme = responsiveFontSizes(theme, {breakpoints: ['xs','sm', 'md', 'lg']});
-
-const EventiTimeTable = () => {
+const EventTimeTable = () => {
 
   const [open, setOpen] = React.useState(false);
 
@@ -80,4 +77,4 @@ const EventiTimeTable = () => {
   );
 };
 
-export {EventiTimeTable};
+export {EventTimeTable};

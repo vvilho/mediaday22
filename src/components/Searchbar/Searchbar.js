@@ -3,7 +3,6 @@ import SearchBar from "material-ui-search-bar";
 import { useHistory } from "react-router-dom";
 
 
-
 const Searchbar = () => {
 
 
@@ -12,23 +11,22 @@ const Searchbar = () => {
     const searchBarRef = useRef()
     let history = useHistory();
 
-
-    // Load speakerdata from Public/data folder
-    useEffect(() => {
-        fetch('/data/events.json'
-            ,{
-                headers : {
+    const getSpeakers = async () => {
+        const response = await fetch('/data/events.json'
+            , {
+                headers: {
                     'Content-Type': 'application/json',
                     'Accept': 'application/json'
                 }
             }
         )
-            .then((response) => {
-                return response.json();
-            })
-            .then((myJson) => {
-                setEventData(myJson);
-            });
+        const json = await response.json();
+        setEventData(json);
+    }
+
+    // Load speakerdata from Public/data folder
+    useEffect(() => {
+        getSpeakers();
     }, [])
 
 

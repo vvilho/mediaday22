@@ -1,6 +1,7 @@
 import React, {useEffect, useRef, useState} from "react";
 import SearchBar from "material-ui-search-bar";
 import { useHistory } from "react-router-dom";
+import './Searchbar.css'
 
 
 const Searchbar = () => {

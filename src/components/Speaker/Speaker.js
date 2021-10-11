@@ -38,7 +38,7 @@ const Speaker = ({speakerName, speakerCompany, speakerImage, speakerIntro, speak
               <Typography
                   variant="subtitle1"
                   className="speaker-caption"
-                  color={colors.fourth}
+                  color={colors.main}
               >
                 <strong>
                   {speakerCompany}

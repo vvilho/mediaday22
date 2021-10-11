@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import {Grid, Typography} from '@mui/material';
+import {Container, Grid, Typography} from '@mui/material';
 import {Speaker} from '../Speaker/Speaker';
+import colors from '../../siteWideColors';
+import './speakerGrid.css'
 
 const SpeakerGrid = () => {
     const [speakers, setSpeakers] = useState(null);
@@ -28,9 +30,9 @@ const SpeakerGrid = () => {
 
 
     return (
-        <>
-            <Typography variant={'h3'} marginY='1.5rem'>Avainpuhujat</Typography>
-            <Grid container justifyContent='center' spacing={0} marginBottom='1.5rem'>
+        <Container disableGutters={true} className={'speakerContainer'}>
+            <Typography variant={'h3'} marginBottom='1.5rem' paddingTop='1.5rem' color={colors.base} >Avainpuhujat</Typography>
+            <Grid container justifyContent='center' spacing={0} paddingBottom='1.5rem'>
                 {speakers?.map((speaker) =>
                     <Speaker key={speakers.findIndex(x => x.name === speaker.name)}
                              speakerName={speaker?.name ?
@@ -46,7 +48,7 @@ const SpeakerGrid = () => {
                              speakerUrl={speaker?.videoUrl}/>,
                 )}
             </Grid>
-        </>
+        </Container>
     );
 };
 

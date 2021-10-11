@@ -73,7 +73,7 @@ const LandingPage = () => {
           <StreamTicker/>
           <Grid container
                 style={{
-                  background: 'linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("banner.webp")',
+                  background: 'linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7) ), url("banner.webp")',
                   width: '100%',
                   height: 'fit-content',
                   backgroundSize: 'cover',

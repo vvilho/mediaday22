@@ -6,31 +6,40 @@ import {Introduction} from '../components/Introduction/Introduction';
 import StreamTicker from '../components/StreamTicker/StreamTicker';
 import NextStream from '../components/NextStream/NextStream';
 import {useHistory} from 'react-router-dom';
+import colors from '../siteWideColors';
 
 let theme = createTheme({
   typography: {
     h1: {
       fontFamily: "Russo One",
+      color: colors.base,
     },
     h2: {
       fontFamily: "Russo One",
+      color: colors.base,
     },
     h3: {
       fontFamily: "Russo One",
+      color: colors.base,
     },
     h4: {
       fontFamily: "Russo One",
+      color: colors.base,
     },
     h5: {
       fontFamily: "Russo One",
+      color: colors.base,
     },
     h6: {
       fontFamily: "Russo One",
+      color: colors.base,
     },
     button:{
-      fontFamily: "Russo One"
+      fontFamily: "Russo One",
+      color: colors.base,
     },
-    fontFamily: "Roboto"
+    fontFamily: "Roboto",
+    color: colors.base,
   }
 });
 theme = responsiveFontSizes(theme, {breakpoints: ['xs','sm', 'md', 'lg']});
@@ -86,7 +95,7 @@ const LandingPage = () => {
               <img src={'/logos/mediaday_logo_vanha_white.png'}
                    className="App-logo" alt="Mediaday logo"/>
               <Typography variant={'h5'} marginY="1.5rem" marginX="1.5rem"
-                          className={''} color={'white'} textAlign="left">
+                          className={''} textAlign="left">
                 Metropolia ammattikorkeakoulu järjestää Mediaday-tapahtuman
                 pitkän
                 tauon jälkeen keväällä 2022.

@@ -5,6 +5,7 @@ import format from 'date-fns/format'
 import parse from 'date-fns/parse';
 import './calender.css'
 import {useHistory} from "react-router-dom";
+import colors from '../../siteWideColors';
 
 
 
@@ -32,7 +33,7 @@ const Calendar = () => {
                 url: x.videoUrl,
                 backgroundColor: x.eventColor,
                 textColor: 'black',
-                borderColor: 'white'
+                borderColor: colors.base
             }
 
             setEvents(oldEvents => [...oldEvents, singleEvent]);
@@ -92,7 +93,7 @@ const Calendar = () => {
                     slotMinTime='10:00:00'
                     slotMaxTime={'21:00:00'}
                     headerToolbar={{start: '', center: 'title', end: ''}}
-                    height={'525px'}
+                    height={'560px'}
                     titleFormat={{weekday: 'long', year:'numeric', month: 'long', day: 'numeric', omitCommas: true}}
                     buttonIcons={false}
                     slotLabelFormat={[{

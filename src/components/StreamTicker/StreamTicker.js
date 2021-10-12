@@ -3,6 +3,7 @@ import Ticker from 'react-ticker';
 import {Typography} from '@mui/material';
 import NextStream from '../NextStream/NextStream';
 import {Link} from 'react-router-dom';
+import colors from '../../siteWideColors';
 import './streamTicker.css';
 
 const StreamTicker = () => {
@@ -50,7 +51,7 @@ const StreamTicker = () => {
                             variant={'h6'}
                             sx={{
                               whiteSpace: 'nowrap',
-                              color: 'white',
+                              color: colors.base,
                             }}
                         >
                           Tapahtuma on päättynyt
@@ -73,7 +74,7 @@ const StreamTicker = () => {
                               to={'/event/' + stream.nextStream?.videoUrl}
                               sx={{
                                 whiteSpace: 'nowrap',
-                                color: 'white',
+                                color: colors.base,
                                 textDecoration: 'none',
                                 marginRight: '3rem',
                               }}>

@@ -15,23 +15,30 @@ let theme = createTheme({
   typography: {
     h1: {
       fontFamily: "Russo One",
+      color: colors.base,
     },
     h2: {
       fontFamily: "Russo One",
+      color: colors.base,
     },
     h3: {
       fontFamily: "Russo One",
+      color: colors.base,
     },
     h4: {
       fontFamily: "Russo One",
+      color: colors.base,
     },
     h5: {
       fontFamily: "Russo One",
+      color: colors.base,
     },
     h6: {
       fontFamily: "Russo One",
+      color: colors.base,
     },
-    fontFamily: "Roboto"
+    fontFamily: "Roboto",
+    color: colors.base,
   }
 });
 theme = responsiveFontSizes(theme, {breakpoints: ['xs','sm', 'md', 'lg']});
@@ -58,7 +65,7 @@ const EventTimeTable = () => {
           <Grid
               container
               justifyContent={'center'}
-
+              sx={{background: colors.main}}
           >
             <Grid
                 xs={12}

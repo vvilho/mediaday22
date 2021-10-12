@@ -6,8 +6,25 @@
     font-family: 'Russo One', sans-serif;
 }
 .fc-theme-standard td{
-    border: 1px solid #080808;
+    border: 1px solid #CCCCCC;
 }
 .fc-theme-standard .fc-scrollgrid{
-    border-color: #080808;
+    border-color: #CCCCCC;
+}
+.fc-toolbar-title{
+    color: #f5f5f5;
+    text-align: center;
+}
+.fc-timegrid-slot{
+    color: #f5f5f5;
+}
+@media only screen and (max-width: 480px) {
+    .fc-event-title{
+        font-size: 0.6rem;
+    }
+}
+@media only screen and (max-width: 410px) {
+    .fc-event-title{
+        font-size: 0.53rem;
+    }
 }

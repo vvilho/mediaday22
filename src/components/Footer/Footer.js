@@ -31,6 +31,7 @@ const Footer = () => {
         <Typography
             variant="h5"
             className={classes.footerMainText}
+            color={colors.base}
         >Tapahtumassa mukana</Typography>
         <Container className={'brandContainer'}>
           <Grid
@@ -172,7 +173,7 @@ const Footer = () => {
             <Grid item xs={12} md={8}>
               <Grid container>
                 <Grid item xs={12} className={'footerBottomGridItem'} id={'footerAbout'}>
-                  <Stack spacing={1} marginBottom='8px' direction={'column'}>
+                  <Stack spacing={1} marginBottom='8px' direction={'column'} color={colors.base}>
                     <Typography variant="h6" textAlign="left">
                       Yhteystiedot
                     </Typography>
@@ -187,7 +188,7 @@ const Footer = () => {
                   </Stack>
                 </Grid>
                 <Grid item xs={12} className={'footerBottomGridItem'}>
-                  <Stack spacing={1} marginBottom='8px' direction={'column'}>
+                  <Stack spacing={1} marginBottom='8px' direction={'column'} color={colors.base}>
                     <Typography variant="h6" textAlign="left">
                       Järjestäjät
                     </Typography>
@@ -198,7 +199,7 @@ const Footer = () => {
                   </Stack>
                 </Grid>
                 <Grid item xs={12} className={'footerBottomGridItem'}>
-                  <Stack spacing={1} marginBottom='8px' direction={'column'}>
+                  <Stack spacing={1} marginBottom='8px' direction={'column'} color={colors.base}>
                     <Typography variant="h6" textAlign="left">
                       Medioille
                     </Typography>

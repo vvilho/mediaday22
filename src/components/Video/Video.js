@@ -1,6 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 
 import videojs from 'video.js';
+import './video.css';
 import 'video.js/dist/video-js.css';
 import '@videojs/themes/dist/city/index.css';
 
@@ -25,6 +26,7 @@ const Video = ({url, type}) => {
     responsive: true,
     loop: true,
     fluid: true,
+    language: 'fi',
     sources: [
       {
         src: url,

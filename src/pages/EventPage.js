@@ -5,28 +5,40 @@ import {createTheme, responsiveFontSizes} from '@material-ui/core/styles';
 import Counter from '../components/Counter/Counter';
 import StreamStatus from '../components/StreamStatus/StreamStatus';
 import StreamerInfo from '../components/StreamerInfo/StreamerInfo';
+import colors from '../siteWideColors';
 
 let theme = createTheme({
   typography: {
     h1: {
       fontFamily: "Russo One",
+      color: colors.base,
     },
     h2: {
       fontFamily: "Russo One",
+      color: colors.base,
     },
     h3: {
       fontFamily: "Russo One",
+      color: colors.base,
     },
     h4: {
       fontFamily: "Russo One",
+      color: colors.base,
     },
     h5: {
       fontFamily: "Russo One",
+      color: colors.base,
     },
     h6: {
       fontFamily: "Russo One",
+      color: colors.base,
     },
-    fontFamily: "Roboto"
+    body1:{
+      fontFamily: "Roboto",
+      color: colors.base,
+    },
+    fontFamily: "Roboto",
+    color: colors.base,
   }
 });
 theme = responsiveFontSizes(theme, {breakpoints: ['xs','sm', 'md', 'lg']});
@@ -77,7 +89,7 @@ const EventPage = () => {
 
   return (
       <ThemeProvider theme={theme}>
-        <Grid container justifyContent="center">
+        <Grid container justifyContent="center" sx={{background: colors.main}}>
           <StreamStatus
               startDate={eventResult?.startDate}
               startTime={eventResult?.startTime}

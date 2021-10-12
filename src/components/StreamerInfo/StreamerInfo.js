@@ -36,7 +36,7 @@ const StreamerInfo = ({
   return (
       <>
         <Grid container className={'streamerInfoContainer'} textAlign="left">
-          <Card className={'streamerInfoCard'} sx={{backgroundColor: colors.base}}>
+          <Card className={'streamerInfoCard'} sx={{backgroundColor: colors.second}}>
             <CardHeader
                 className={'streamerInfoCardHeader'}
                 avatar={<Avatar
@@ -69,22 +69,22 @@ const StreamerInfo = ({
             <CardActions className={'streamerInfoCardActions'}>
               {socialMedia.facebook &&
                 <Link href="" target="_blank">
-                  <Facebook fontSize="large" sx={{color: '#3b5998'}}/>
+                  <Facebook fontSize="large" sx={{color: colors.fourth}}/>
                 </Link>
               }
               {socialMedia.twitter &&
                 <Link href="https://twitter.com/?lang=fi" target="_blank">
-                  <Twitter fontSize="large" sx={{color: '#1d9bf0'}}/>
+                  <Twitter fontSize="large" sx={{color: colors.fourth}}/>
                 </Link>
               }
               {socialMedia.instagram &&
                 <Link href="https://www.instagram.com/" target="_blank">
-                  <Instagram fontSize="large" sx={{color: '#E1306C'}}/>
+                  <Instagram fontSize="large" sx={{color: colors.fourth}}/>
                 </Link>
               }
               {socialMedia.linkedIn &&
                 <Link href="https://www.linkedin.com/" target="_blank">
-                  <LinkedIn fontSize="large" sx={{color: '#0a66c2'}}/>
+                  <LinkedIn fontSize="large" sx={{color: colors.fourth}}/>
                 </Link>
               }
             </CardActions>

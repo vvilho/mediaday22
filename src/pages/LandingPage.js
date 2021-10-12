@@ -91,7 +91,7 @@ const LandingPage = () => {
                   padding: 0,
                 }}
           >
-            <Grid xs={12} sm={6}>
+            <Grid item xs={12} sm={6}>
               <img src={'/logos/mediaday_logo_vanha_white.png'}
                    className="App-logo" alt="Mediaday logo"/>
               <Typography variant={'h5'} marginY="1.5rem" marginX="1.5rem"
@@ -125,7 +125,7 @@ const LandingPage = () => {
                     </>)}
               </NextStream>
             </Grid>
-            <Grid xs={12} sm={6} className={'bannerGridRight'}>
+            <Grid item xs={12} sm={6} className={'bannerGridRight'}>
               <Introduction/>
             </Grid>
           </Grid>

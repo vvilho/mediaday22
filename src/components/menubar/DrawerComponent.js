@@ -8,7 +8,7 @@ import {
     makeStyles
 } from "@material-ui/core";
 import {Link} from "react-router-dom";
-import {Menu as MenuIcon} from "@material-ui/icons";
+import {Menu} from '@mui/icons-material';
 import {linear, Scrollchor} from 'react-scrollchor';
 import colors from "../../siteWideColors";
 
@@ -49,7 +49,7 @@ function DrawerComponent() {
                     </ListItem>
                     <ListItem onClick={() => setOpenDrawer(false)}>
                         <ListItemText>
-                            <Link to="/yhteystietolomake" className={classes.link}>yhteystietolomake</Link>
+                            <Link to="/yhteystietolomake" className={classes.link}>Yhteystietolomake</Link>
                         </ListItemText>
                     </ListItem>
                     <ListItem onClick={() => setOpenDrawer(false)}>
@@ -62,8 +62,8 @@ function DrawerComponent() {
                     </ListItem>
                 </List>
             </Drawer>
-            <IconButton onClick={() => setOpenDrawer(!openDrawer)}>
-                <MenuIcon/>
+            <IconButton aria-label={'hamburger menu'} onClick={() => setOpenDrawer(!openDrawer)}>
+                <Menu sx={{color: colors.base}}/>
             </IconButton>
         </>
     );

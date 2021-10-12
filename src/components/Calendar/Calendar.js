@@ -20,10 +20,8 @@ const Calendar = () => {
 
 
         eventData?.map(x => {
-            console.log('x',x)
             const dateStart = format(parse(x.startDate, 'dd.MM.yyyy', new Date()), 'yyyy-MM-dd');
             const dateEnd = format(parse(x.endDate, 'dd.MM.yyyy', new Date()), 'yyyy-MM-dd');
-            console.log('datestart',dateStart)
 
 
             const singleEvent = {

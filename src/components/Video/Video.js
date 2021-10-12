@@ -28,19 +28,6 @@ const Video = ({url, type}) => {
 
   const onReady = (player) => {
     playerRef.current = player;
-
-    player.on("waiting", () => {
-      console.log("player is waiting");
-    });
-
-    player.on("dispose", () => {
-      console.log("player will dispose");
-    });
-
-    player.on("error", () => {
-      console.log("player error");
-    });
-
   };
 
   useEffect(() => {
@@ -50,7 +37,6 @@ const Video = ({url, type}) => {
       if (!videoElement) return;
 
       const player = (playerRef.current = videojs(videoElement, options, () => {
-        console.log('player is ready');
         onReady && onReady(player);
       }));
     }

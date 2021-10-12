@@ -5,8 +5,6 @@ const NextStream = ({eventData, children}) => {
   const [nextStream, setNextStream] = useState({});
   const [nextStreamStatus, setNextStreamStatus] = useState('offline');
 
-  console.log('streamstatus', nextStreamStatus);
-
   const isNext = (event) => {
       const [eventStartDay, eventStartMonth, eventStartYear] = event?.startDate.split(
           '.').map(Number);

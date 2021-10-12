@@ -8,6 +8,7 @@ import {
   ThemeProvider, Typography,
 } from '@mui/material';
 import {createTheme, responsiveFontSizes} from '@material-ui/core/styles';
+import colors from '../siteWideColors';
 import {Info} from '@mui/icons-material';
 
 let theme = createTheme({
@@ -87,7 +88,7 @@ const EventTimeTable = () => {
                           title="Klikkaa tapahtumaa päästäksesi striimiin"
                       >
                         <IconButton
-                            onClick={handleTooltipOpen}><Info/></IconButton>
+                            onClick={handleTooltipOpen}><Info sx={{color: colors.fourth}}/></IconButton>
                       </Tooltip>
                     </div>
                   </ClickAwayListener>

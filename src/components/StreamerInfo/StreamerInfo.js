@@ -14,6 +14,7 @@ import {Facebook, Twitter, Instagram, LinkedIn} from '@mui/icons-material';
 import Link from '@mui/material/Link';
 import {Video} from '../Video/Video';
 import './StreamerInfo.css';
+import colors from '../../siteWideColors';
 
 const StreamerInfo = ({
                         name,
@@ -35,7 +36,7 @@ const StreamerInfo = ({
   return (
       <>
         <Grid container className={'streamerInfoContainer'} textAlign="left">
-          <Card className={'streamerInfoCard'}>
+          <Card className={'streamerInfoCard'} sx={{backgroundColor: colors.base}}>
             <CardHeader
                 className={'streamerInfoCardHeader'}
                 avatar={<Avatar

@@ -7,11 +7,11 @@ import {
     useTheme,
     useMediaQuery,
 } from "@material-ui/core";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 import DrawerComponent from './DrawerComponent';
 import colors from '../../siteWideColors'
 import Searchbar from "../Searchbar/Searchbar";
-import { Scrollchor, linear} from 'react-scrollchor';
+import {Scrollchor, linear} from 'react-scrollchor';
 import {Grid} from "@mui/material";
 
 const useStyles = makeStyles((theme) => ({
@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
         textDecoration: 'underline 0.15em rgba(255, 255, 255, 0)',
         transition: 'text-decoration-color 300ms',
         [theme.breakpoints.down('md')]: {
-          fontSize: '1rem',
+            fontSize: '1rem',
             marginLeft: theme.spacing(8),
         },
         "&:hover": {
@@ -53,11 +53,12 @@ const useStyles = makeStyles((theme) => ({
 
     },
 
-    searchBar : {
+    searchBar: {
         textDecoration: "none",
         color: colors.base,
         fontSize: "1rem",
         marginLeft: theme.spacing(5),
+        [theme.breakpoints.down('sm')]: {}
     }
 }));
 
@@ -65,10 +66,11 @@ function Navbar() {
     const classes = useStyles();
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+    const isXsScreen = useMediaQuery(theme.breakpoints.down('xs'));
 
     return (
         <AppBar position="static" className={classes.appBar}>
-            <CssBaseline />
+            <CssBaseline/>
             <Toolbar>
                 <Link to={'/'}>
                     <img
@@ -81,11 +83,17 @@ function Navbar() {
                     <Grid
                         container
                         justifyContent={'flex-end'}
+                        flexWrap={'nowrap'}
                     >
+                        {!isXsScreen &&
+                        <Grid item margin='auto'>
+                            <Searchbar/>
+                        </Grid>
+                        }
                         <Grid
                             item
                         >
-                            <DrawerComponent />
+                            <DrawerComponent/>
                         </Grid>
                     </Grid>
                 ) : (
@@ -105,7 +113,8 @@ function Navbar() {
                                 <Link to="/yhteystietolomake" className={classes.link}>
                                     Yhteystietolomake
                                 </Link>
-                                <Scrollchor to="#footerAbout" className={classes.link} animate={{ duration: 500, easing: linear}}>
+                                <Scrollchor to="#footerAbout" className={classes.link}
+                                            animate={{duration: 500, easing: linear}}>
                                     Lisätietoa
                                 </Scrollchor>
                                 <div
@@ -123,4 +132,5 @@ function Navbar() {
         </AppBar>
     );
 }
+
 export default Navbar;

@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     link: {
         position: 'relative',
         display: 'inline-block',
-        color: 'black',
+        color: colors.base,
         fontSize: "1.1rem",
         marginLeft: theme.spacing(10),
         textDecoration: 'underline 0.15em rgba(255, 255, 255, 0)',
@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
 
     searchBar : {
         textDecoration: "none",
-        color: "white",
+        color: colors.base,
         fontSize: "1rem",
         marginLeft: theme.spacing(5),
     }

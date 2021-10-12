@@ -16,7 +16,7 @@ const useStyles = makeStyles(() => ({
     link: {
         textDecoration: 'none',
         color: 'black',
-        fontSize: '20px',
+        fontSize: '1.1rem',
         fontFamily: "Russo One",
         "&:hover": {
             color: colors.second,

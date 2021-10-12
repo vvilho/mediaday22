@@ -1,11 +1,11 @@
 //TODO Mietitään värejä vielä <:D
 const colors = {
-    main: '#FBD9B1',
-    second: '#536779',
-    third: '#00A398',
+    main: '#181F25',
+    second: '#4A5D6D',
+    third: '#007A72',
     fourth: '#DCAA04',
     fifth: '#080808',
-    base: '#ffffff',
+    base: '#f5f5f5',
 }
 
 

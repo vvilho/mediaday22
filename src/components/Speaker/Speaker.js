@@ -9,10 +9,16 @@ import {
   Typography,
 } from '@mui/material';
 import './speaker.css';
-import { useHistory } from "react-router-dom";
+import {useHistory} from 'react-router-dom';
 import colors from '../../siteWideColors';
 
-const Speaker = ({speakerName, speakerCompany, speakerImage, speakerIntro, speakerUrl,}) => {
+const Speaker = ({
+                   speakerName,
+                   speakerCompany,
+                   speakerImage,
+                   speakerIntro,
+                   speakerUrl,
+                 }) => {
 
   let history = useHistory();
 
@@ -35,27 +41,29 @@ const Speaker = ({speakerName, speakerCompany, speakerImage, speakerIntro, speak
                 variant="h4"
                 color={colors.base}>
               {speakerName}
-              <Typography
-                  variant="subtitle1"
-                  className="speaker-caption"
-                  color={colors.base}
-              >
-                <strong>
-                  {speakerCompany}
-                </strong>
-              </Typography>
             </Typography>
             <Typography
-                variant="subtitle2"
+                variant="body1"
+                fontSize={'1em'}
+                className="speaker-caption"
+                color={colors.base}
+            >
+              <strong>
+                {speakerCompany}
+              </strong>
+            </Typography>
+            <Typography
+                variant="body1"
                 color={colors.base}
                 textAlign={'center'}
+                sx={{paddingTop: '1em'}}
             >
               {speakerIntro}
             </Typography>
             <Button
                 variant={'contained'}
                 className={'button'}
-                onClick={()=> history.push(`/event/${speakerUrl}`)}>
+                onClick={() => history.push(`/event/${speakerUrl}`)}>
               Striimiin
             </Button>
           </CardContent>

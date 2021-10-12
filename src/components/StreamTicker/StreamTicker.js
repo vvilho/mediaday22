@@ -38,8 +38,6 @@ const StreamTicker = () => {
       >
         {(stream) => (
             <>
-              {console.log('nextstream', stream.nextStream,
-                  stream.nextStreamStatus)}
               {(stream.nextStreamStatus === 'offline') && (
                   <Ticker
                       speed={7}
@@ -77,6 +75,9 @@ const StreamTicker = () => {
                                 color: colors.base,
                                 textDecoration: 'none',
                                 marginRight: '3rem',
+                                '&:hover':{
+                                  color: colors.fourth,
+                                },
                               }}>
 
                             {stream.nextStreamStatus === 'upcoming' ? `Seuraava

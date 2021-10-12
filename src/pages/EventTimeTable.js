@@ -68,6 +68,7 @@ const EventTimeTable = () => {
               sx={{background: colors.main}}
           >
             <Grid
+                item
                 xs={12}
                 sm={9}
                 style={{
@@ -77,10 +78,10 @@ const EventTimeTable = () => {
 
             >
               <Grid container justifyContent={'center'} spacing={1}>
-                <Grid item={'auto'}>
+                <Grid item xs={'auto'}>
                   <Typography variant={'h4'} margin={'1rem 0'}>Puhujien aikataulut</Typography>
                 </Grid>
-                <Grid item={'auto'} display={'flex'} alignItems={'center'}>
+                <Grid item xs={'auto'} display={'flex'} alignItems={'center'}>
                   <ClickAwayListener onClickAway={handleTooltipClose}>
                     <div>
                       <Tooltip

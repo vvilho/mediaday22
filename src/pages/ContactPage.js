@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import {ContactForm} from "../components/ContactForm/ContactForm";
 import {createTheme, responsiveFontSizes} from '@material-ui/core/styles';
 import {ThemeProvider} from '@mui/material';
+import colors from "../siteWideColors";
 
 let theme = createTheme({
     typography: {
@@ -22,6 +23,13 @@ let theme = createTheme({
         },
         h6: {
             fontFamily: "Russo One",
+        },
+        body1: {
+            fontFamily: "Russo One",
+        },
+        button: {
+            fontFamily: "Russo One",
+            color: colors.base,
         },
         fontFamily: "Roboto"
     }

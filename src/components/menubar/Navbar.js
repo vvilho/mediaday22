@@ -32,9 +32,13 @@ const useStyles = makeStyles((theme) => ({
         display: 'inline-block',
         color: colors.base,
         fontSize: "1.1rem",
-        marginLeft: theme.spacing(10),
+        marginLeft: theme.spacing(15),
         textDecoration: 'underline 0.15em rgba(255, 255, 255, 0)',
         transition: 'text-decoration-color 300ms',
+        [theme.breakpoints.down('md')]: {
+          fontSize: '1rem',
+            marginLeft: theme.spacing(8),
+        },
         "&:hover": {
             color: colors.fourth,
             textDecorationColor: colors.fourth,

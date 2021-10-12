@@ -15,8 +15,8 @@ import colors from "../../siteWideColors";
 const useStyles = makeStyles(() => ({
     link: {
         textDecoration: 'none',
-        color: 'black',
-        fontSize: '1.1rem',
+        color: colors.base,
+        fontSize: '1rem',
         fontFamily: "Russo One",
         "&:hover": {
             color: colors.second,

@@ -57,7 +57,7 @@
   }
 }
 .button{
-  width: fit-content !important;
+  width: 8rem !important;
   display: inline-block !important;
   text-decoration: none !important;
   border: 3px solid rgb(204, 204, 204) !important;

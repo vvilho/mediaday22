@@ -37,6 +37,7 @@ const useStyles = makeStyles((theme) => ({
         borderRadius: '5px',
         padding: '1rem',
         justifyContent: 'center',
+        backgroundColor: colors.base,
     }
 }));
 

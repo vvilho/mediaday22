@@ -1,8 +1,13 @@
 import React, {useEffect, useState} from 'react';
-import {Box, Button, Typography} from "@mui/material";
-import {Modal, TextField} from "@material-ui/core";
+import {Box, Button, Container, Typography} from "@mui/material";
+import {makeStyles, Modal, TextField} from "@material-ui/core";
 import {init, sendForm} from 'emailjs-com';
-import './contactForm.css';
+import colors from '../../siteWideColors';
+
+//TODO Siirteleppä tyylit tänne t: minä
+const useStyles = makeStyles((theme) => {
+
+})
 
 const ContactForm = () => {
 
@@ -23,14 +28,14 @@ const ContactForm = () => {
     const handleSubmit = async (evt) => {
         evt.preventDefault();
         try {
-            const response = await sendForm('contact_form_mediaday', 'mediaday2022_template', '#contactForm', 'user_9FZPzBTtUqDXunVFE3aTl');
-            if (response.status === 200) {
-                await handleOpen();
-                document.getElementById('modalText').innerText = 'Kiitos yhtydenotostanne \n(Sulje modaali painamalla sen ulkopuolelta)';
-            }
+            //const response = await sendForm('contact_form_mediaday', 'mediaday2022_template', '#contactForm', 'user_9FZPzBTtUqDXunVFE3aTl');
+            //if (response.status === 200) {
+            await handleOpen();
+            document.getElementById('modalText').innerText = 'Kiitos yhteydenotostanne!';
+            // }
         } catch (err) {
             await handleOpen();
-            document.getElementById('modalText').innerText = 'Jokin meni vikaan, yritä myöhemmin uudelleen. \n(Sulje modaali painamalla sen ulkopuolelta)';
+            document.getElementById('modalText').innerText = 'Jokin meni vikaan, yritä myöhemmin uudelleen.';
         }
     };
 
@@ -50,40 +55,49 @@ const ContactForm = () => {
     return (
         <>
             <Modal open={open} onClose={handleClose}>
-                <Box sx={{position: 'absolute',
+                <Box sx={{
+                    position: 'absolute',
                     top: '30%',
                     left: '50%',
                     transform: 'translate(-50%, -50%)',
-                    width: 400,
-                    bgcolor: 'background.paper',
-                    border: '2px solid #000',
+                    width: 'auto',
+                    textAlign: 'center',
+                    bgcolor: `${colors.second}`,
+                    color: `${colors.base}`,
+                    border: '1px solid #000',
                     boxShadow: 24,
-                    p: 4,}}>
+                    p: 4,
+                }}>
                     <Typography id="modalText"></Typography>
+                    <Button variant={'contained'} sx={{bottom: '-1rem'}} onClick={handleClose}>Sulje</Button>
                 </Box>
             </Modal>
             <Box id="contactForm" sx={{
                 '& .MuiTextField-root': {m: 1},
                 margin: '2rem 0.5rem 2rem 0.5rem',
+                display: 'flex',
+                flexDirection: 'column',
                 border: '1px solid grey',
                 borderRadius: '5px',
                 padding: '1rem',
                 justifyContent: 'center',
             }} component="form" onSubmit={handleSubmit} onInvalid={handleInvalid}>
-                <Typography variant="body1">Ota meihin yhteyttä täältä.</Typography>
-                <TextField label="Nimesi" id="name" name="name" type="text" fullWidth={false}
-                           variant="outlined" margin="dense" required={true} helperText={' '}/>
-                <TextField label="Sähköpostisi" name="email" id="email" type="email" fullWidth={false}
-                           variant="outlined" margin="dense" required={true} helperText={' '}/>
-                <br/>
-                <TextField className="email-message" name="message" multiline={true} label="Viestisi" id="message"
+                <Typography variant="body1" style={{marginBottom: '1rem'}}>Ota meihin yhteyttä täältä.</Typography>
+                <Container disableGutters={true}>
+                    <TextField autoFocus={true} label="Nimesi" id="name" name="name" type="text" fullWidth={false}
+                               variant="outlined" margin="dense" required={true} helperText={' '}
+                               style={{width: '45%', margin: 'auto 2.3% auto auto'}}/>
+                    <TextField label="Sähköpostisi" name="email" id="email" type="email" fullWidth={false}
+                               variant="outlined" margin="dense" required={true} helperText={' '}
+                               style={{width: '45%', margin: 'auto auto auto 2.3%'}}/>
+                </Container>
+                <TextField name="message" multiline={true} label="Viestisi" id="message"
                            type="text"
                            variant="outlined" minRows={3} required={true}
-                           fullWidth={true} inputProps={{maxLength: characterLimit}}
-                           helperText={' '}
+                           fullWidth={false} inputProps={{maxLength: characterLimit}}
+                           helperText={' '} style={{margin: '1rem auto auto auto', width: '95%'}}
                            onChange={handleChange}/>
-                <br/>
-                <Button variant="contained" sx={{marginTop: '1rem'}}
+                <Button variant="contained" sx={{margin: '1rem auto auto auto', width: '10'}}
                         type="submit">Lähetä</Button>
             </Box>
         </>

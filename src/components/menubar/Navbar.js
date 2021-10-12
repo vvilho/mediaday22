@@ -31,8 +31,8 @@ const useStyles = makeStyles((theme) => ({
         position: 'relative',
         display: 'inline-block',
         color: 'black',
-        fontSize: "20px",
-        marginLeft: theme.spacing(11),
+        fontSize: "1.1rem",
+        marginLeft: theme.spacing(10),
         textDecoration: 'underline 0.15em rgba(255, 255, 255, 0)',
         transition: 'text-decoration-color 300ms',
         "&:hover": {
@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
             textDecorationColor: colors.fourth,
         },
         "&:first-child": {
-            marginLeft: theme.spacing(6),
+            marginLeft: theme.spacing(5),
         }
     },
     appBar: {

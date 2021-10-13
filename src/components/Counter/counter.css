@@ -4,7 +4,7 @@ width: 1em;
 
 .flip-countdown-title {
     font-family: 'Russo One', sans-serif;
-    color: #f5f5f5;
+    color: #D6D6D6;
 }
 
 .flip-countdown .flip-countdown-piece .flip-countdown-card .flip-countdown-card-sec .card__top, .flip-countdown .flip-countdown-piece .flip-countdown-card .flip-countdown-card-sec .card__bottom, .flip-countdown .flip-countdown-piece .flip-countdown-card .flip-countdown-card-sec .card__back::before, .flip-countdown .flip-countdown-piece .flip-countdown-card .flip-countdown-card-sec .card__back::after{

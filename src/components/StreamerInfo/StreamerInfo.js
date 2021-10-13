@@ -8,7 +8,7 @@ import {
   CardContent,
   CardActions,
   Modal,
-  Typography,
+  Typography, IconButton,
 } from '@mui/material';
 import {Facebook, Twitter, Instagram, LinkedIn} from '@mui/icons-material';
 import Link from '@mui/material/Link';
@@ -36,7 +36,8 @@ const StreamerInfo = ({
   return (
       <>
         <Grid container className={'streamerInfoContainer'} textAlign="left">
-          <Card className={'streamerInfoCard'} sx={{backgroundColor: colors.second}}>
+          <Card className={'streamerInfoCard'}
+                sx={{backgroundColor: colors.second}}>
             <CardHeader
                 className={'streamerInfoCardHeader'}
                 avatar={<Avatar
@@ -46,9 +47,9 @@ const StreamerInfo = ({
                     onClick={handleOpen}
                 />}
                 title={<Typography variant={'h5'}
-                    className={'streamerInfoCardTitle'}>{name}, {company}</Typography>}
+                                   className={'streamerInfoCardTitle'}>{name}, {company}</Typography>}
                 subheader={<Typography variant={'body1'}
-                    className={'streamerInfoCardSubHeader'}>{startDate} klo {startTime}-{endTime}</Typography>}
+                                       className={'streamerInfoCardSubHeader'}>{startDate} klo {startTime}-{endTime}</Typography>}
             />
             <Modal
                 open={open}
@@ -56,10 +57,12 @@ const StreamerInfo = ({
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
             >
-                <img src={avatar} className={'modalImg'} alt={'Modal speaker avatar'}/>
+              <img src={avatar} className={'modalImg'}
+                   alt={'Modal speaker avatar'}/>
             </Modal>
             <CardContent className="streamerInfoCardContent">
-              <Typography variant={'h5'} className={'streamerInfoCardDesc'}>{desc}</Typography>
+              <Typography variant={'h5'}
+                          className={'streamerInfoCardDesc'}>{desc}</Typography>
               <Video
                   url={url}
                   type={type}
@@ -68,24 +71,32 @@ const StreamerInfo = ({
             <Divider variant="middle"/>
             <CardActions className={'streamerInfoCardActions'}>
               {socialMedia.facebook &&
-                <Link href="" target="_blank">
+              <IconButton>
+                <Link href={socialMedia.facebook} target="_blank" sx={{fontSize: 0}}>
                   <Facebook fontSize="large" sx={{color: colors.fourth}}/>
                 </Link>
+              </IconButton>
               }
               {socialMedia.twitter &&
-                <Link href="https://twitter.com/?lang=fi" target="_blank">
+              <IconButton>
+                <Link href={socialMedia.twitter} target="_blank" sx={{fontSize: 0}}>
                   <Twitter fontSize="large" sx={{color: colors.fourth}}/>
                 </Link>
+              </IconButton>
               }
               {socialMedia.instagram &&
-                <Link href="https://www.instagram.com/" target="_blank">
+              <IconButton>
+                <Link href={socialMedia.instagram} target="_blank" sx={{fontSize: 0}}>
                   <Instagram fontSize="large" sx={{color: colors.fourth}}/>
                 </Link>
+              </IconButton>
               }
               {socialMedia.linkedIn &&
-                <Link href="https://www.linkedin.com/" target="_blank">
+              <IconButton>
+                <Link href={socialMedia.linkedIn} target="_blank" sx={{fontSize: 0}}>
                   <LinkedIn fontSize="large" sx={{color: colors.fourth}}/>
                 </Link>
+              </IconButton>
               }
             </CardActions>
           </Card>

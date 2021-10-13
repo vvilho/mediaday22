@@ -51,7 +51,7 @@ const StreamerInfo = ({
                 avatar={<Avatar
                     alt="Speaker avatar"
                     src={avatar}
-                    sx={{width: 56, height: 56}}
+                    sx={{width: 56, height: 56, border: `1px solid ${colors.fourth}`}}
                     onClick={handleOpen}
                 />}
                 title={<Typography variant={'h5'}

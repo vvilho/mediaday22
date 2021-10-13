@@ -4,7 +4,7 @@ import {Typography} from '@mui/material';
 import NextStream from '../NextStream/NextStream';
 import {Link} from 'react-router-dom';
 import colors from '../../siteWideColors';
-import './streamTicker.css';
+import './StreamTicker.css';
 
 const StreamTicker = () => {
 

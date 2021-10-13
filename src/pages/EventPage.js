@@ -74,7 +74,7 @@ const EventPage = () => {
   let streamName = id.split('-');
   streamName = streamName.map(w => w.charAt(0).toUpperCase() + w.slice(1));
 
-  // set document title to be custom for each sitec
+  // set document title to be custom for each site
   useEffect(() => {
     document.title = `${streamName[0]} ${streamName[1]} Stream`;
   }, [streamName]);

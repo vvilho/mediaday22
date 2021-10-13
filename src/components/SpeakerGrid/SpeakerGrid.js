@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {Container, Grid, Typography} from '@mui/material';
 import {Speaker} from '../Speaker/Speaker';
 import colors from '../../siteWideColors';
-import './speakerGrid.css'
+import './SpeakerGrid.css'
 
 const SpeakerGrid = () => {
     const [speakers, setSpeakers] = useState(null);

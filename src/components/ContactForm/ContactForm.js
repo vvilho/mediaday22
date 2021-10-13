@@ -106,7 +106,6 @@ const ContactForm = () => {
         }
     };
 
-    //Melko purkkaratkaisu handlaamaan invalidia inputtia formiin ja viestimään sen käyttäjälle olennaisiin elementteihin
     const handleInvalid = (evt) => {
         evt.preventDefault();
         evt.target.offsetParent.classList.add('Mui-error');

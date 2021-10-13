@@ -1,12 +1,12 @@
 import React from 'react';
 import {Container, Divider, Typography, Stack} from '@mui/material';
-import {makeStyles, useTheme, Grid} from '@material-ui/core';
+import {makeStyles, Grid} from '@material-ui/core';
 import Link from '@mui/material/Link';
 import { Link as RouterLink } from "react-router-dom";
-import './footer.css';
+import './Footer.css';
 import colors from '../../siteWideColors';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   footer: {
     position: 'static',
     bottom: 0,
@@ -24,7 +24,6 @@ const useStyles = makeStyles((theme) => ({
 
 const Footer = () => {
   const classes = useStyles();
-  const theme = useTheme();
 
   return (
       <Container className={classes.footer}>
@@ -214,9 +213,7 @@ const Footer = () => {
                   </Stack>
                 </Grid>
               </Grid>
-
             </Grid>
-
           </Grid>
         </Container>
       </Container>

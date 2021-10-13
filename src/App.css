@@ -16,7 +16,7 @@
 }
 .bannerButtonContainer{
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   margin-left: 1.5rem;
 }
 .App-header {

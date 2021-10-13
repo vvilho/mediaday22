@@ -43,6 +43,7 @@ const Searchbar = () => {
             let speakers = [];
 
             eventData?.events.map(x => speakers?.push(x.name.toUpperCase()));
+            // eslint-disable-next-line array-callback-return
             speakers.map(x => {
                 if (x.includes(searchBarValue.toString().toUpperCase())) {
                     const index = speakers.indexOf(x);

@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import FlipCountdown from '@rumess/react-flip-countdown';
-import './counter.css';
+import './Counter.css';
 
 
 const Counter = ({startDate, startTime}) => {

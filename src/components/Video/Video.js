@@ -1,7 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import {Grid} from '@mui/material';
 import videojs from 'video.js';
-import './video.css';
+import './Video.css';
 import 'video.js/dist/video-js.css';
 
 
@@ -9,8 +9,8 @@ const Video = ({url, type}) => {
 
   const videoRef = useRef(null);
   const playerRef = useRef(null);
-  const [videoUrl, setVideoUrl] = useState(url);
-  const [videoType, setVideoType] = useState(type);
+  const [videoUrl] = useState(url);
+  const [videoType] = useState(type);
 
   const options = {
     // lookup the options in the docs for more options

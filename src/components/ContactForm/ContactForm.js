@@ -17,6 +17,10 @@ const useStyles = makeStyles((theme) => ({
         '& .MuiFormLabel-root': {
             color: colors.base,
         },
+        '& .MuiFormHelperText-root': {
+            color: colors.base,
+            opacity: 0.9
+        },
         [theme.breakpoints.down('xs')]: {
             width: '100%',
             margin: '0 !important'
@@ -33,6 +37,10 @@ const useStyles = makeStyles((theme) => ({
         },
         '& .MuiFormLabel-root': {
             color: colors.base,
+        },
+        '& .MuiFormHelperText-root': {
+            color: colors.base,
+            opacity: 0.9
         },
         [theme.breakpoints.down('xs')]: {
             width: '100%',
@@ -98,7 +106,6 @@ const ContactForm = () => {
         }
     };
 
-    //Melko purkkaratkaisu handlaamaan invalidia inputtia formiin ja viestimään sen käyttäjälle olennaisiin elementteihin
     const handleInvalid = (evt) => {
         evt.preventDefault();
         evt.target.offsetParent.classList.add('Mui-error');

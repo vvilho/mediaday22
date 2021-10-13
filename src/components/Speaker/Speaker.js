@@ -8,7 +8,7 @@ import {
   Grid,
   Typography,
 } from '@mui/material';
-import './speaker.css';
+import './Speaker.css';
 import {useHistory} from 'react-router-dom';
 import colors from '../../siteWideColors';
 
@@ -35,7 +35,7 @@ const Speaker = ({
               alt={'image of ' + speakerUrl}
               onClick={()=>{
                   if(window.matchMedia("(pointer: coarse)").matches) {
-                      return;
+
                   }else{
                       history.push(`/event/${speakerUrl}`)
                   }

@@ -57,14 +57,21 @@ const Speaker = ({
             </Typography>
             <Typography
                 variant="body1"
-                fontSize={'1em'}
+                fontSize={'0.7em'}
                 className="speaker-caption"
                 color={colors.base}
+                fontFamily={'Russo One'}
             >
               <strong>
                 {speakerCompany}
               </strong>
             </Typography>
+              <Button
+                  variant={'contained'}
+                  className={'button'}
+                  onClick={() => history.push(`/event/${speakerUrl}`)}>
+                  Striimiin
+              </Button>
 
             <Typography
                 variant="body1"
@@ -74,12 +81,7 @@ const Speaker = ({
             >
               {speakerIntro}
             </Typography>
-            <Button
-                variant={'contained'}
-                className={'button'}
-                onClick={() => history.push(`/event/${speakerUrl}`)}>
-              Striimiin
-            </Button>
+
           </CardContent>
         </Card>
       </Grid>

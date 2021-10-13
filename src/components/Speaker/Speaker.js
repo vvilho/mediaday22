@@ -75,7 +75,7 @@ const Speaker = ({
             <Typography
                 variant="body1"
                 color={colors.base}
-                textAlign={'center'}
+                textAlign={'left'}
                 sx={{paddingTop: '1em'}}
             >
               {speakerIntro}

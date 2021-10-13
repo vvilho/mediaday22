@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
         },
         [theme.breakpoints.down('xs')]: {
             width: '100%',
-            margin: '0 !important'
+            margin: '0 0 0.6rem 0 !important'
         },
     },
     contactForm: {

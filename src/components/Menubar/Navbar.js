@@ -76,7 +76,7 @@ function Navbar() {
                     <img
                         width='120px'
                         alt={'Mediaday logo'}
-                        src="logos/mediadaylogo_pieni.png"
+                        src="logos/mediadaylogo_pieni.webp"
                     />
                 </Link>
                 {isMobile ? (

@@ -48,7 +48,7 @@ const Footer = () => {
             >
               <Link href="https://fireframe.fi/" target="_blank">
                 <img className={'brandImg'} alt={'Fireframe logo'}
-                     src='logos/fireframelogo.png'/>
+                     src='logos/fireframelogo.webp'/>
               </Link>
             </Grid>
             <Grid
@@ -60,7 +60,7 @@ const Footer = () => {
             >
               <Link href="https://avita.org/" target="_blank">
                 <img className={'brandImg'} alt={'Avita logo'}
-                     src="logos/avitalogo.png"/>
+                     src="logos/avitalogo.webp"/>
               </Link>
             </Grid>
             <Grid
@@ -72,7 +72,7 @@ const Footer = () => {
             >
               <Link href="https://www.crestron.com/" target="_blank">
                 <img className={'brandImg'} alt={'Creston logo'}
-                     src="logos/crestonlogo.png"/>
+                     src="logos/crestonlogo.webp"/>
               </Link>
             </Grid>
             <Grid
@@ -84,7 +84,7 @@ const Footer = () => {
             >
               <Link href="https://www.foodandco.fi/" target="_blank">
                 <img className={'brandImg'} alt={'Food & co logo'}
-                     src="logos/fazerlogo.png"/>
+                     src="logos/fazerlogo.webp"/>
               </Link>
             </Grid>
             <Grid
@@ -96,7 +96,7 @@ const Footer = () => {
             >
               <Link href="https://flyar.fi/fi/" target="_blank">
                 <img className={'brandImg'} alt={'FlyAR logo'}
-                     src="logos/flyarlogo.png"/>
+                     src="logos/flyarlogo.webp"/>
               </Link>
             </Grid>
             <Grid
@@ -108,7 +108,7 @@ const Footer = () => {
             >
               <Link href="https://metropolia.fi/fi" target="_blank">
                 <img className={'brandImg'} alt={'Metropolia logo'}
-                     src="logos/metropolialogo.png"/>
+                     src="logos/metropolialogo.webp"/>
               </Link>
             </Grid>
             <Grid
@@ -120,7 +120,7 @@ const Footer = () => {
             >
               <Link href="https://www.panasonic.com/fi/" target="_blank">
                 <img className={'brandImg'} alt={'Panasonic logo'}
-                     src="logos/panasoniclogo.png"/>
+                     src="logos/panasoniclogo.webp"/>
               </Link>
             </Grid>
             <Grid
@@ -132,7 +132,7 @@ const Footer = () => {
             >
               <Link href="https://www.sony.fi/" target="_blank">
                 <img className={'brandImg'} alt={'Sony logo'}
-                     src="logos/sonylogo.png"/>
+                     src="logos/sonylogo.webp"/>
               </Link>
             </Grid>
             <Grid
@@ -157,7 +157,7 @@ const Footer = () => {
             >
               <Link href="https://trail.fi/fi/" target="_blank">
                 <img className={'brandImg'} alt={'Trail logo'}
-                     src="logos/traillogo.png"/>
+                     src="logos/traillogo.webp"/>
               </Link>
             </Grid>
           </Grid>
@@ -167,7 +167,7 @@ const Footer = () => {
           <Grid container alignItems='center'>
             <Grid item xs={12} md={4}>
                 <img id={'mediaDayFooterLogo'} alt={'Mediaday logo'}
-                     src="logos/mediadaylogo.png"/>
+                     src="logos/mediadaylogo.webp"/>
             </Grid>
             <Grid item xs={12} md={8}>
               <Grid container>

@@ -163,7 +163,7 @@ const Footer = () => {
             </Grid>
           </Grid>
         </Container>
-        <Divider/>
+        <Divider color={colors.base}/>
         <Container className={'footerBottomContainer'}>
           <Grid container alignItems='center'>
             <Grid item xs={12} md={4}>

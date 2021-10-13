@@ -18,7 +18,7 @@
       "streamArchiveVideoType": "video/mp4",
       "speakerImage": "../faces/mikko_kodisoja_scaled.webp",
       "speakerIntro": "Yrityksen perustaja Mikko Kodisoja kertoo, miksi vaihtoi peliteollisuuden elokuvamaailmaan. Kuumana puheenaiheena Suomen ensimmäinen Hollywood-tason ledseinä-studio. Puheenvuoro esitetään englanniksi.",
-      "eventColor" : "#4B778D",
+      "eventColor" : "#6C99B2",
       "keynote": true,
       "socialMedia": {
         "facebook": "https://fi-fi.facebook.com/",
@@ -44,7 +44,7 @@
       "streamArchiveVideoType": "video/mp4",
       "speakerImage": "../faces/sami_marttinen_scaled.webp",
       "speakerIntro": "Sami Marttinen esittelee Swappien tarinan, ja teknologian merkityksen yrityksen nousun taustalla. Puheenvuoro esitetään suomeksi.",
-      "eventColor" : "#28B5B5",
+      "eventColor" : "#DBAD6A",
       "keynote": true,
       "socialMedia": {
         "facebook": "https://fi-fi.facebook.com/",

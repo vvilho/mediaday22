@@ -6,7 +6,7 @@ const Introduction = () => {
     return (
         <Container maxWidth={false}>
             <Divider sx={{borderColor: colors.base, borderBottomWidth: '1px'}}/>
-            <Typography variant={'h5'} marginY='1rem' textAlign='left' color='white'>
+            <Typography variant={'h5'} marginY='1rem' textAlign='left' color={colors.base}>
                 <strong>Puhujia eri teollisuudenaloilta</strong>
             </Typography>
             <Typography variant={'body1'} textAlign='left' color={colors.base} sx={{margin:'0 0 1rem 0'}}>

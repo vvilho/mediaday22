@@ -68,7 +68,7 @@ const StreamerInfo = ({
 
               />
             </CardContent>
-            <Divider variant="middle"/>
+            <Divider color={colors.base} variant="middle"/>
             <CardActions className={'streamerInfoCardActions'}>
               {socialMedia.facebook &&
               <IconButton>

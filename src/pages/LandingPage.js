@@ -79,7 +79,7 @@ const LandingPage = () => {
   return (
       <Container className="App-header" maxWidth={false} disableGutters={true}>
         <ThemeProvider theme={theme}>
-          <StreamTicker/>
+          <StreamTicker eventData={eventData}/>
           <Grid container
                 style={{
                   background: 'linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7) ), url("banner.webp")',

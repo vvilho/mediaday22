@@ -126,7 +126,7 @@ const EventPage = () => {
                       !streamStatus?.streamHasEnded) && (
                       <>
                         <Grid item xs={12}>
-                          <Typography variant={'h4'}>Striimi käynnissä! Tule katsomaan</Typography>
+                          <Typography variant={'h4'} margin={'1rem 0'}>Striimi käynnissä! Tule katsomaan</Typography>
                         </Grid>
                         <Grid item width="800px">
                           <StreamerInfo
@@ -148,7 +148,7 @@ const EventPage = () => {
                   {streamStatus.streamHasEnded && (
                       <>
                         <Grid item xs={12}>
-                          <Typography variant={'h4'}>Striimi päättynyt. Katso tallenne.</Typography>
+                          <Typography variant={'h4'} margin={'1rem 0'}>Striimi päättynyt. Katso tallenne.</Typography>
                         </Grid>
                         <Grid item width="800px">
                           <StreamerInfo

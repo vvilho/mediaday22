@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import Ticker from 'react-ticker';
 import {Typography} from '@mui/material';
 import NextStream from '../NextStream/NextStream';
@@ -6,31 +6,7 @@ import {Link} from 'react-router-dom';
 import colors from '../../siteWideColors';
 import './StreamTicker.css';
 
-const StreamTicker = () => {
-
-  const [eventData, setEventData] = useState([]);
-
-  const getEventData = async () => {
-    try {
-      const result = await fetch('data/events.json', {
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json',
-        },
-      });
-
-      const json = await result.json();
-      setEventData(json.events);
-
-    }
-    catch (err) {
-      console.log('getEventData error', err);
-    }
-  };
-
-  useEffect(() => {
-    getEventData();
-  }, []);
+const StreamTicker = ({eventData}) => {
 
   return (
       <NextStream

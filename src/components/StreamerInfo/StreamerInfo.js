@@ -37,7 +37,6 @@ const StreamerInfo = ({
       <>
           <Modal
               open={open}
-              onChange={(e)=> e.preventDefault()}
               onClose={handleClose}
               aria-labelledby="modal-modal-title"
               aria-describedby="modal-modal-description"
@@ -64,6 +63,7 @@ const StreamerInfo = ({
               <Video
                   url={url}
                   type={type}
+
               />
             </CardContent>
             <Divider variant="middle"/>

@@ -32,7 +32,20 @@ const Speaker = ({
               component="img"
               height="300"
               image={speakerImage}
-              alt={'image of ' + speakerUrl}/>
+              alt={'image of ' + speakerUrl}
+              onClick={()=>{
+                  if(window.matchMedia("(pointer: coarse)").matches) {
+                      return;
+                  }else{
+                      history.push(`/event/${speakerUrl}`)
+                  }
+              }}
+              style={{
+                  cursor: 'pointer'
+              }}
+
+
+          />
           <CardContent
               className="speaker-content"
               sx={{height: '100%', backgroundColor: colors.second}}>
@@ -52,6 +65,7 @@ const Speaker = ({
                 {speakerCompany}
               </strong>
             </Typography>
+
             <Typography
                 variant="body1"
                 color={colors.base}

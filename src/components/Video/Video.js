@@ -65,8 +65,11 @@ const Video = ({url, type}) => {
         padding: '16px',
       }}>
         <Grid item xs={12} data-vjs-player>
-          <video ref={videoRef}
-                 className="video-js vjs-big-play-centered"/>
+          <video
+              ref={videoRef}
+              className="video-js vjs-big-play-centered"
+          />
+
         </Grid>
       </Grid>
   );

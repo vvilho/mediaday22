@@ -9,8 +9,8 @@ const Video = ({url, type}) => {
 
   const videoRef = useRef(null);
   const playerRef = useRef(null);
-  const [videoUrl, setVideoUrl] = useState(url)
-  const [videoType, setVideoType] = useState(type)
+  const [videoUrl, setVideoUrl] = useState(url);
+  const [videoType, setVideoType] = useState(type);
 
   const options = {
     // lookup the options in the docs for more options
@@ -48,7 +48,6 @@ const Video = ({url, type}) => {
       player.autoplay(options.autoplay);
       player.src(options.sources);
     }
-  console.log('yamako?')
   }, []);
 
   // Dispose the Video.js player when the functional component unmounts

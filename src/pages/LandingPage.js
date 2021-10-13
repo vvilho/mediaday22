@@ -94,7 +94,7 @@ const LandingPage = () => {
             <Grid item xs={12} sm={6}>
               <img src={'/logos/mediaday_logo_vanha_white.png'}
                    className="App-logo" alt="Mediaday logo"/>
-              <Typography variant={'h5'} marginY="1.5rem" marginX="1.5rem"
+              <Typography variant={'h5'} marginTop="1.5rem" marginBottom="0" marginX="1.5rem"
                           className={''} textAlign="left">
                 Metropolia ammattikorkeakoulu järjestää Mediaday-tapahtuman
                 pitkän
@@ -129,7 +129,6 @@ const LandingPage = () => {
               <Introduction/>
             </Grid>
           </Grid>
-
           <SpeakerGrid/>
         </ThemeProvider>
       </Container>

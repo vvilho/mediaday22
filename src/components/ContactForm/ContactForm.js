@@ -8,22 +8,32 @@ const useStyles = makeStyles((theme) => ({
     message: {
         margin: '1rem auto auto auto !important',
         width: '95%',
+        '& .MuiInputBase-root': {
+            backgroundColor: colors.main,
+        },
+        '& .MuiInputBase-input': {
+            color: colors.base,
+        },
+        '& .MuiFormLabel-root': {
+            color: colors.base,
+        },
         [theme.breakpoints.down('xs')]: {
             width: '100%',
             margin: '0 !important'
         }
     },
-    inputField1: {
+    inputField: {
         width: '45%',
-        margin: 'auto 2.3% auto auto !important',
-        [theme.breakpoints.down('xs')]: {
-            width: '100%',
-            margin: '0 !important'
+        margin: 'auto 2.3% auto 2.3% !important',
+        '& .MuiInputBase-root': {
+            backgroundColor: colors.main,
         },
-    },
-    inputField2: {
-        width: '45%',
-        margin: 'auto auto auto 2.3% !important',
+        '& .MuiInputBase-input': {
+            color: colors.base,
+        },
+        '& .MuiFormLabel-root': {
+            color: colors.base,
+        },
         [theme.breakpoints.down('xs')]: {
             width: '100%',
             margin: '0 !important'
@@ -37,6 +47,10 @@ const useStyles = makeStyles((theme) => ({
         padding: '1rem',
         justifyContent: 'center',
         backgroundColor: colors.second,
+    },
+    contactHead: {
+        marginBottom: '1rem !important',
+        color: colors.base
     }
 }));
 
@@ -126,12 +140,12 @@ const ContactForm = () => {
             <Box id="contactForm" className={classes.contactForm} sx={{
                 '& .MuiTextField-root': {m: 1}
             }} component="form" onSubmit={handleSubmit} onInvalid={handleInvalid}>
-                <Typography variant="body1" style={{marginBottom: '1rem'}}>Ota meihin yhteyttä täältä.</Typography>
+                <Typography variant="body1" className={classes.contactHead}>Ota meihin yhteyttä täältä.</Typography>
                 <Container disableGutters={true}>
-                    <TextField autoFocus={true} className={classes.inputField1} label="Nimesi" id="name" name="name"
+                    <TextField autoFocus={true} className={classes.inputField} label="Nimesi" id="name" name="name"
                                type="text" fullWidth={false}
                                variant="outlined" margin="dense" required={true} helperText={' '}/>
-                    <TextField label="Sähköpostisi" className={classes.inputField2} name="email" id="email" type="email"
+                    <TextField label="Sähköpostisi" className={classes.inputField} name="email" id="email" type="email"
                                fullWidth={false}
                                variant="outlined" margin="dense" required={true} helperText={' '}/>
                 </Container>

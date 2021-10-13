@@ -8,36 +8,49 @@ const useStyles = makeStyles((theme) => ({
     message: {
         margin: '1rem auto auto auto !important',
         width: '95%',
+        '& .MuiInputBase-root': {
+            backgroundColor: colors.main,
+        },
+        '& .MuiInputBase-input': {
+            color: colors.base,
+        },
+        '& .MuiFormLabel-root': {
+            color: colors.base,
+        },
         [theme.breakpoints.down('xs')]: {
             width: '100%',
             margin: '0 !important'
         }
     },
-    inputField1: {
+    inputField: {
         width: '45%',
-        margin: 'auto 2.3% auto auto !important',
-        [theme.breakpoints.down('xs')]: {
-            width: '100%',
-            margin: '0 !important'
+        margin: 'auto 2.3% auto 2.3% !important',
+        '& .MuiInputBase-root': {
+            backgroundColor: colors.main,
         },
-    },
-    inputField2: {
-        width: '45%',
-        margin: 'auto auto auto 2.3% !important',
+        '& .MuiInputBase-input': {
+            color: colors.base,
+        },
+        '& .MuiFormLabel-root': {
+            color: colors.base,
+        },
         [theme.breakpoints.down('xs')]: {
             width: '100%',
             margin: '0 !important'
         },
     },
     contactForm: {
-        margin: '2rem 0.5rem 2rem 0.5rem',
         display: 'flex',
         flexDirection: 'column',
-        border: '1px solid grey',
+        border: '1px solid black',
         borderRadius: '5px',
         padding: '1rem',
         justifyContent: 'center',
-        backgroundColor: colors.base,
+        backgroundColor: colors.second,
+    },
+    contactHead: {
+        marginBottom: '1rem !important',
+        color: colors.base
     }
 }));
 
@@ -72,8 +85,8 @@ const ContactForm = () => {
                 emailInput.value = '';
                 messageInput.value = '';
                 setMessageLength(0);
-            await handleOpen();
-            document.getElementById('modalText').innerText = 'Kiitos yhteydenotostanne!';
+                await handleOpen();
+                document.getElementById('modalText').innerText = 'Kiitos yhteydenotostanne!';
             }
             submitButton.disabled = false;
             submitButton.classList.remove('Mui-disabled');
@@ -99,7 +112,12 @@ const ContactForm = () => {
     }, [messageLength]);
 
     return (
-        <>
+        <Container disableGutters={true} sx={{
+            width: '100%',
+            height: '100%',
+            padding: '2rem 0.75rem 2rem 0.75rem',
+            backgroundColor: colors.main
+        }}>
             <Modal open={open} onClose={handleClose}>
                 <Box sx={{
                     position: 'absolute',
@@ -114,18 +132,21 @@ const ContactForm = () => {
                     boxShadow: 24,
                     p: 4,
                 }}>
-                    <Typography id="modalText"></Typography>
-                    <Button variant={'contained'} sx={{bottom: '-1rem'}} onClick={handleClose}>Sulje</Button>
+                    <Typography id="modalText"/>
+                    <Button variant={'contained'} className={'button'} sx={{bottom: '-1rem', margin: 0}}
+                            onClick={handleClose}>Sulje</Button>
                 </Box>
             </Modal>
             <Box id="contactForm" className={classes.contactForm} sx={{
                 '& .MuiTextField-root': {m: 1}
             }} component="form" onSubmit={handleSubmit} onInvalid={handleInvalid}>
-                <Typography variant="body1" style={{marginBottom: '1rem'}}>Ota meihin yhteyttä täältä.</Typography>
+                <Typography variant="body1" className={classes.contactHead}>Ota meihin yhteyttä täältä.</Typography>
                 <Container disableGutters={true}>
-                    <TextField autoFocus={true} className={classes.inputField1} label="Nimesi" id="name" name="name" type="text" fullWidth={false}
+                    <TextField autoFocus={true} className={classes.inputField} label="Nimesi" id="name" name="name"
+                               type="text" fullWidth={false}
                                variant="outlined" margin="dense" required={true} helperText={' '}/>
-                    <TextField label="Sähköpostisi" className={classes.inputField2} name="email" id="email" type="email" fullWidth={false}
+                    <TextField label="Sähköpostisi" className={classes.inputField} name="email" id="email" type="email"
+                               fullWidth={false}
                                variant="outlined" margin="dense" required={true} helperText={' '}/>
                 </Container>
                 <TextField className={classes.message} name="message" multiline={true} label="Viestisi" id="message"
@@ -134,10 +155,10 @@ const ContactForm = () => {
                            fullWidth={false} inputProps={{maxLength: characterLimit}}
                            helperText={' '}
                            onChange={handleChange}/>
-                <Button id='contactSubmitButton' variant="contained" sx={{margin: '1rem auto auto auto', width: '10'}}
+                <Button id='contactSubmitButton' className={'button'} sx={{margin: 'auto !important'}}
                         type="submit">Lähetä</Button>
             </Box>
-        </>
+        </Container>
 
     )
 }

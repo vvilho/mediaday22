@@ -32,7 +32,20 @@ const Speaker = ({
               component="img"
               height="300"
               image={speakerImage}
-              alt={'image of ' + speakerUrl}/>
+              alt={'image of ' + speakerUrl}
+              onClick={()=>{
+                  if(window.matchMedia("(pointer: coarse)").matches) {
+                      return;
+                  }else{
+                      history.push(`/event/${speakerUrl}`)
+                  }
+              }}
+              style={{
+                  cursor: 'pointer'
+              }}
+
+
+          />
           <CardContent
               className="speaker-content"
               sx={{height: '100%', backgroundColor: colors.second}}>
@@ -44,14 +57,22 @@ const Speaker = ({
             </Typography>
             <Typography
                 variant="body1"
-                fontSize={'1em'}
+                fontSize={'0.7em'}
                 className="speaker-caption"
                 color={colors.base}
+                fontFamily={'Russo One'}
             >
               <strong>
                 {speakerCompany}
               </strong>
             </Typography>
+              <Button
+                  variant={'contained'}
+                  className={'button'}
+                  onClick={() => history.push(`/event/${speakerUrl}`)}>
+                  Striimiin
+              </Button>
+
             <Typography
                 variant="body1"
                 color={colors.base}
@@ -60,12 +81,7 @@ const Speaker = ({
             >
               {speakerIntro}
             </Typography>
-            <Button
-                variant={'contained'}
-                className={'button'}
-                onClick={() => history.push(`/event/${speakerUrl}`)}>
-              Striimiin
-            </Button>
+
           </CardContent>
         </Card>
       </Grid>

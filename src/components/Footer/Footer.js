@@ -145,7 +145,7 @@ const Footer = () => {
             >
               <Link href="https://swappie.com/fi/" target="_blank">
                 <img className={'brandImg'} alt={'Swappie logo'}
-                     src="logos/swappielogo.png"/>
+                     src="logos/swappielogo.webp"/>
               </Link>
             </Grid>
             <Grid

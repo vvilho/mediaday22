@@ -35,6 +35,15 @@ const StreamerInfo = ({
 
   return (
       <>
+          <Modal
+              open={open}
+              onChange={(e)=> e.preventDefault()}
+              onClose={handleClose}
+              aria-labelledby="modal-modal-title"
+              aria-describedby="modal-modal-description"
+          >
+              <img src={avatar} className={'modalImg'} alt={'Modal speaker avatar'}/>
+          </Modal>
         <Grid container className={'streamerInfoContainer'} textAlign="left">
           <Card className={'streamerInfoCard'} sx={{backgroundColor: colors.second}}>
             <CardHeader
@@ -50,14 +59,6 @@ const StreamerInfo = ({
                 subheader={<Typography variant={'body1'}
                     className={'streamerInfoCardSubHeader'}>{startDate} klo {startTime}-{endTime}</Typography>}
             />
-            <Modal
-                open={open}
-                onClose={handleClose}
-                aria-labelledby="modal-modal-title"
-                aria-describedby="modal-modal-description"
-            >
-                <img src={avatar} className={'modalImg'} alt={'Modal speaker avatar'}/>
-            </Modal>
             <CardContent className="streamerInfoCardContent">
               <Typography variant={'h5'} className={'streamerInfoCardDesc'}>{desc}</Typography>
               <Video

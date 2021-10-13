@@ -56,7 +56,7 @@ const Speaker = ({
             </Typography>
             <Typography
                 variant="body1"
-                fontSize={'0.7em'}
+                fontSize={'1.2rem'}
                 className="speaker-caption"
                 color={colors.base}
                 fontFamily={'Russo One'}

@@ -17,6 +17,10 @@ const useStyles = makeStyles((theme) => ({
         '& .MuiFormLabel-root': {
             color: colors.base,
         },
+        '& .MuiFormHelperText-root': {
+            color: colors.base,
+            opacity: 0.9
+        },
         [theme.breakpoints.down('xs')]: {
             width: '100%',
             margin: '0 !important'
@@ -33,6 +37,10 @@ const useStyles = makeStyles((theme) => ({
         },
         '& .MuiFormLabel-root': {
             color: colors.base,
+        },
+        '& .MuiFormHelperText-root': {
+            color: colors.base,
+            opacity: 0.9
         },
         [theme.breakpoints.down('xs')]: {
             width: '100%',

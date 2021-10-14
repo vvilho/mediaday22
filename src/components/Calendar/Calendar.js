@@ -3,7 +3,7 @@ import FullCalendar from '@fullcalendar/react' // must go before plugins
 import timeGridPlugin from '@fullcalendar/timegrid' // a plugin!
 import format from 'date-fns/format'
 import parse from 'date-fns/parse';
-import './Calender.css'
+import './Calendar.css'
 import {useHistory} from "react-router-dom";
 import colors from '../../siteWideColors';
 

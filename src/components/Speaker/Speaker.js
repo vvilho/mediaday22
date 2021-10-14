@@ -56,7 +56,7 @@ const Speaker = ({
             </Typography>
             <Typography
                 variant="body1"
-                fontSize={'0.7em'}
+                fontSize={'1.2rem'}
                 className="speaker-caption"
                 color={colors.base}
                 fontFamily={'Russo One'}
@@ -75,7 +75,7 @@ const Speaker = ({
             <Typography
                 variant="body1"
                 color={colors.base}
-                textAlign={'center'}
+                textAlign={'left'}
                 sx={{paddingTop: '1em'}}
             >
               {speakerIntro}

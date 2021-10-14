@@ -46,7 +46,7 @@ const Footer = () => {
                 lg={3}
                 className={'brandGridItem'}
             >
-              <Link href="https://fireframe.fi/" target="_blank" rel='nofollow'>
+              <Link href="https://fireframe.fi/" target="_blank" rel='nofollow noopener'>
                 <img className={'brandImg'} alt={'Fireframe logo'}
                      src='logos/fireframelogo.webp'/>
               </Link>
@@ -58,7 +58,7 @@ const Footer = () => {
                 lg={3}
                 className={'brandGridItem'}
             >
-              <Link href="https://avita.org/" target="_blank" rel='nofollow'>
+              <Link href="https://avita.org/" target="_blank" rel='nofollow noopener'>
                 <img className={'brandImg'} alt={'Avita logo'}
                      src="logos/avitalogo.webp"/>
               </Link>
@@ -70,7 +70,7 @@ const Footer = () => {
                 lg={3}
                 className={'brandGridItem'}
             >
-              <Link href="https://www.crestron.com/" target="_blank" rel='nofollow'>
+              <Link href="https://www.crestron.com/" target="_blank" rel='nofollow noopener'>
                 <img className={'brandImg'} alt={'Creston logo'}
                      src="logos/crestonlogo.webp"/>
               </Link>
@@ -82,7 +82,7 @@ const Footer = () => {
                 lg={3}
                 className={'brandGridItem'}
             >
-              <Link href="https://www.foodandco.fi/" target="_blank" rel='nofollow'>
+              <Link href="https://www.foodandco.fi/" target="_blank" rel='nofollow noopener'>
                 <img className={'brandImg'} alt={'Food & co logo'}
                      src="logos/fazerlogo.webp"/>
               </Link>
@@ -94,7 +94,7 @@ const Footer = () => {
                 lg={3}
                 className={'brandGridItem'}
             >
-              <Link href="https://flyar.fi/fi/" target="_blank" rel='nofollow'>
+              <Link href="https://flyar.fi/fi/" target="_blank" rel='nofollow noopener'>
                 <img className={'brandImg'} alt={'FlyAR logo'}
                      src="logos/flyarlogo.webp"/>
               </Link>
@@ -106,7 +106,7 @@ const Footer = () => {
                 lg={3}
                 className={'brandGridItem'}
             >
-              <Link href="https://metropolia.fi/fi" target="_blank" rel='nofollow'>
+              <Link href="https://metropolia.fi/fi" target="_blank" rel='nofollow noopener'>
                 <img className={'brandImg'} alt={'Metropolia logo'}
                      src="logos/metropolialogo.webp"/>
               </Link>
@@ -118,7 +118,7 @@ const Footer = () => {
                 lg={3}
                 className={'brandGridItem'}
             >
-              <Link href="https://www.panasonic.com/fi/" target="_blank"  rel='nofollow'>
+              <Link href="https://www.panasonic.com/fi/" target="_blank"  rel='nofollow noopener'>
                 <img className={'brandImg'} alt={'Panasonic logo'}
                      src="logos/panasoniclogo.webp"/>
               </Link>
@@ -130,7 +130,7 @@ const Footer = () => {
                 lg={3}
                 className={'brandGridItem'}
             >
-              <Link href="https://www.sony.fi/" target="_blank" rel='nofollow'>
+              <Link href="https://www.sony.fi/" target="_blank" rel='nofollow noopener'>
                 <img className={'brandImg'} alt={'Sony logo'}
                      src="logos/sonylogo.webp"/>
               </Link>
@@ -142,7 +142,7 @@ const Footer = () => {
                 lg={3}
                 className={'brandGridItem'}
             >
-              <Link href="https://swappie.com/fi/" target="_blank" rel='nofollow'>
+              <Link href="https://swappie.com/fi/" target="_blank" rel='nofollow noopener'>
                 <img className={'brandImg'} alt={'Swappie logo'}
                      src="logos/swappielogo.webp"/>
               </Link>
@@ -155,7 +155,7 @@ const Footer = () => {
                 lg={3}
                 className={'brandGridItem'}
             >
-              <Link href="https://trail.fi/fi/" target="_blank" rel='nofollow'>
+              <Link href="https://trail.fi/fi/" target="_blank" rel='nofollow noopener'>
                 <img className={'brandImg'} alt={'Trail logo'}
                      src="logos/traillogo.webp"/>
               </Link>

@@ -36,7 +36,7 @@ const StreamerInfo = ({
             setOpen(true)
         }
     };
-    
+
     const handleClose = () => setOpen(false);
 
   return (
@@ -57,7 +57,7 @@ const StreamerInfo = ({
                 avatar={<Avatar
                     alt="Speaker avatar"
                     src={avatar}
-                    sx={{width: 56, height: 56, border: `1px solid ${colors.fourth}`}}
+                    sx={{width: 56, height: 56, border: `1px solid ${colors.fourth}`, cursor: 'pointer'}}
                     onClick={handleOpen}
                 />}
                 title={<Typography variant={'h5'}

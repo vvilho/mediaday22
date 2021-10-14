@@ -96,6 +96,8 @@ const LandingPage = () => {
                    className="App-logo" alt="Mediaday logo"/>
               <Typography variant={'h5'} marginTop="1.5rem" marginBottom="0" marginX="1.5rem"
                           className={''} textAlign="left">
+                1.4.2022
+                Karaportti 2 + ON-AIR<br/>
                 Metropolia ammattikorkeakoulu järjestää Mediaday-tapahtuman
                 pitkän
                 tauon jälkeen keväällä 2022.

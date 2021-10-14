@@ -59,7 +59,11 @@ const useStyles = makeStyles((theme) => ({
     contactHead: {
         marginBottom: '1rem !important',
         color: colors.base
-    }
+    },
+        notchedOutline: {
+            borderWidth: "1px",
+            borderColor: "white !important"
+        }
 }));
 
 const ContactForm = () => {
@@ -149,21 +153,69 @@ const ContactForm = () => {
             }} component="form" onSubmit={handleSubmit} onInvalid={handleInvalid}>
                 <Typography variant="body1" className={classes.contactHead}>Ota meihin yhteyttä täältä.</Typography>
                 <Container disableGutters={true}>
-                    <TextField autoFocus={true} className={classes.inputField} label="Nimesi" id="name" name="name"
-                               type="text" fullWidth={false}
-                               variant="outlined" margin="dense" required={true} helperText={' '}/>
-                    <TextField label="Sähköpostisi" className={classes.inputField} name="email" id="email" type="email"
-                               fullWidth={false}
-                               variant="outlined" margin="dense" required={true} helperText={' '}/>
+                    <TextField
+                        autoFocus={true}
+                        className={classes.inputField}
+                        label="Nimesi"
+                        id="name"
+                        name="name"
+                        type="text"
+                        fullWidth={false}
+                        variant="outlined"
+                        margin="dense"
+                        required={true}
+                        helperText={' '}
+                        InputProps={{
+                            classes: {
+                                notchedOutline: classes.notchedOutline
+                            }
+                        }}
+                    />
+                    <TextField
+                        label="Sähköpostisi"
+                        className={classes.inputField}
+                        name="email"
+                        id="email"
+                        type="email"
+                        fullWidth={false}
+                        variant="outlined"
+                        margin="dense"
+                        required={true}
+                        helperText={' '}
+                        InputProps={{
+                            classes: {
+                                notchedOutline: classes.notchedOutline
+                            }
+                        }}
+                    />
                 </Container>
-                <TextField className={classes.message} name="message" multiline={true} label="Viestisi" id="message"
-                           type="text"
-                           variant="outlined" minRows={3} required={true}
-                           fullWidth={false} inputProps={{maxLength: characterLimit}}
-                           helperText={' '}
-                           onChange={handleChange}/>
-                <Button id='contactSubmitButton' className={'button'} sx={{margin: 'auto !important'}}
-                        type="submit">Lähetä</Button>
+                <TextField
+                    className={classes.message}
+                    name="message"
+                    multiline={true}
+                    label="Viestisi"
+                    id="message"
+                    type="text"
+                    variant="outlined"
+                    minRows={3}
+                    required={true}
+                    fullWidth={false}
+                    inputProps={{maxLength: characterLimit}}
+                    helperText={' '}
+                    onChange={handleChange}
+                    InputProps={{
+                        classes: {
+                            notchedOutline: classes.notchedOutline
+                        }
+                    }}
+                />
+                <Button
+                    id='contactSubmitButton'
+                    className={'button'}
+                    sx={{margin: 'auto !important'}}
+                    type="submit">
+                    Lähetä
+                </Button>
             </Box>
         </Container>
 
